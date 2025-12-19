@@ -144,3 +144,70 @@ body{
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+/* Turntable visual on the question page */
+
+.turntable-container{
+  position: relative;
+  /* make the banner span edge-to-edge regardless of page padding */
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 60vh; /* tall banner area */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.turntable-img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* ensure image always covers full width and height */
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the container */
+  object-position: center;
+  /* subtle darken so overlay text pops */
+  filter: brightness(0.86) saturate(0.95);
+  /* image stroke and drop shadow */
+  box-shadow: inset 0 0 0 8px rgba(0,0,0,0.28), 0 30px 60px rgba(0,0,0,0.45);
+}
+.turntable-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.turntable-overlay .overlay-title {
+  font-size: clamp(28px, 6vw, 72px);
+  line-height: 1;
+  /* layered shadow as a stroke fallback */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.turntable-overlay .overlay-points {
+  font-size: clamp(20px, 3.6vw, 40px);
+  line-height: 1;
+  opacity: 0.95;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /* subtle drop shadow to lift the points text */
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+}
+
+.question-text{
+  text-align: center;
+  color: #fff;
+}
