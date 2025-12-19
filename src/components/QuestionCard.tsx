@@ -65,9 +65,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     <div className="card" style={style}>
       <div className="card-title">{title}</div>
       <div className="card-choices">
-        {renderChoice("1")}
-        {renderChoice("2")}
-        {renderChoice("3")}
+        {renderChoice("30")}
+        {renderChoice("40")}
+        {renderChoice("50")}
       </div>
     </div>
   );

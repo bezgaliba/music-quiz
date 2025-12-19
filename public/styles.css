@@ -100,8 +100,8 @@ body{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
   background: var(--choice-bg);
   border-radius: 50%;
   color: #fff;
