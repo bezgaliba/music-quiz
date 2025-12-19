@@ -65,6 +65,26 @@ body{
   color: #fff;
   text-decoration: none;
   border: 3px solid var(--choice-border);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.choice:disabled{
+  cursor: default;
+  opacity: 0.35;
+}
+
+.choice.used{
+  position: relative;
+  background: #000;
+}
+
+.choice.used::after{
+  content: "✕";
+  color: #ff4d4d;
+  font-weight: 700;
+  position: absolute;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 900px){

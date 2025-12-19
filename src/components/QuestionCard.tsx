@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type QuestionCardProps = {
   title: string;
@@ -7,24 +7,68 @@ type QuestionCardProps = {
   style?: React.CSSProperties;
 };
 
+const USED_KEY = "usedQuestions";
+
 const QuestionCard: React.FC<QuestionCardProps> = ({
   title,
   categoryId,
   style,
 }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [used, setUsed] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(USED_KEY) || "[]";
+      const arr = JSON.parse(raw) as string[];
+      setUsed(new Set(arr));
+    } catch {
+      setUsed(new Set());
+    }
+  }, [location.pathname]);
+
+  const markUsed = (qid: string) => {
+    const key = `${categoryId}:${qid}`;
+    if (used.has(key)) return;
+    const next = new Set(used);
+    next.add(key);
+    setUsed(next);
+    try {
+      localStorage.setItem(USED_KEY, JSON.stringify(Array.from(next)));
+    } catch {
+      // ignore
+    }
+  };
+
+  const handleClick = (qid: string) => {
+    markUsed(qid);
+    navigate(`/question/${categoryId}/${qid}`);
+  };
+
+  const renderChoice = (qid: string) => {
+    const key = `${categoryId}:${qid}`;
+    const isUsed = used.has(key);
+    return (
+      <button
+        key={qid}
+        className={`choice ${isUsed ? "used" : ""}`}
+        disabled={isUsed}
+        onClick={() => handleClick(qid)}
+        aria-pressed={isUsed}
+      >
+        {qid}
+      </button>
+    );
+  };
+
   return (
     <div className="card" style={style}>
       <div className="card-title">{title}</div>
       <div className="card-choices">
-        <Link to={`/question/${categoryId}/1`} className="choice">
-          1
-        </Link>
-        <Link to={`/question/${categoryId}/2`} className="choice">
-          2
-        </Link>
-        <Link to={`/question/${categoryId}/3`} className="choice">
-          3
-        </Link>
+        {renderChoice("1")}
+        {renderChoice("2")}
+        {renderChoice("3")}
       </div>
     </div>
   );
