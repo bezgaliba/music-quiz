@@ -111,10 +111,7 @@ body{
   cursor: pointer;
 }
 
-.choice:disabled{
-  cursor: default;
-  opacity: 0.35;
-}
+
 
 .choice.used{
   position: relative;

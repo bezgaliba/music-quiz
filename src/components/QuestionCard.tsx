@@ -53,7 +53,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       <button
         key={qid}
         className={`choice ${isUsed ? "used" : ""}`}
-        disabled={isUsed}
         onClick={() => handleClick(qid)}
         aria-pressed={isUsed}
       >
