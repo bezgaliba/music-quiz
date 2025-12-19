@@ -4,184 +4,180 @@
       "id": "00s",
       "title": "00s",
       "questions": [
-        { "id": "1", "text": "Which band had the hit 'Mr. Brightside' in the 2000s?", "choices": ["The Killers", "Coldplay", "Maroon 5"] },
-        { "id": "2", "text": "Who released 'Get Lucky' in 2013?", "choices": ["Daft Punk", "Justice", "Air"] },
-        { "id": "3", "text": "Which song begins with 'Wake me up when September ends'?", "choices": ["Green Day", "Blink-182", "Sum 41"] }
+        { "id": "1", "songPath": "public/resources/audio/00s/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/00s/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/00s/", "song": "song50" }
       ]
     },
     {
       "id": "10s",
       "title": "10s",
       "questions": [
-        { "id": "1", "text": "Which artist released 'Bad Romance'?", "choices": ["Lady Gaga", "Katy Perry", "Rihanna"] },
-        { "id": "2", "text": "What's the band behind 'Uprising'?", "choices": ["Muse", "Coldplay", "Foo Fighters"] },
-        { "id": "3", "text": "Which song contains the lyric 'I'm gonna take my horse to the old town road'?", "choices": ["Lil Nas X", "Post Malone", "Miley Cyrus"] }
+        { "id": "1", "songPath": "public/resources/audio/10s/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/10s/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/10s/", "song": "song50" }
       ]
     },
     {
       "id": "rock",
       "title": "Rock",
       "questions": [
-        { "id": "1", "text": "Which band uses the song 'Enter Sandman'?", "choices": ["Metallica", "Nirvana", "AC/DC"] },
-        { "id": "2", "text": "Who sang 'Smells Like Teen Spirit'?", "choices": ["Nirvana", "Pearl Jam", "Alice In Chains"] },
-        { "id": "3", "text": "Which band released 'Bohemian Rhapsody'?", "choices": ["Queen", "The Beatles", "Led Zeppelin"] }
+        { "id": "1", "songPath": "public/resources/audio/rock/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/rock/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/rock/", "song": "song50" }
       ]
     },
     {
       "id": "classical",
       "title": "Classical",
       "questions": [
-        { "id": "1", "text": "Who composed the 'Moonlight Sonata'?", "choices": ["Beethoven", "Mozart", "Bach"] },
-        { "id": "2", "text": "Who wrote 'The Four Seasons'?", "choices": ["Vivaldi", "Handel", "Haydn"] },
-        { "id": "3", "text": "Which composer wrote the 'Ride of the Valkyries'?", "choices": ["Wagner", "Tchaikovsky", "Strauss"] }
+        { "id": "1", "songPath": "public/resources/audio/classical/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/classical/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/classical/", "song": "song50" }
       ]
-    }
-    ,
+    },
     {
       "id": "twilight",
       "title": "Star Wars Soundtrack",
       "questions": [
-        { "id": "1", "text": "Which artist appears on the Twilight soundtrack?", "choices": ["Bon Iver", "Paramore", "Evanescence"] },
-        { "id": "2", "text": "Which song was featured in the Twilight movie?", "choices": ["Decode", "Skyscraper", "In My Place"] },
-        { "id": "3", "text": "Who performed 'Full Moon'?", "choices": ["The Black Ghosts", "N/A", "N/A"] }
+        { "id": "1", "songPath": "public/resources/audio/twilight/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/twilight/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ]
     },
     {
       "id": "minion",
       "title": "Minion Covers",
       "questions": [
-        { "id": "1", "text": "Which song was covered by Minions?", "choices": ["Happy", "Yellow Submarine", "Bohemian Rhapsody"] },
-        { "id": "2", "text": "Which movie features Minions singing?", "choices": ["Despicable Me", "Shrek", "Toy Story"] },
-        { "id": "3", "text": "Who composed the backing track?", "choices": ["Heitor Pereira", "Hans Zimmer", "John Williams"] }
+        { "id": "1", "songPath": "public/resources/audio/minion/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/minion/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/minion/", "song": "song50" }
       ]
     },
     {
       "id": "metal",
       "title": "Metal",
       "questions": [
-        { "id": "1", "text": "Which band wrote 'Master of Puppets'?", "choices": ["Metallica", "Megadeth", "Anthrax"] },
-        { "id": "2", "text": "Who's known for the growling vocal style?", "choices": ["Various", "Pop singers", "None"] },
-        { "id": "3", "text": "Which festival is famous for metal bands?", "choices": ["Wacken", "Glastonbury", "Coachella"] }
+        { "id": "1", "songPath": "public/resources/audio/metal/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/metal/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/metal/", "song": "song50" }
       ]
     },
     {
       "id": "metal2",
       "title": "Indie",
       "questions": [
-        { "id": "1", "text": "Which indie band had a breakout in the 2010s?", "choices": ["Arctic Monkeys", "The Strokes", "The Killers"] },
-        { "id": "2", "text": "Which label is known for indie music?", "choices": ["Sub Pop", "Def Jam", "Motown"] },
-        { "id": "3", "text": "Which festival spotlights indie artists?", "choices": ["SXSW", "Tomorrowland", "Ultra"] }
+        { "id": "1", "songPath": "public/resources/audio/metal2/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/metal2/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/metal2/", "song": "song50" }
       ]
     },
     {
       "id": "rap",
       "title": "Rap",
       "questions": [
-        { "id": "1", "text": "Who released 'Lose Yourself'?", "choices": ["Eminem", "Drake", "Kendrick Lamar"] },
-        { "id": "2", "text": "Which artist is from Toronto and popular in rap?", "choices": ["Drake", "The Weeknd", "Justin Bieber"] },
-        { "id": "3", "text": "Which group released 'Juicy'?", "choices": ["The Notorious B.I.G.", "Wu-Tang Clan", "A Tribe Called Quest"] }
+        { "id": "1", "songPath": "public/resources/audio/rap/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/rap/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/rap/", "song": "song50" }
       ]
-    }
-    ,
+    },
     {
       "id": "electro",
       "title": "Electronic",
       "questions": [
-        { "id": "1", "text": "Which duo released 'One More Time'?", "choices": ["Daft Punk", "Disclosure", "Chemical Brothers"] },
-        { "id": "2", "text": "Who produced the track 'Strobe'?", "choices": ["deadmau5", "Skrillex", "Calvin Harris"] },
-        { "id": "3", "text": "Which festival is well-known for electronic music?", "choices": ["Ultra", "Lollapalooza", "Reading"] }
+        { "id": "1", "songPath": "public/resources/audio/electro/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/electro/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/electro/", "song": "song50" }
       ]
-    }
-    ,
+    },
     {
       "id": "pop",
       "title": "Pop",
       "questions": [
-        { "id": "1", "text": "Who sang 'Thriller'?", "choices": ["Michael Jackson", "Prince", "Madonna"] },
-        { "id": "2", "text": "Which artist released 'Shape of You'?,", "choices": ["Ed Sheeran", "Shawn Mendes", "Niall Horan"] },
-        { "id": "3", "text": "Who is known as the 'Material Girl'?", "choices": ["Madonna", "Cher", "Dua Lipa"] }
+        { "id": "1", "songPath": "public/resources/audio/pop/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/pop/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/pop/", "song": "song50" }
       ]
     },
     {
       "id": "jazz",
       "title": "Jazz",
       "questions": [
-        { "id": "1", "text": "Who is famous for 'Take Five'?", "choices": ["Dave Brubeck", "Miles Davis", "John Coltrane"] },
-        { "id": "2", "text": "Who played trumpet on 'Kind of Blue'?", "choices": ["Miles Davis", "Chet Baker", "Dizzy Gillespie"] },
-        { "id": "3", "text": "Which instrument is Louis Armstrong known for?", "choices": ["Trumpet", "Saxophone", "Piano"] }
+        { "id": "1", "songPath": "public/resources/audio/jazz/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/jazz/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/jazz/", "song": "song50" }
       ]
     },
     {
       "id": "blues",
       "title": "Blues",
       "questions": [
-        { "id": "1", "text": "Which singer is associated with the blues and 'The Thrill Is Gone'?", "choices": ["B.B. King", "Muddy Waters", "Howlin' Wolf"] },
-        { "id": "2", "text": "Which instrument is central to blues music?", "choices": ["Guitar", "Violin", "Synthesizer"] },
-        { "id": "3", "text": "Which festival celebrates blues music?", "choices": ["Chicago Blues Festival", "Glastonbury", "Coachella"] }
+        { "id": "1", "songPath": "public/resources/audio/blues/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/blues/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/blues/", "song": "song50" }
       ]
     },
     {
       "id": "soul",
       "title": "Soul",
       "questions": [
-        { "id": "1", "text": "Who sang 'Respect'?", "choices": ["Aretha Franklin", "Etta James", "Tina Turner"] },
-        { "id": "2", "text": "Which label was central to Motown?", "choices": ["Motown", "Atlantic", "Def Jam"] },
-        { "id": "3", "text": "Who recorded 'What's Going On'?", "choices": ["Marvin Gaye", "Stevie Wonder", "Al Green"] }
+        { "id": "1", "songPath": "public/resources/audio/soul/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/soul/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/soul/", "song": "song50" }
       ]
     },
     {
       "id": "reggae",
       "title": "Reggae",
       "questions": [
-        { "id": "1", "text": "Which artist is synonymous with reggae?", "choices": ["Bob Marley", "Peter Tosh", "Jimmy Cliff"] },
-        { "id": "2", "text": "Reggae originated in which country?", "choices": ["Jamaica", "Trinidad", "Barbados"] },
-        { "id": "3", "text": "Which festival often features reggae acts?", "choices": ["Rototom Sunsplash", "Tomorrowland", "Reading"] }
+        { "id": "1", "songPath": "public/resources/audio/reggae/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/reggae/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/reggae/", "song": "song50" }
       ]
     },
     {
       "id": "folk",
       "title": "Folk",
       "questions": [
-        { "id": "1", "text": "Who wrote 'Blowin' in the Wind'?", "choices": ["Bob Dylan", "Joan Baez", "Joni Mitchell"] },
-        { "id": "2", "text": "Which instrument is common in folk?", "choices": ["Acoustic guitar", "Synthesizer", "Saxophone"] },
-        { "id": "3", "text": "Which festival features folk music?", "choices": ["Cambridge Folk Festival", "Ultra", "Coachella"] }
+        { "id": "1", "songPath": "public/resources/audio/folk/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/folk/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/folk/", "song": "song50" }
       ]
     },
     {
       "id": "latin",
       "title": "Latin",
       "questions": [
-        { "id": "1", "text": "Which style originates from Cuba?", "choices": ["Salsa", "Reggaeton", "Bachata"] },
-        { "id": "2", "text": "Which artist is famous in Latin pop?", "choices": ["Shakira", "Ricky Martin", "Enrique Iglesias"] },
-        { "id": "3", "text": "Which dance is associated with Latin music?", "choices": ["Salsa", "Waltz", "Tango"] }
+        { "id": "1", "songPath": "public/resources/audio/latin/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/latin/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/latin/", "song": "song50" }
       ]
     },
     {
       "id": "punk",
       "title": "Punk",
       "questions": [
-        { "id": "1", "text": "Which band is associated with punk rock?", "choices": ["The Ramones", "Sex Pistols", "The Clash"] },
-        { "id": "2", "text": "Which era did punk emerge?", "choices": ["1970s", "1990s", "1950s"] },
-        { "id": "3", "text": "Which festival has punk acts?", "choices": ["Rebellion Festival", "Glastonbury", "Lollapalooza"] }
+        { "id": "1", "songPath": "public/resources/audio/punk/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/punk/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/punk/", "song": "song50" }
       ]
     },
     {
       "id": "world",
       "title": "World",
       "questions": [
-        { "id": "1", "text": "World music often includes traditional music from which region?", "choices": ["Various regions", "Only Europe", "Only USA"] },
-        { "id": "2", "text": "Which instrument is used globally?", "choices": ["Percussion", "Electric guitar", "Synthesizer"] },
-        { "id": "3", "text": "Which festival showcases world music?", "choices": ["WOMAD", "Ultra", "Tomorrowland"] }
+        { "id": "1", "songPath": "public/resources/audio/world/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/world/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/world/", "song": "song50" }
       ]
-    }
-    ,
+    },
     {
       "id": "soundtrack2",
       "title": "Movie Soundtracks",
       "questions": [
-        { "id": "1", "text": "Which composer wrote the score for 'Inception'?", "choices": ["Hans Zimmer", "John Williams", "Howard Shore"] },
-        { "id": "2", "text": "Which movie featured the song 'My Heart Will Go On'?", "choices": ["Titanic", "Romeo + Juliet", "The Bodyguard"] },
-        { "id": "3", "text": "Who composed 'The Imperial March'?", "choices": ["John Williams", "James Horner", "Ennio Morricone"] }
+        { "id": "1", "songPath": "public/resources/audio/soundtrack2/", "song": "song30" },
+        { "id": "2", "songPath": "public/resources/audio/soundtrack2/", "song": "song40" },
+        { "id": "3", "songPath": "public/resources/audio/soundtrack2/", "song": "song50" }
       ]
     }
   ]
