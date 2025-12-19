@@ -5,7 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Music Quiz</title>
-        <link rel="stylesheet" href="/styles.css">
+                <script>
+                    // Development cache-bust: append timestamp so refresh pulls the latest CSS
+                    (function(){
+                        var l = document.createElement('link');
+                        l.rel = 'stylesheet';
+                        l.href = '/styles.css?v=' + Date.now();
+                        document.head.appendChild(l);
+                    })();
+                </script>
+                        <script>
+                            (function(){
+                                try {
+                                    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+                                        localStorage.removeItem('usedQuestions');
+                                    }
+                                } catch (e) { /* ignore */ }
+                            })();
+                        </script>
     </head>
     <body>
         <div id="root"></div>
