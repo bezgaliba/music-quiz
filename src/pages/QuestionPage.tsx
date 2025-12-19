@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
 
 const POINTS: Record<string, number> = {
@@ -19,6 +19,7 @@ const QuestionPage: React.FC = () => {
   };
   const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
   const points = POINTS[normalizedId] ?? 0;
+  const navigate = useNavigate();
 
   return (
     <div className="question-page">
@@ -28,15 +29,19 @@ const QuestionPage: React.FC = () => {
           alt="Turntable"
           className="turntable-img"
         />
-        <div className="turntable-overlay">
+        <div
+          className="turntable-overlay"
+          onClick={() => navigate(-1)}
+          role="button"
+          aria-label="Go back"
+          style={{ pointerEvents: "auto", cursor: "pointer" }}
+        >
           <div className="overlay-title">{cat ? cat.title : ""}</div>
           <div className="overlay-points">{points} points</div>
         </div>
       </div>
 
-      <p>
-        <Link to="/">Back</Link>
-      </p>
+      {/* Back link removed: overlay click navigates back now */}
     </div>
   );
 };
