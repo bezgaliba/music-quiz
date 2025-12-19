@@ -20,12 +20,18 @@ const QuestionPage: React.FC = () => {
   const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
   const points = POINTS[normalizedId] ?? 0;
   const navigate = useNavigate();
+  const imageForPoints = (p: number) => {
+    if (p === 30) return "/resources/img/turntable30.jpeg";
+    if (p === 40) return "/resources/img/turntable40.jpeg";
+    if (p === 50) return "/resources/img/turntable50.jpeg";
+    return "/resources/img/turntable.jpeg";
+  };
 
   return (
     <div className="question-page">
       <div className="turntable-container">
         <img
-          src="/resources/img/turntable.jpeg"
+          src={imageForPoints(points)}
           alt="Turntable"
           className="turntable-img"
         />
