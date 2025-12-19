@@ -46,8 +46,6 @@ const QuestionPage: React.FC = () => {
           <div className="overlay-points">{points} points</div>
         </div>
       </div>
-
-      {/* Back link removed: overlay click navigates back now */}
     </div>
   );
 };

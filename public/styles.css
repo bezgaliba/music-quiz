@@ -53,7 +53,6 @@ body{
   margin-bottom: 12px;
   font-weight: 600;
   font-size: 2rem;
-  /* stroked text via layered shadows for smoother cross-browser results */
   text-shadow:
     -2px -2px 0 rgba(0,0,0,0.6),
     2px -2px 0 rgba(0,0,0,0.6),
@@ -61,15 +60,11 @@ body{
     2px 2px 0 rgba(0,0,0,0.6),
     0 6px 18px rgba(0,0,0,0.25);
 
-  /* make the title take full width so wrapping is consistent and predictable */
   width: 100%;
-  /* center the title text and allow it to wrap to multiple centered lines */
   text-align: center;
   line-height: 1.05;
-  /* allow long words to wrap instead of overflowing */
   overflow-wrap: anywhere;
   word-break: break-word;
-  /* keep a small margin so shadow doesn't clip on very tight cards */
   padding-right: 4px;
   padding-left: 4px;
 }
@@ -132,6 +127,60 @@ body{
 .choice.used::before{ transform: translate(-50%, -50%) rotate(45deg); }
 .choice.used::after{ transform: translate(-50%, -50%) rotate(-45deg); }
 
+.card-title.title-used{
+  position: relative;
+  opacity: 0.85;
+}
+.card-title .title-text,
+.title-text{
+  position: relative;
+  display: inline-block;
+}
+
+.card-title.title-used .title-text::before,
+.card-title.title-used .title-text::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(37px, 6vw, 67px);
+  height: 3px;
+  background: rgba(255,77,77,0.98);
+  border-radius: 2px;
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.card-title.title-used .title-text::before{ transform: translate(-50%, -50%) rotate(45deg); }
+.card-title.title-used .title-text::after{ transform: translate(-50%, -50%) rotate(-45deg); }
+
+.card-title.title-used::before,
+.card-title.title-used::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(47px, 7vw, 80px);
+  height: 2px;
+  background: rgba(255,77,77,0.98);
+  border-radius: 2px;
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 1;
+}
+.card-title.title-used::before{ transform: translate(-50%, -50%) rotate(45deg); }
+.card-title.title-used::after{ transform: translate(-50%, -50%) rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .card-title.title-used .title-text::before,
+  .card-title.title-used .title-text::after,
+  .card-title.title-used::before,
+  .card-title.title-used::after{
+    height: 2.4px;
+    width: clamp(30px, 8vw, 50px);
+  }
+}
+
 @media (max-width: 900px){
   .grid-inner{ grid-template-columns: repeat(2, 1fr); }
 }
@@ -145,17 +194,14 @@ body{
   background-repeat: no-repeat;
 }
 
-/* Turntable visual on the question page */
-
 .turntable-container{
   position: relative;
-  /* make the banner span edge-to-edge regardless of page padding */
   width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 60vh; /* tall banner area */
+  height: 60vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -166,16 +212,13 @@ body{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* ensure image always covers full width and height */
   min-width: 100%;
   min-height: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* cover the container */
+  object-fit: cover;
   object-position: center;
-  /* subtle darken so overlay text pops */
   filter: brightness(0.86) saturate(0.95);
-  /* image stroke and drop shadow */
   box-shadow: inset 0 0 0 8px rgba(0,0,0,0.28), 0 30px 60px rgba(0,0,0,0.45);
 }
 .turntable-overlay{
@@ -194,7 +237,6 @@ body{
 .turntable-overlay .overlay-title {
   font-size: clamp(28px, 6vw, 72px);
   line-height: 1;
-  /* layered shadow as a stroke fallback */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
@@ -203,7 +245,6 @@ body{
   line-height: 1;
   opacity: 0.95;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  /* subtle drop shadow to lift the points text */
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
 }
 

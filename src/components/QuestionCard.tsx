@@ -27,6 +27,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       setUsed(new Set());
     }
   }, [location.pathname]);
+  const allUsed = () => {
+    const keys = [`${categoryId}:30`, `${categoryId}:40`, `${categoryId}:50`];
+    return keys.every((k) => used.has(k));
+  };
 
   const markUsed = (qid: string) => {
     const key = `${categoryId}:${qid}`;
@@ -63,7 +67,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
   return (
     <div className="card" style={style}>
-      <div className="card-title">{title}</div>
+      <div className={`card-title ${allUsed() ? "title-used" : ""}`}>
+        <span className="title-text">{title}</span>
+      </div>
       <div className="card-choices">
         {renderChoice("30")}
         {renderChoice("40")}
