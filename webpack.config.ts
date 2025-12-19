@@ -28,7 +28,6 @@ const webpackConfig = (env): webpack.Configuration => ({
                 exclude: /dist/
             }
             ,
-            // allow importing plain .css files from JS/TS
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"]

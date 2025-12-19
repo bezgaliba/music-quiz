@@ -32,7 +32,6 @@ body{
 }
 
 .grid-inner.all-rows{
-  /* allow explicit placement of items */
   grid-auto-rows: min-content;
 }
 
@@ -42,11 +41,8 @@ body{
   padding: 18px 28px;
   display: flex;
   flex-direction: column;
-  /* make children take the full content width so titles wrap predictably */
   align-items: stretch;
-  /* subtle inner stroke and drop shadow for depth */
   box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-  /* stronger outer stroke */
   border: 4px solid rgba(0,0,0,0.16);
   transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
   will-change: transform;
@@ -115,16 +111,26 @@ body{
 
 .choice.used{
   position: relative;
-  background: #000;
+  background: #222;
+  opacity: 0.65;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.choice.used::before,
 .choice.used::after{
-  content: "✕";
-  color: #ff4d4d;
-  font-weight: 700;
+  content: "";
   position: absolute;
-  font-size: 1.25rem;
+  left: 50%;
+  top: 50%;
+  width: 68%;
+  height: 4px;
+  background: rgba(255,77,77,0.98);
+  border-radius: 2px;
+  transform-origin: center;
+  pointer-events: none;
 }
+.choice.used::before{ transform: translate(-50%, -50%) rotate(45deg); }
+.choice.used::after{ transform: translate(-50%, -50%) rotate(-45deg); }
 
 @media (max-width: 900px){
   .grid-inner{ grid-template-columns: repeat(2, 1fr); }
