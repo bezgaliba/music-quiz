@@ -1,0 +1,96 @@
+{
+  "categories": [
+    {
+      "id": "00s",
+      "title": "00s",
+      "questions": [
+        { "id": "1", "text": "Which band had the hit 'Mr. Brightside' in the 2000s?", "choices": ["The Killers", "Coldplay", "Maroon 5"] },
+        { "id": "2", "text": "Who released 'Get Lucky' in 2013?", "choices": ["Daft Punk", "Justice", "Air"] },
+        { "id": "3", "text": "Which song begins with 'Wake me up when September ends'?", "choices": ["Green Day", "Blink-182", "Sum 41"] }
+      ]
+    },
+    {
+      "id": "10s",
+      "title": "10s",
+      "questions": [
+        { "id": "1", "text": "Which artist released 'Bad Romance'?", "choices": ["Lady Gaga", "Katy Perry", "Rihanna"] },
+        { "id": "2", "text": "What's the band behind 'Uprising'?", "choices": ["Muse", "Coldplay", "Foo Fighters"] },
+        { "id": "3", "text": "Which song contains the lyric 'I'm gonna take my horse to the old town road'?", "choices": ["Lil Nas X", "Post Malone", "Miley Cyrus"] }
+      ]
+    },
+    {
+      "id": "rock",
+      "title": "Rock",
+      "questions": [
+        { "id": "1", "text": "Which band uses the song 'Enter Sandman'?", "choices": ["Metallica", "Nirvana", "AC/DC"] },
+        { "id": "2", "text": "Who sang 'Smells Like Teen Spirit'?", "choices": ["Nirvana", "Pearl Jam", "Alice In Chains"] },
+        { "id": "3", "text": "Which band released 'Bohemian Rhapsody'?", "choices": ["Queen", "The Beatles", "Led Zeppelin"] }
+      ]
+    },
+    {
+      "id": "classical",
+      "title": "Classical",
+      "questions": [
+        { "id": "1", "text": "Who composed the 'Moonlight Sonata'?", "choices": ["Beethoven", "Mozart", "Bach"] },
+        { "id": "2", "text": "Who wrote 'The Four Seasons'?", "choices": ["Vivaldi", "Handel", "Haydn"] },
+        { "id": "3", "text": "Which composer wrote the 'Ride of the Valkyries'?", "choices": ["Wagner", "Tchaikovsky", "Strauss"] }
+      ]
+    }
+    ,
+    {
+      "id": "twilight",
+      "title": "James Bond Soundtrack",
+      "questions": [
+        { "id": "1", "text": "Which artist appears on the Twilight soundtrack?", "choices": ["Bon Iver", "Paramore", "Evanescence"] },
+        { "id": "2", "text": "Which song was featured in the Twilight movie?", "choices": ["Decode", "Skyscraper", "In My Place"] },
+        { "id": "3", "text": "Who performed 'Full Moon'?", "choices": ["The Black Ghosts", "N/A", "N/A"] }
+      ]
+    },
+    {
+      "id": "minion",
+      "title": "Minion Covers",
+      "questions": [
+        { "id": "1", "text": "Which song was covered by Minions?", "choices": ["Happy", "Yellow Submarine", "Bohemian Rhapsody"] },
+        { "id": "2", "text": "Which movie features Minions singing?", "choices": ["Despicable Me", "Shrek", "Toy Story"] },
+        { "id": "3", "text": "Who composed the backing track?", "choices": ["Heitor Pereira", "Hans Zimmer", "John Williams"] }
+      ]
+    },
+    {
+      "id": "metal",
+      "title": "Metal",
+      "questions": [
+        { "id": "1", "text": "Which band wrote 'Master of Puppets'?", "choices": ["Metallica", "Megadeth", "Anthrax"] },
+        { "id": "2", "text": "Who's known for the growling vocal style?", "choices": ["Various", "Pop singers", "None"] },
+        { "id": "3", "text": "Which festival is famous for metal bands?", "choices": ["Wacken", "Glastonbury", "Coachella"] }
+      ]
+    },
+    {
+      "id": "metal2",
+      "title": "Indie",
+      "questions": [
+        { "id": "1", "text": "Which indie band had a breakout in the 2010s?", "choices": ["Arctic Monkeys", "The Strokes", "The Killers"] },
+        { "id": "2", "text": "Which label is known for indie music?", "choices": ["Sub Pop", "Def Jam", "Motown"] },
+        { "id": "3", "text": "Which festival spotlights indie artists?", "choices": ["SXSW", "Tomorrowland", "Ultra"] }
+      ]
+    },
+    {
+      "id": "rap",
+      "title": "Rap",
+      "questions": [
+        { "id": "1", "text": "Who released 'Lose Yourself'?", "choices": ["Eminem", "Drake", "Kendrick Lamar"] },
+        { "id": "2", "text": "Which artist is from Toronto and popular in rap?", "choices": ["Drake", "The Weeknd", "Justin Bieber"] },
+        { "id": "3", "text": "Which group released 'Juicy'?", "choices": ["The Notorious B.I.G.", "Wu-Tang Clan", "A Tribe Called Quest"] }
+      ]
+    }
+    ,
+    {
+      "id": "electro",
+      "title": "Electronic",
+      "questions": [
+        { "id": "1", "text": "Which duo released 'One More Time'?", "choices": ["Daft Punk", "Disclosure", "Chemical Brothers"] },
+        { "id": "2", "text": "Who produced the track 'Strobe'?", "choices": ["deadmau5", "Skrillex", "Calvin Harris"] },
+        { "id": "3", "text": "Which festival is well-known for electronic music?", "choices": ["Ultra", "Lollapalooza", "Reading"] }
+      ]
+    }
+  ]
+}
