@@ -92,5 +92,97 @@
         { "id": "3", "text": "Which festival is well-known for electronic music?", "choices": ["Ultra", "Lollapalooza", "Reading"] }
       ]
     }
+    ,
+    {
+      "id": "pop",
+      "title": "Pop",
+      "questions": [
+        { "id": "1", "text": "Who sang 'Thriller'?", "choices": ["Michael Jackson", "Prince", "Madonna"] },
+        { "id": "2", "text": "Which artist released 'Shape of You'?,", "choices": ["Ed Sheeran", "Shawn Mendes", "Niall Horan"] },
+        { "id": "3", "text": "Who is known as the 'Material Girl'?", "choices": ["Madonna", "Cher", "Dua Lipa"] }
+      ]
+    },
+    {
+      "id": "jazz",
+      "title": "Jazz",
+      "questions": [
+        { "id": "1", "text": "Who is famous for 'Take Five'?", "choices": ["Dave Brubeck", "Miles Davis", "John Coltrane"] },
+        { "id": "2", "text": "Who played trumpet on 'Kind of Blue'?", "choices": ["Miles Davis", "Chet Baker", "Dizzy Gillespie"] },
+        { "id": "3", "text": "Which instrument is Louis Armstrong known for?", "choices": ["Trumpet", "Saxophone", "Piano"] }
+      ]
+    },
+    {
+      "id": "blues",
+      "title": "Blues",
+      "questions": [
+        { "id": "1", "text": "Which singer is associated with the blues and 'The Thrill Is Gone'?", "choices": ["B.B. King", "Muddy Waters", "Howlin' Wolf"] },
+        { "id": "2", "text": "Which instrument is central to blues music?", "choices": ["Guitar", "Violin", "Synthesizer"] },
+        { "id": "3", "text": "Which festival celebrates blues music?", "choices": ["Chicago Blues Festival", "Glastonbury", "Coachella"] }
+      ]
+    },
+    {
+      "id": "soul",
+      "title": "Soul",
+      "questions": [
+        { "id": "1", "text": "Who sang 'Respect'?", "choices": ["Aretha Franklin", "Etta James", "Tina Turner"] },
+        { "id": "2", "text": "Which label was central to Motown?", "choices": ["Motown", "Atlantic", "Def Jam"] },
+        { "id": "3", "text": "Who recorded 'What's Going On'?", "choices": ["Marvin Gaye", "Stevie Wonder", "Al Green"] }
+      ]
+    },
+    {
+      "id": "reggae",
+      "title": "Reggae",
+      "questions": [
+        { "id": "1", "text": "Which artist is synonymous with reggae?", "choices": ["Bob Marley", "Peter Tosh", "Jimmy Cliff"] },
+        { "id": "2", "text": "Reggae originated in which country?", "choices": ["Jamaica", "Trinidad", "Barbados"] },
+        { "id": "3", "text": "Which festival often features reggae acts?", "choices": ["Rototom Sunsplash", "Tomorrowland", "Reading"] }
+      ]
+    },
+    {
+      "id": "folk",
+      "title": "Folk",
+      "questions": [
+        { "id": "1", "text": "Who wrote 'Blowin' in the Wind'?", "choices": ["Bob Dylan", "Joan Baez", "Joni Mitchell"] },
+        { "id": "2", "text": "Which instrument is common in folk?", "choices": ["Acoustic guitar", "Synthesizer", "Saxophone"] },
+        { "id": "3", "text": "Which festival features folk music?", "choices": ["Cambridge Folk Festival", "Ultra", "Coachella"] }
+      ]
+    },
+    {
+      "id": "latin",
+      "title": "Latin",
+      "questions": [
+        { "id": "1", "text": "Which style originates from Cuba?", "choices": ["Salsa", "Reggaeton", "Bachata"] },
+        { "id": "2", "text": "Which artist is famous in Latin pop?", "choices": ["Shakira", "Ricky Martin", "Enrique Iglesias"] },
+        { "id": "3", "text": "Which dance is associated with Latin music?", "choices": ["Salsa", "Waltz", "Tango"] }
+      ]
+    },
+    {
+      "id": "punk",
+      "title": "Punk",
+      "questions": [
+        { "id": "1", "text": "Which band is associated with punk rock?", "choices": ["The Ramones", "Sex Pistols", "The Clash"] },
+        { "id": "2", "text": "Which era did punk emerge?", "choices": ["1970s", "1990s", "1950s"] },
+        { "id": "3", "text": "Which festival has punk acts?", "choices": ["Rebellion Festival", "Glastonbury", "Lollapalooza"] }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "World",
+      "questions": [
+        { "id": "1", "text": "World music often includes traditional music from which region?", "choices": ["Various regions", "Only Europe", "Only USA"] },
+        { "id": "2", "text": "Which instrument is used globally?", "choices": ["Percussion", "Electric guitar", "Synthesizer"] },
+        { "id": "3", "text": "Which festival showcases world music?", "choices": ["WOMAD", "Ultra", "Tomorrowland"] }
+      ]
+    }
+    ,
+    {
+      "id": "soundtrack2",
+      "title": "Movie Soundtracks",
+      "questions": [
+        { "id": "1", "text": "Which composer wrote the score for 'Inception'?", "choices": ["Hans Zimmer", "John Williams", "Howard Shore"] },
+        { "id": "2", "text": "Which movie featured the song 'My Heart Will Go On'?", "choices": ["Titanic", "Romeo + Juliet", "The Bodyguard"] },
+        { "id": "3", "text": "Who composed 'The Imperial March'?", "choices": ["John Williams", "James Horner", "Ennio Morricone"] }
+      ]
+    }
   ]
 }
