@@ -258,6 +258,7 @@ body{
   display: flex;
   justify-content: center;
   z-index: 30;
+  gap: 12px;
 }
 .audio-control .icon-play-btn{
   background: rgba(255,255,255,0.06);
@@ -272,5 +273,21 @@ body{
   cursor: pointer;
 }
 .audio-control .icon-play-btn:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+.audio-control .reset-btn{
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,255,255,0.12);
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.audio-control .reset-btn:hover{
   background: rgba(255,255,255,0.12);
 }
