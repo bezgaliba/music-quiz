@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
 
 const USED_KEY = "usedQuestions";
-const ANSWERS_KEY = "answersSession";
+const SEEN_KEY = "seenQuestions";
 
 const numericToQid: Record<string, string> = {
   "30": "1",
@@ -18,37 +18,19 @@ const AnswersPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem(ANSWERS_KEY);
-      const parsedStored = stored ? JSON.parse(stored) : null;
-      // If there's a non-empty stored session, use it. If it's missing or an empty array,
-      // treat that as "no session" and populate from USED_KEY so new rounds rebuild answers.
-      if (Array.isArray(parsedStored) && parsedStored.length > 0) {
-        setUsedKeys(parsedStored as string[]);
-      } else {
-        const raw = localStorage.getItem(USED_KEY) || "[]";
-        const arr = JSON.parse(raw) as string[];
-        setUsedKeys(arr);
-        // write session only when we actually populated it from USED_KEY
-        try {
-          localStorage.setItem(ANSWERS_KEY, JSON.stringify(arr));
-        } catch {
-          // ignore
-        }
-      }
-      setIndex(0);
+      const rawUsed = localStorage.getItem(USED_KEY) || "[]";
+      const allUsed = JSON.parse(rawUsed) as string[];
+
+      const rawSeen = localStorage.getItem(SEEN_KEY) || "[]";
+      const seen = JSON.parse(rawSeen) as string[];
+
+      // Only show questions that are in 'used' but NOT in 'seen'
+      const newItems = allUsed.filter((k) => !seen.includes(k));
+      setUsedKeys(newItems);
     } catch {
       setUsedKeys([]);
     }
-
-    return () => {
-      try {
-        localStorage.setItem(ANSWERS_KEY, JSON.stringify([]));
-      } catch {
-        // ignore
-      }
-      setUsedKeys([]);
-      setIndex(0);
-    };
+    setIndex(0);
   }, []);
 
   const items = useMemo(() => {
@@ -91,9 +73,10 @@ const AnswersPage: React.FC = () => {
 
   const handleBack = () => {
     try {
-      localStorage.setItem(ANSWERS_KEY, JSON.stringify([]));
-    } catch {
-      // ignore
+      const rawUsed = localStorage.getItem(USED_KEY) || "[]";
+      localStorage.setItem(SEEN_KEY, rawUsed);
+    } catch (e) {
+      console.error("Error saving seen questions:", e);
     }
     navigate("/");
   };
