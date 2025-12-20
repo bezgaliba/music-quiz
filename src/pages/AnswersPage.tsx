@@ -127,24 +127,30 @@ const AnswersPage: React.FC = () => {
             <div style={{ color: "white" }}>
               No crossed answers for this round.
             </div>
-          ) : (
-            items.map((it, i) => (
+          ) : current ? (
+            <div
+              key={current.key}
+              style={{
+                color: "#fff",
+                padding: "1rem",
+                borderRadius: 8,
+                background: "rgba(0,0,0,0.5)",
+                width: "100%",
+                marginTop: "4rem", // Push it down a bit so it doesn't overlap with back button
+              }}
+            >
               <div
-                key={it.key}
                 style={{
-                  color: i === index ? "#fff" : "#ddd",
-                  opacity: i === index ? 1 : 0.8,
-                  padding: "0.4rem 0.6rem",
-                  borderRadius: 6,
-                  background: i === index ? "rgba(0,0,0,0.35)" : "transparent",
-                  width: "100%",
+                  fontWeight: 700,
+                  fontSize: "1.2rem",
+                  marginBottom: "0.5rem",
                 }}
               >
-                <div style={{ fontWeight: 600 }}>{it.artist}</div>
-                <div style={{ fontSize: "0.95rem" }}>{it.name}</div>
+                {current.artist}
               </div>
-            ))
-          )}
+              <div style={{ fontSize: "1.1rem" }}>{current.name}</div>
+            </div>
+          ) : null}
         </div>
 
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
