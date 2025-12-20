@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
 
+import { incrementRound } from "../gameState";
+
 const USED_KEY = "usedQuestions";
 const SEEN_KEY = "seenQuestions";
 
@@ -76,11 +78,7 @@ const AnswersPage: React.FC = () => {
       const rawUsed = localStorage.getItem(USED_KEY) || "[]";
       localStorage.setItem(SEEN_KEY, rawUsed);
 
-      const currentRound = parseInt(
-        localStorage.getItem("currentRound") || "1",
-        10,
-      );
-      localStorage.setItem("currentRound", (currentRound + 1).toString());
+      incrementRound();
     } catch (e) {
       console.error("Error saving seen questions:", e);
     }

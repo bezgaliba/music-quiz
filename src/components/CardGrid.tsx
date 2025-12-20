@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QuestionCard from "./QuestionCard";
 import data from "../data/questions.json";
+import { getRound } from "../gameState";
 
 const categories = data.categories as { id: string; title: string }[];
 
@@ -10,8 +11,7 @@ const CardGrid: React.FC = () => {
   const [round, setRound] = useState(1);
 
   useEffect(() => {
-    const r = parseInt(localStorage.getItem("currentRound") || "1", 10);
-    setRound(r);
+    setRound(getRound());
   }, []);
 
   return (
