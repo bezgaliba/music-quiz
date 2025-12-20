@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
 
@@ -29,6 +29,19 @@ const QuestionPage: React.FC = () => {
     return "/resources/img/turntable.jpeg";
   };
 
+  useEffect(() => {
+    return () => {
+      try {
+        if (audioRef.current) {
+          audioRef.current.pause();
+          audioRef.current.currentTime = 0;
+        }
+      } catch (e) {
+        console.error("Error during cleanup:", e);
+      }
+    };
+  }, []);
+
   return (
     <div className="question-page">
       <div className="turntable-container">
@@ -39,7 +52,17 @@ const QuestionPage: React.FC = () => {
         />
         <div
           className="turntable-overlay"
-          onClick={() => navigate(-1)}
+          onClick={() => {
+            if (audioRef.current) {
+              try {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+              } catch (e) {
+                console.error("Error stopping audio on navigation:", e);
+              }
+            }
+            navigate(-1);
+          }}
           role="button"
           aria-label="Go back"
           style={{ pointerEvents: "auto", cursor: "pointer" }}
