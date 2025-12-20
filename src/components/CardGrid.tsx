@@ -1,12 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import QuestionCard from "./QuestionCard";
 import data from "../data/questions.json";
 
 const categories = data.categories as { id: string; title: string }[];
 
 const CardGrid: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="grid">
+      <button className="end-round-btn" onClick={() => navigate("/answers")}>
+        End Round
+      </button>
       <div className="grid-inner all-rows">
         {categories.map((c, idx) => {
           const row = Math.floor(idx / 4) + 1;
