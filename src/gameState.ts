@@ -9,3 +9,13 @@ export const incrementRound = () => {
 export const resetRound = () => {
   round = 1;
 };
+
+export const resetGame = () => {
+  round = 1;
+  try {
+    localStorage.removeItem("usedQuestions");
+    localStorage.removeItem("seenQuestions");
+  } catch (e) {
+    console.error("Failed to clear game state:", e);
+  }
+};
