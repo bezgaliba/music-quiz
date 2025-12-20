@@ -358,3 +358,19 @@ body{
 .audio-control .reset-btn:hover{
   background: rgba(255,255,255,0.12);
 }
+
+@keyframes flyInFromTop {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fly-in-content {
+  opacity: 0;
+  animation: flyInFromTop 1s ease-out 3s forwards;
+}

@@ -55,6 +55,8 @@ const AnswersPage: React.FC = () => {
           name: answer?.name ?? "",
           songPath: answer?.songPath ?? "",
           song: answer?.song ?? "",
+          imagePath: answer?.imagePath ?? "",
+          image: answer?.image ?? "",
         };
       })
       .filter(Boolean) as Array<{
@@ -66,6 +68,8 @@ const AnswersPage: React.FC = () => {
       name: string;
       songPath: string;
       song: string;
+      imagePath: string;
+      image: string;
     }>;
   }, [usedKeys]);
 
@@ -152,7 +156,7 @@ const AnswersPage: React.FC = () => {
             width: "600px",
             padding: "2rem",
             marginTop: "3rem",
-            marginLeft: "10rem",
+            marginLeft: "15rem",
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
@@ -166,13 +170,17 @@ const AnswersPage: React.FC = () => {
           ) : current ? (
             <div
               key={current.key}
+              className="fly-in-content"
               style={{
                 color: "#fff",
                 padding: "1rem",
                 borderRadius: 8,
                 background: "rgba(0,0,0,0.5)",
                 width: "100%",
-                marginTop: "4rem", // Push it down a bit so it doesn't overlap with back button
+                marginTop: "10rem", // Push it down a bit so it doesn't overlap with back button
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
               }}
             >
               <div
@@ -196,6 +204,30 @@ const AnswersPage: React.FC = () => {
               >
                 {current.name}
               </div>
+              <hr
+                style={{
+                  width: "100%",
+                  border: "none",
+                  borderTop: "8px solid #500000",
+                  margin: "1rem 0",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                }}
+              />
+              {current.imagePath && current.image && (
+                <img
+                  src={`/${current.imagePath.replace(/^public\//, "")}${
+                    current.image
+                  }.jpg`.replace(/\/\//g, "/")}
+                  alt={current.artist}
+                  style={{
+                    width: "300px",
+                    height: "300px",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 8px rgba(0,0,0,0.5)",
+                  }}
+                />
+              )}
             </div>
           ) : null}
         </div>
