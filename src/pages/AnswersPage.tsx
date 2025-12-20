@@ -141,26 +141,53 @@ const AnswersPage: React.FC = () => {
             >
               <div
                 style={{
-                  fontWeight: 700,
-                  fontSize: "1.2rem",
+                  fontWeight: 600,
+                  fontSize: "2rem",
                   marginBottom: "0.5rem",
+                  textShadow:
+                    "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
                 }}
               >
                 {current.artist}
               </div>
-              <div style={{ fontSize: "1.1rem" }}>{current.name}</div>
+              <div
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: 600,
+                  textShadow:
+                    "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+                }}
+              >
+                {current.name}
+              </div>
             </div>
           ) : null}
         </div>
 
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <div className="overlay-title" style={{ fontSize: "2rem" }}>
+            <div
+              className="overlay-title"
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: 600,
+                color: "#fff",
+                textShadow:
+                  "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+              }}
+            >
               {current ? current.categoryTitle : ""}
             </div>
             <div
               className="overlay-points"
-              style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}
+              style={{
+                fontSize: "1.5rem",
+                marginTop: "0.5rem",
+                fontWeight: 600,
+                color: "#fff",
+                textShadow:
+                  "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+              }}
             >
               {current ? `${current.points} points` : ""}
             </div>
