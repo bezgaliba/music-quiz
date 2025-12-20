@@ -115,8 +115,10 @@ const AnswersPage: React.FC = () => {
       <div style={{ position: "relative", display: "flex", flex: 1 }}>
         <div
           style={{
-            width: "320px",
+            width: "600px",
             padding: "2rem",
+            marginTop: "3rem",
+            marginLeft: "10rem",
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
@@ -142,7 +144,7 @@ const AnswersPage: React.FC = () => {
               <div
                 style={{
                   fontWeight: 600,
-                  fontSize: "2rem",
+                  fontSize: "3rem",
                   marginBottom: "0.5rem",
                   textShadow:
                     "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
@@ -152,7 +154,7 @@ const AnswersPage: React.FC = () => {
               </div>
               <div
                 style={{
-                  fontSize: "1.5rem",
+                  fontSize: "2.2rem",
                   fontWeight: 600,
                   textShadow:
                     "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
@@ -165,13 +167,21 @@ const AnswersPage: React.FC = () => {
         </div>
 
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <div style={{ textAlign: "center", marginTop: "2rem" }}>
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: "2rem",
+              marginRight: "30rem",
+              minWidth: "500px",
+            }}
+          >
             <div
               className="overlay-title"
               style={{
-                fontSize: "2.5rem",
+                fontSize: "3rem",
                 fontWeight: 600,
                 color: "#fff",
+                whiteSpace: "nowrap",
                 textShadow:
                   "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
               }}
@@ -181,10 +191,11 @@ const AnswersPage: React.FC = () => {
             <div
               className="overlay-points"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "2rem",
                 marginTop: "0.5rem",
                 fontWeight: 600,
                 color: "#fff",
+                whiteSpace: "nowrap",
                 textShadow:
                   "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
               }}
@@ -202,30 +213,31 @@ const AnswersPage: React.FC = () => {
             justifyContent: "flex-end",
           }}
         >
-          <button
-            aria-label="Next answer"
-            title="Next answer"
-            onClick={handleNext}
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              border: "none",
-              color: "white",
-              padding: "0.6rem 0.8rem",
-              borderRadius: 8,
-              cursor: items.length === 0 ? "not-allowed" : "pointer",
-              opacity: items.length === 0 ? 0.5 : 1,
-            }}
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          {index < items.length - 1 && (
+            <button
+              aria-label="Next answer"
+              title="Next answer"
+              onClick={handleNext}
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                border: "none",
+                color: "white",
+                padding: "0.6rem 0.8rem",
+                borderRadius: 8,
+                cursor: "pointer",
+              }}
             >
-              <path d="M8 5v14l11-7L8 5z" fill="currentColor" />
-            </svg>
-          </button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 5v14l11-7L8 5z" fill="currentColor" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
     </div>
