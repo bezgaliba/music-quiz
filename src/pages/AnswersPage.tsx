@@ -53,6 +53,8 @@ const AnswersPage: React.FC = () => {
           points,
           artist: answer?.artist ?? "",
           name: answer?.name ?? "",
+          songPath: answer?.songPath ?? "",
+          song: answer?.song ?? "",
         };
       })
       .filter(Boolean) as Array<{
@@ -62,11 +64,39 @@ const AnswersPage: React.FC = () => {
       points: number;
       artist: string;
       name: string;
+      songPath: string;
+      song: string;
     }>;
   }, [usedKeys]);
 
   const current =
     items.length > 0 && index >= 0 ? items[index % items.length] : null;
+
+  useEffect(() => {
+    if (!current) return;
+
+    const { songPath, song } = current;
+    if (!songPath || !song) return;
+
+    // Remove 'public/' prefix if present and ensure leading slash
+    const cleanPath = songPath.replace(/^public\//, "");
+    const url = `/${cleanPath}${song}.mp3`.replace(/\/\//g, "/");
+
+    const audio = new Audio(url);
+    audio.loop = false;
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.error("Audio playback failed:", error);
+      });
+    }
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [current]);
 
   const handleNext = () => {
     if (items.length === 0) return;
