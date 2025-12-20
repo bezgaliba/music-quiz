@@ -48,7 +48,6 @@ const QuestionPage: React.FC = () => {
           <div className="overlay-points">{points} points</div>
         </div>
       </div>
-      {/* Centered play/pause button under the image */}
       <div
         className="audio-control"
         style={{
@@ -62,7 +61,6 @@ const QuestionPage: React.FC = () => {
           aria-label={isPlaying ? "Pause" : "Play"}
           className={`icon-play-btn ${isPlaying ? "playing" : ""}`}
           onClick={async () => {
-            // compute song url
             const numericToQid: Record<string, string> = {
               "30": "1",
               "40": "2",
@@ -78,20 +76,49 @@ const QuestionPage: React.FC = () => {
               ? `${questionMeta.songPath.replace(/^public/, "")}${questionMeta.song}.mp3`
               : null;
             if (!fileUrl) return;
-            if (!audioRef.current) audioRef.current = new Audio(fileUrl);
+
+            if (!audioRef.current) audioRef.current = new Audio();
             const audio = audioRef.current;
+
+            audio.onerror = () => {
+              setIsPlaying(false);
+              try {
+                audio.pause();
+                audio.removeAttribute("src");
+                audio.load();
+              } catch (e) {
+                console.error("Audio error handling failed:", e);
+              }
+            };
+
+            audio.onended = () => setIsPlaying(false);
+
+            if (
+              audio.src !== window.location.origin + fileUrl &&
+              audio.src !== fileUrl
+            ) {
+              audio.src = fileUrl;
+              try {
+                audio.load();
+              } catch (e) {
+                console.error("Audio load error:", e);
+              }
+            }
+
             if (audio.paused) {
-              await audio.play();
-              setIsPlaying(true);
+              try {
+                await audio.play();
+                setIsPlaying(true);
+              } catch {
+                setIsPlaying(false);
+              }
             } else {
               audio.pause();
               setIsPlaying(false);
             }
-            audio.onended = () => setIsPlaying(false);
           }}
         >
           {isPlaying ? (
-            // Pause icon
             <svg
               width="24"
               height="24"
@@ -103,7 +130,6 @@ const QuestionPage: React.FC = () => {
               <rect x="14" y="5" width="4" height="14" fill="currentColor" />
             </svg>
           ) : (
-            // Play icon
             <svg
               width="24"
               height="24"
@@ -126,7 +152,6 @@ const QuestionPage: React.FC = () => {
             setIsPlaying(false);
           }}
         >
-          {/* Fuller replay icon, sized to match play */}
           <svg
             width="24"
             height="24"
