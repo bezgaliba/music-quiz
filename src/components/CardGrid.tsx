@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QuestionCard from "./QuestionCard";
 import data from "../data/questions.json";
@@ -7,8 +7,28 @@ const categories = data.categories as { id: string; title: string }[];
 
 const CardGrid: React.FC = () => {
   const navigate = useNavigate();
+  const [round, setRound] = useState(1);
+
+  useEffect(() => {
+    const r = parseInt(localStorage.getItem("currentRound") || "1", 10);
+    setRound(r);
+  }, []);
+
   return (
     <div className="grid">
+      <div
+        style={{
+          textAlign: "center",
+          marginBottom: "2rem",
+          fontSize: "3rem",
+          fontWeight: 600,
+          color: "#fff",
+          textShadow:
+            "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+        }}
+      >
+        Round {round}
+      </div>
       <button className="end-round-btn" onClick={() => navigate("/answers")}>
         End Round
       </button>

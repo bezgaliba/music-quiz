@@ -75,6 +75,12 @@ const AnswersPage: React.FC = () => {
     try {
       const rawUsed = localStorage.getItem(USED_KEY) || "[]";
       localStorage.setItem(SEEN_KEY, rawUsed);
+
+      const currentRound = parseInt(
+        localStorage.getItem("currentRound") || "1",
+        10,
+      );
+      localStorage.setItem("currentRound", (currentRound + 1).toString());
     } catch (e) {
       console.error("Error saving seen questions:", e);
     }
