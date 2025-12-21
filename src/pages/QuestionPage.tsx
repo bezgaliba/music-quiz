@@ -21,6 +21,9 @@ const QuestionPage: React.FC = () => {
   };
   const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
   const points = POINTS[normalizedId] ?? 0;
+  const questionMeta = cat
+    ? cat.questions.find((q: any) => q.id === normalizedId)
+    : undefined;
   const navigate = useNavigate();
   const imageForPoints = (p: number) => {
     if (p === 30) return "/resources/img/turntable30.jpeg";
@@ -50,6 +53,53 @@ const QuestionPage: React.FC = () => {
           alt="Turntable"
           className="turntable-img"
         />
+        {questionMeta?.header && (
+          <div
+            style={{
+              position: "absolute",
+              top: "8%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "rgba(0,0,0,0.7)",
+              color: "#fff",
+              padding: "0.75rem 1.5rem",
+              borderRadius: "12px",
+              fontWeight: 700,
+              fontSize: "1.4rem",
+              textAlign: "center",
+              pointerEvents: "none",
+              maxWidth: "80%",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.45)",
+            }}
+          >
+            {questionMeta.header}
+          </div>
+        )}
+        {questionMeta?.bonus && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "8%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "rgba(0,0,0,0.7)",
+              color: "#b86f94",
+              padding: "1.1rem 1.9rem",
+              borderRadius: "12px",
+              fontWeight: 700,
+              fontSize: "clamp(28px, 6vw, 48px)",
+              textAlign: "center",
+              pointerEvents: "none",
+              maxWidth: "90%",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.45)",
+              lineHeight: 1.2,
+              textShadow:
+                "-0.6px -0.6px 0 rgba(0,0,0,0.9), 0.6px -0.6px 0 rgba(0,0,0,0.9), -0.6px 0.6px 0 rgba(0,0,0,0.9), 0.6px 0.6px 0 rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.35)",
+            }}
+          >
+            {questionMeta.bonus}
+          </div>
+        )}
         <div
           className="turntable-overlay"
           onClick={() => {
@@ -92,11 +142,11 @@ const QuestionPage: React.FC = () => {
             const normalizedId =
               id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
             const catData = data.categories.find((c: any) => c.id === category);
-            const questionMeta = catData
+            const questionMetaPlay = catData
               ? catData.questions.find((q: any) => q.id === normalizedId)
               : undefined;
-            const fileUrl = questionMeta
-              ? `${questionMeta.songPath.replace(/^public/, "")}${questionMeta.song}.mp3`
+            const fileUrl = questionMetaPlay
+              ? `${questionMetaPlay.songPath.replace(/^public/, "")}${questionMetaPlay.song}.mp3`
               : null;
             if (!fileUrl) return;
 

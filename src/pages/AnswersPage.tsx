@@ -57,6 +57,7 @@ const AnswersPage: React.FC = () => {
           song: answer?.song ?? "",
           imagePath: answer?.imagePath ?? "",
           image: answer?.image ?? "",
+          bonus: answer?.bonus ?? "",
         };
       })
       .filter(Boolean) as Array<{
@@ -70,6 +71,7 @@ const AnswersPage: React.FC = () => {
       song: string;
       imagePath: string;
       image: string;
+      bonus: string;
     }>;
   }, [usedKeys]);
 
@@ -224,21 +226,47 @@ const AnswersPage: React.FC = () => {
                 }}
               />
               {current.imagePath && current.image && (
-                <img
-                  src={`/${current.imagePath.replace(/^public\//, "")}${
-                    current.image
-                  }.jpg`.replace(/\/\//g, "/")}
-                  alt={current.artist}
-                  style={{
-                    width: "100%",
-                    maxWidth: "100%",
-                    height: "auto",
-                    maxHeight: "620px",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
-                  }}
-                />
+                <div style={{ position: "relative", width: "100%" }}>
+                  {current.bonus && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1rem",
+                        right: "1rem",
+                        background: "rgba(184,111,148,0.75)",
+                        color: "#fff",
+                        padding: "1.1rem 1.3rem",
+                        borderRadius: "12px",
+                        fontWeight: 700,
+                        fontSize: "1.35rem",
+                        maxWidth: "55%",
+                        textAlign: "left",
+                        boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
+                        lineHeight: 1.5,
+                        pointerEvents: "none",
+                        textShadow:
+                          "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
+                      }}
+                    >
+                      {current.bonus}
+                    </div>
+                  )}
+                  <img
+                    src={`/${current.imagePath.replace(/^public\//, "")}${
+                      current.image
+                    }.jpg`.replace(/\/\//g, "/")}
+                    alt={current.artist}
+                    style={{
+                      width: "100%",
+                      maxWidth: "100%",
+                      height: "auto",
+                      maxHeight: "620px",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
+                    }}
+                  />
+                </div>
               )}
             </div>
           ) : null}
