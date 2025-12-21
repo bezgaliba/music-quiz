@@ -150,13 +150,22 @@ const AnswersPage: React.FC = () => {
         </svg>
       </button>
 
-      <div style={{ position: "relative", display: "flex", flex: 1 }}>
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          flex: 1,
+          gap: "2rem",
+          padding: "4rem 3rem 3rem",
+          alignItems: "flex-start",
+        }}
+      >
         <div
           style={{
-            width: "600px",
+            flex: 1,
+            maxWidth: "1200px",
             padding: "2rem",
-            marginTop: "3rem",
-            marginLeft: "15rem",
+            marginTop: "5rem",
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
@@ -175,12 +184,13 @@ const AnswersPage: React.FC = () => {
                 color: "#fff",
                 padding: "1rem",
                 borderRadius: 8,
-                background: "rgba(0,0,0,0.5)",
                 width: "100%",
-                marginTop: "10rem", // Push it down a bit so it doesn't overlap with back button
+                marginTop: "4rem",
+                marginLeft: "3rem",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
+                gap: "0.75rem",
               }}
             >
               <div
@@ -220,11 +230,13 @@ const AnswersPage: React.FC = () => {
                   }.jpg`.replace(/\/\//g, "/")}
                   alt={current.artist}
                   style={{
-                    width: "300px",
-                    height: "300px",
+                    width: "100%",
+                    maxWidth: "100%",
+                    height: "auto",
+                    maxHeight: "620px",
                     objectFit: "cover",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0,0,0,0.5)",
+                    borderRadius: "12px",
+                    boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
                   }}
                 />
               )}
@@ -232,51 +244,58 @@ const AnswersPage: React.FC = () => {
           ) : null}
         </div>
 
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: "3rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+            textAlign: "center",
+            minWidth: "320px",
+            padding: "0 1rem",
+            pointerEvents: "none",
+          }}
+        >
           <div
+            className="overlay-title"
             style={{
-              textAlign: "center",
-              marginTop: "2rem",
-              marginRight: "30rem",
-              minWidth: "500px",
+              fontSize: "3rem",
+              fontWeight: 600,
+              color: "#fff",
+              whiteSpace: "nowrap",
+              textShadow:
+                "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
             }}
           >
-            <div
-              className="overlay-title"
-              style={{
-                fontSize: "3rem",
-                fontWeight: 600,
-                color: "#fff",
-                whiteSpace: "nowrap",
-                textShadow:
-                  "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-              }}
-            >
-              {current ? current.categoryTitle : ""}
-            </div>
-            <div
-              className="overlay-points"
-              style={{
-                fontSize: "2rem",
-                marginTop: "0.5rem",
-                fontWeight: 600,
-                color: "#fff",
-                whiteSpace: "nowrap",
-                textShadow:
-                  "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-              }}
-            >
-              {current ? `${current.points} points` : ""}
-            </div>
+            {current ? current.categoryTitle : ""}
+          </div>
+          <div
+            className="overlay-points"
+            style={{
+              fontSize: "2rem",
+              marginTop: "0.5rem",
+              fontWeight: 600,
+              color: "#fff",
+              whiteSpace: "nowrap",
+              textShadow:
+                "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+            }}
+          >
+            {current ? `${current.points} points` : ""}
           </div>
         </div>
 
         <div
           style={{
+            position: "absolute",
+            right: "1.5rem",
+            top: "50%",
+            transform: "translateY(-50%)",
             width: 160,
-            padding: "2rem",
             display: "flex",
             justifyContent: "flex-end",
+            alignItems: "center",
+            zIndex: 5,
           }}
         >
           {index < items.length - 1 && (
