@@ -51,9 +51,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/90s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "90s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30", "year": "1995" },
-  { "id": "2", "artist": "90s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40", "year": "1995" },
-  { "id": "3", "artist": "90s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50", "year": "1995" }
+  { "id": "1", "artist": "Ace of Base", "name": "All That She Wants", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30", "year": "1992" },
+  { "id": "2", "artist": "Semisonic", "name": "Closing Time", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40", "year": "1998" },
+  { "id": "3", "artist": "Liquido", "name": "Narcotic", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50", "year": "1998" }
       ]
     },
     {
@@ -65,9 +65,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "80s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30", "year": "1985" },
-  { "id": "2", "artist": "80s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40", "year": "1985" },
-  { "id": "3", "artist": "80s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50", "year": "1985" }
+  { "id": "1", "artist": "Metallica", "name": "For Whom The Bell Tolls", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30", "year": "1984" },
+  { "id": "2", "artist": "Erasure", "name": "A Little Respect", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40", "year": "1988" },
+  { "id": "3", "artist": "Suzanne Vega", "name": "Luka", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50", "year": "1987" }
       ]
     },
     {
@@ -93,9 +93,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/rock/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Rock Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30", "year": "2001" },
-  { "id": "2", "artist": "Rock Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40", "year": "2001" },
-  { "id": "3", "artist": "Rock Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50", "year": "2001" }
+  { "id": "1", "artist": "Guns N Roses", "name": "November Rain", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30", "year": "1992" },
+  { "id": "2", "artist": "Rainbow", "name": "Since You Been Gone", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40", "year": "1979" },
+  { "id": "3", "artist": "Staind", "name": "It's Been A While", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50", "year": "2001" }
       ]
     },
     {
@@ -107,9 +107,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Electronica Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30", "year": "2010" },
-  { "id": "2", "artist": "Electronica Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/electronica/answers/", "song": "song40", "imagePath": "public/resources/img/electronica/", "image": "img40", "year": "2010" },
-  { "id": "3", "artist": "Electronica Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/electronica/answers/", "song": "song50", "imagePath": "public/resources/img/electronica/", "image": "img50", "year": "2010" }
+  { "id": "1", "artist": "The Prodigy", "name": "Firestarter", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30", "year": "1996" },
+  { "id": "2", "artist": "Moby", "name": "Natural Blues", "songPath": "public/resources/audio/electronica/answers/", "song": "song40", "imagePath": "public/resources/img/electronica/", "image": "img40", "year": "2000" },
+  { "id": "3", "artist": "The Chemical Brothers", "name": "Hey Boy Hey Girl", "songPath": "public/resources/audio/electronica/answers/", "song": "song50", "imagePath": "public/resources/img/electronica/", "image": "img50", "year": "1999" }
       ]
     },
     {
@@ -149,23 +149,23 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Boyband Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30", "year": "1999" },
-  { "id": "2", "artist": "Boyband Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40", "year": "1999" },
-  { "id": "3", "artist": "Boyband Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50", "year": "1999" }
+  { "id": "1", "artist": "NSYNC", "name": "It's Gonna Be Me", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30", "year": "2000" },
+  { "id": "2", "artist": "Blue", "name": "I Can", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40", "year": "2011" },
+  { "id": "3", "artist": "Jonas Brothers", "name": "Burnin' Up", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50", "year": "2008" }
       ]
     },
     {
       "id": "tv",
       "title": "TV Series",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/tvseries/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/tvseries/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/tvseries/", "song": "song50" }
+        { "id": "1", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song30" },
+        { "id": "2", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song40" },
+        { "id": "3", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song50", "bonus": "+10 Name The Artist" }
       ],
       "answers": [
-  { "id": "1", "artist": "TV Series Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/tvseries/answers/", "song": "song30", "imagePath": "public/resources/img/tvseries/", "image": "img30", "year": "2010" },
-  { "id": "2", "artist": "TV Series Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/tvseries/answers/", "song": "song40", "imagePath": "public/resources/img/tvseries/", "image": "img40", "year": "2010" },
-  { "id": "3", "artist": "TV Series Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/tvseries/answers/", "song": "song50", "imagePath": "public/resources/img/tvseries/", "image": "img50", "year": "2010" }
+  { "id": "1", "artist": "Breaking Bad", "songPath": "public/resources/audio/tvseries/answers/", "song": "song30", "imagePath": "public/resources/img/tvseries/", "image": "img30", "year": "2008 - 2013" },
+  { "id": "2", "artist": "Futurama", "songPath": "public/resources/audio/tvseries/answers/", "song": "song40", "imagePath": "public/resources/img/tvseries/", "image": "img40", "year": "1999 - present" },
+  { "id": "3", "artist": "House, M.D.", "songPath": "public/resources/audio/tvseries/answers/", "song": "song50", "imagePath": "public/resources/img/tvseries/", "image": "img50", "year": "2004 - 2012", "bonus": "Massive Attack" }
       ]
     },
     {
@@ -177,9 +177,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Twilight Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30", "year": "2008" },
-  { "id": "2", "artist": "Twilight Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40", "year": "2008" },
-  { "id": "3", "artist": "Twilight Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50", "year": "2008" }
+  { "id": "1", "artist": "Muse", "name": "Supermassive Black Hole", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30", "year": "2006" },
+  { "id": "2", "artist": "Paramore", "name": "Decode", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40", "year": "2008" },
+  { "id": "3", "artist": "Iron & Wine", "name": "Flightless Bird, American Mouth", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50", "year": "2005" }
       ]
     },
     {
@@ -191,9 +191,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Geography Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30", "year": "2014" },
-  { "id": "2", "artist": "Geography Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40", "year": "2014" },
-  { "id": "3", "artist": "Geography Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50", "year": "2014" }
+  { "id": "1", "artist": "Europe", "name": "The Final Countdown", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30", "year": "1986" },
+  { "id": "2", "artist": "America", "name": "A Horse with No Name", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40", "year": "1971" },
+  { "id": "3", "artist": "Kansas", "name": "Dust in the Wind", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50", "year": "1977" }
       ]
     },
     {
@@ -205,9 +205,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/german/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "German Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/german/answers/", "song": "song30", "imagePath": "public/resources/img/german/", "image": "img30", "year": "1983" },
-  { "id": "2", "artist": "German Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/german/answers/", "song": "song40", "imagePath": "public/resources/img/german/", "image": "img40", "year": "1983" },
-  { "id": "3", "artist": "German Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/german/answers/", "song": "song50", "imagePath": "public/resources/img/german/", "image": "img50", "year": "1983" }
+  { "id": "1", "artist": "Rammstein", "name": "Sonne", "songPath": "public/resources/audio/german/answers/", "song": "song30", "imagePath": "public/resources/img/german/", "image": "img30", "year": "2001" },
+  { "id": "2", "artist": "Tokio Hotel", "name": "Durch den Monsun", "songPath": "public/resources/audio/german/answers/", "song": "song40", "imagePath": "public/resources/img/german/", "image": "img40", "year": "2005" },
+  { "id": "3", "artist": "Nena", "name": "99 Luftballons", "songPath": "public/resources/audio/german/answers/", "song": "song50", "imagePath": "public/resources/img/german/", "image": "img50", "year": "1983" }
       ]
     },
     {
@@ -219,9 +219,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Dogs Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30", "year": "2016" },
-  { "id": "2", "artist": "Dogs Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40", "year": "2016" },
-  { "id": "3", "artist": "Dogs Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50", "year": "2016" }
+  { "id": "1", "artist": "Baha Men", "name": "Who Let the Dogs Out", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30", "year": "2000" },
+  { "id": "2", "artist": "Jane's Addiction", "name": "Been Caught Stealing", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40", "year": "1990" },
+  { "id": "3", "artist": "Pink Floyd", "name": "Dogs", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50", "year": "1977" }
       ]
     },
     {
@@ -233,9 +233,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Signature Dance Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30", "year": "1990" },
-  { "id": "2", "artist": "Signature Dance Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40", "year": "1990" },
-  { "id": "3", "artist": "Signature Dance Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50", "year": "1990" }
+  { "id": "1", "artist": "Village People", "name": "Y.M.C.A.", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30", "year": "1978" },
+  { "id": "2", "artist": "Las Ketchup", "name": "The Ketchup Song (Aserejé)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40", "year": "2002" },
+  { "id": "3", "artist": "Soulja Boy", "name": "Crank That (Soulja Boy)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50", "year": "2007" }
       ]
     },
     {
@@ -247,9 +247,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Worst Haircuts Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "year": "1998" },
-  { "id": "2", "artist": "Worst Haircuts Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40", "year": "1998" },
-  { "id": "3", "artist": "Worst Haircuts Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50", "year": "1998" }
+  { "id": "1", "artist": "Jedward", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "year": "2011" },
+  { "id": "2", "artist": "Limahl", "name": "NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40", "year": "1984" },
+  { "id": "3", "artist": "A Flock of Seagulls", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50", "year": "1982" }
       ]
     },
     {
@@ -261,9 +261,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "3-Letter Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30", "year": "2000" },
-  { "id": "2", "artist": "3-Letter Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40", "year": "2000" },
-  { "id": "3", "artist": "3-Letter Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50", "year": "2000" }
+  { "id": "1", "artist": "Sia", "name": "Chandelier", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30", "year": "2014" },
+  { "id": "2", "artist": "R.E.M.", "name": "Losing My Religion", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40", "year": "1991" },
+  { "id": "3", "artist": "HIM", "name": "Join Me in Death", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50", "year": "1999" }
       ]
     },
     {
@@ -275,9 +275,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Foodie Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30", "year": "2011" },
-  { "id": "2", "artist": "Foodie Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40", "year": "2011" },
-  { "id": "3", "artist": "Foodie Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50", "year": "2011" }
+  { "id": "1", "artist": "Bananarama", "name": "Cruel Summer", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30", "year": "1983" },
+  { "id": "2", "artist": "Pearl Jam", "name": "Even Flow", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40", "year": "1991" },
+  { "id": "3", "artist": "Chuck Berry", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50", "year": "1958" }
       ]
     }
   ]

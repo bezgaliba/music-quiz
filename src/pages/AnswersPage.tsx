@@ -4,6 +4,18 @@ import data from "../data/questions.json";
 
 import { incrementRound } from "../gameState";
 
+type Answer = {
+  id: string;
+  artist?: string;
+  name?: string;
+  bonus?: string;
+  songPath?: string;
+  song?: string;
+  imagePath?: string;
+  image?: string;
+  year?: string;
+};
+
 const USED_KEY = "usedQuestions";
 const SEEN_KEY = "seenQuestions";
 
@@ -45,7 +57,9 @@ const AnswersPage: React.FC = () => {
         const qid = numericToQid[pointsStr];
         const category = data.categories.find((c: any) => c.id === catId);
         if (!category) return null;
-        const answer = category.answers?.find((a: any) => a.id === qid);
+        const answer = (category.answers as Answer[] | undefined)?.find(
+          (a) => a.id === qid,
+        );
         return {
           key: k,
           categoryId: catId,
@@ -208,25 +222,29 @@ const AnswersPage: React.FC = () => {
               >
                 {current.artist}
               </div>
-              <div
-                style={{
-                  fontSize: "2.2rem",
-                  fontWeight: 600,
-                  textShadow:
-                    "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-                }}
-              >
-                {current.name}
-              </div>
-              <hr
-                style={{
-                  width: "100%",
-                  border: "none",
-                  borderTop: "8px solid #500000",
-                  margin: "1rem 0",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
-                }}
-              />
+              {current.name ? (
+                <>
+                  <div
+                    style={{
+                      fontSize: "2.2rem",
+                      fontWeight: 600,
+                      textShadow:
+                        "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+                    }}
+                  >
+                    {current.name}
+                  </div>
+                  <hr
+                    style={{
+                      width: "100%",
+                      border: "none",
+                      borderTop: "8px solid #500000",
+                      margin: "1rem 0",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                    }}
+                  />
+                </>
+              ) : null}
               {current.imagePath && current.image && (
                 <div style={{ position: "relative", width: "100%" }}>
                   {current.bonus && (

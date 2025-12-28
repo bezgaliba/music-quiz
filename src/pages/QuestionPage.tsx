@@ -2,6 +2,14 @@ import React, { useRef, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
 
+type Question = {
+  id: string;
+  header?: string;
+  songPath?: string;
+  song?: string;
+  bonus?: string;
+};
+
 const POINTS: Record<string, number> = {
   "1": 30,
   "2": 40,
@@ -22,7 +30,9 @@ const QuestionPage: React.FC = () => {
   const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
   const points = POINTS[normalizedId] ?? 0;
   const questionMeta = cat
-    ? cat.questions.find((q: any) => q.id === normalizedId)
+    ? (cat.questions as Question[] | undefined)?.find(
+        (q) => q.id === normalizedId,
+      )
     : undefined;
   const navigate = useNavigate();
   const imageForPoints = (p: number) => {
