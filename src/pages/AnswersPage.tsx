@@ -55,6 +55,7 @@ const AnswersPage: React.FC = () => {
           name: answer?.name ?? "",
           songPath: answer?.songPath ?? "",
           song: answer?.song ?? "",
+          year: answer?.year ?? "",
           imagePath: answer?.imagePath ?? "",
           image: answer?.image ?? "",
           bonus: answer?.bonus ?? "",
@@ -69,6 +70,7 @@ const AnswersPage: React.FC = () => {
       name: string;
       songPath: string;
       song: string;
+      year: string;
       imagePath: string;
       image: string;
       bonus: string;
@@ -266,6 +268,27 @@ const AnswersPage: React.FC = () => {
                       boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
                     }}
                   />
+                  {current.year && (
+                    <div
+                      aria-hidden
+                      style={{
+                        position: "absolute",
+                        right: "1rem",
+                        bottom: "1rem",
+                        background: "rgba(0,0,0,0.35)",
+                        color: "#fff",
+                        padding: "0.25rem 0.5rem",
+                        borderRadius: 6,
+                        fontWeight: 600,
+                        fontSize: "1.5rem",
+                        textShadow:
+                          "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      {current.year}
+                    </div>
+                  )}
                 </div>
               )}
             </div>

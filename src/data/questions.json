@@ -9,9 +9,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "20s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/20s/answers/", "song": "song30", "imagePath": "public/resources/img/20s/", "image": "img30", "bonus": "Answer to the bonus question."},
-        { "id": "2", "artist": "20s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/20s/answers/", "song": "song40", "imagePath": "public/resources/img/20s/", "image": "img40" },
-        { "id": "3", "artist": "20s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/20s/answers/", "song": "song50", "imagePath": "public/resources/img/20s/", "image": "img50" }
+  { "id": "1", "artist": "20s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/20s/answers/", "song": "song30", "imagePath": "public/resources/img/20s/", "image": "img30", "bonus": "Answer to the bonus question.", "year": "2023"},
+  { "id": "2", "artist": "20s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/20s/answers/", "song": "song40", "imagePath": "public/resources/img/20s/", "image": "img40", "year": "2023" },
+  { "id": "3", "artist": "20s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/20s/answers/", "song": "song50", "imagePath": "public/resources/img/20s/", "image": "img50", "year": "2023" }
       ]
     },
     {
@@ -23,9 +23,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "10s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30" },
-        { "id": "2", "artist": "10s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40" },
-        { "id": "3", "artist": "10s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50" }
+  { "id": "1", "artist": "10s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30", "year": "2012" },
+  { "id": "2", "artist": "10s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40", "year": "2012" },
+  { "id": "3", "artist": "10s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "year": "2012" }
       ]
     },
     {
@@ -37,9 +37,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "00s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30" },
-        { "id": "2", "artist": "00s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
-        { "id": "3", "artist": "00s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
+  { "id": "1", "artist": "00s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "year": "2005" },
+  { "id": "2", "artist": "00s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40", "year": "2005" },
+  { "id": "3", "artist": "00s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50", "year": "2005" }
       ]
     },
     {
@@ -51,9 +51,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/90s/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "90s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30" },
-        { "id": "2", "artist": "90s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40" },
-        { "id": "3", "artist": "90s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50" }
+  { "id": "1", "artist": "90s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30", "year": "1995" },
+  { "id": "2", "artist": "90s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40", "year": "1995" },
+  { "id": "3", "artist": "90s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50", "year": "1995" }
       ]
     },
     {
@@ -65,9 +65,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "80s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30" },
-        { "id": "2", "artist": "80s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40" },
-        { "id": "3", "artist": "80s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50" }
+  { "id": "1", "artist": "80s Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30", "year": "1985" },
+  { "id": "2", "artist": "80s Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40", "year": "1985" },
+  { "id": "3", "artist": "80s Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50", "year": "1985" }
       ]
     },
     {
@@ -79,9 +79,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/indie/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Indie Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/indie/answers/", "song": "song30", "imagePath": "public/resources/img/indie/", "image": "img30" },
-        { "id": "2", "artist": "Indie Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/indie/answers/", "song": "song40", "imagePath": "public/resources/img/indie/", "image": "img40" },
-        { "id": "3", "artist": "Indie Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/indie/answers/", "song": "song50", "imagePath": "public/resources/img/indie/", "image": "img50" }
+  { "id": "1", "artist": "Indie Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/indie/answers/", "song": "song30", "imagePath": "public/resources/img/indie/", "image": "img30", "year": "2018" },
+  { "id": "2", "artist": "Indie Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/indie/answers/", "song": "song40", "imagePath": "public/resources/img/indie/", "image": "img40", "year": "2018" },
+  { "id": "3", "artist": "Indie Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/indie/answers/", "song": "song50", "imagePath": "public/resources/img/indie/", "image": "img50", "year": "2018" }
       ]
     },
     {
@@ -93,9 +93,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/rock/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Rock Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30" },
-        { "id": "2", "artist": "Rock Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40" },
-        { "id": "3", "artist": "Rock Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50" }
+  { "id": "1", "artist": "Rock Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30", "year": "2001" },
+  { "id": "2", "artist": "Rock Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40", "year": "2001" },
+  { "id": "3", "artist": "Rock Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50", "year": "2001" }
       ]
     },
     {
@@ -107,23 +107,23 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Electronica Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30" },
-        { "id": "2", "artist": "Electronica Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/electronica/answers/", "song": "song40", "imagePath": "public/resources/img/electronica/", "image": "img40" },
-        { "id": "3", "artist": "Electronica Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/electronica/answers/", "song": "song50", "imagePath": "public/resources/img/electronica/", "image": "img50" }
+  { "id": "1", "artist": "Electronica Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30", "year": "2010" },
+  { "id": "2", "artist": "Electronica Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/electronica/answers/", "song": "song40", "imagePath": "public/resources/img/electronica/", "image": "img40", "year": "2010" },
+  { "id": "3", "artist": "Electronica Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/electronica/answers/", "song": "song50", "imagePath": "public/resources/img/electronica/", "image": "img50", "year": "2010" }
       ]
     },
     {
       "id": "hiphop",
-      "title": "Hip Hop",
+      "title": "Hip-Hop",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song40" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Hip Hop Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/hiphop/answers/", "song": "song30", "imagePath": "public/resources/img/hiphop/", "image": "img30" },
-        { "id": "2", "artist": "Hip Hop Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/hiphop/answers/", "song": "song40", "imagePath": "public/resources/img/hiphop/", "image": "img40" },
-        { "id": "3", "artist": "Hip Hop Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/hiphop/answers/", "song": "song50", "imagePath": "public/resources/img/hiphop/", "image": "img50" }
+  { "id": "1", "artist": "Hip Hop Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/hiphop/answers/", "song": "song30", "imagePath": "public/resources/img/hiphop/", "image": "img30", "year": "2015" },
+  { "id": "2", "artist": "Hip Hop Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/hiphop/answers/", "song": "song40", "imagePath": "public/resources/img/hiphop/", "image": "img40", "year": "2015" },
+  { "id": "3", "artist": "Hip Hop Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/hiphop/answers/", "song": "song50", "imagePath": "public/resources/img/hiphop/", "image": "img50", "year": "2015" }
       ]
     },
     {
@@ -135,9 +135,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/disco/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Disco Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/disco/answers/", "song": "song30", "imagePath": "public/resources/img/disco/", "image": "img30" },
-        { "id": "2", "artist": "Disco Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/disco/answers/", "song": "song40", "imagePath": "public/resources/img/disco/", "image": "img40" },
-        { "id": "3", "artist": "Disco Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/disco/answers/", "song": "song50", "imagePath": "public/resources/img/disco/", "image": "img50" }
+  { "id": "1", "artist": "Disco Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/disco/answers/", "song": "song30", "imagePath": "public/resources/img/disco/", "image": "img30", "year": "1978" },
+  { "id": "2", "artist": "Disco Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/disco/answers/", "song": "song40", "imagePath": "public/resources/img/disco/", "image": "img40", "year": "1978" },
+  { "id": "3", "artist": "Disco Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/disco/answers/", "song": "song50", "imagePath": "public/resources/img/disco/", "image": "img50", "year": "1978" }
       ]
     },
     {
@@ -149,9 +149,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Boyband Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30" },
-        { "id": "2", "artist": "Boyband Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40" },
-        { "id": "3", "artist": "Boyband Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50" }
+  { "id": "1", "artist": "Boyband Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30", "year": "1999" },
+  { "id": "2", "artist": "Boyband Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40", "year": "1999" },
+  { "id": "3", "artist": "Boyband Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50", "year": "1999" }
       ]
     },
     {
@@ -163,9 +163,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/tvseries/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "TV Series Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/tvseries/answers/", "song": "song30", "imagePath": "public/resources/img/tvseries/", "image": "img30" },
-        { "id": "2", "artist": "TV Series Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/tvseries/answers/", "song": "song40", "imagePath": "public/resources/img/tvseries/", "image": "img40" },
-        { "id": "3", "artist": "TV Series Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/tvseries/answers/", "song": "song50", "imagePath": "public/resources/img/tvseries/", "image": "img50" }
+  { "id": "1", "artist": "TV Series Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/tvseries/answers/", "song": "song30", "imagePath": "public/resources/img/tvseries/", "image": "img30", "year": "2010" },
+  { "id": "2", "artist": "TV Series Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/tvseries/answers/", "song": "song40", "imagePath": "public/resources/img/tvseries/", "image": "img40", "year": "2010" },
+  { "id": "3", "artist": "TV Series Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/tvseries/answers/", "song": "song50", "imagePath": "public/resources/img/tvseries/", "image": "img50", "year": "2010" }
       ]
     },
     {
@@ -177,9 +177,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Twilight Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30" },
-        { "id": "2", "artist": "Twilight Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40" },
-        { "id": "3", "artist": "Twilight Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50" }
+  { "id": "1", "artist": "Twilight Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30", "year": "2008" },
+  { "id": "2", "artist": "Twilight Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40", "year": "2008" },
+  { "id": "3", "artist": "Twilight Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50", "year": "2008" }
       ]
     },
     {
@@ -191,9 +191,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Geography Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30" },
-        { "id": "2", "artist": "Geography Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40" },
-        { "id": "3", "artist": "Geography Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50" }
+  { "id": "1", "artist": "Geography Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30", "year": "2014" },
+  { "id": "2", "artist": "Geography Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40", "year": "2014" },
+  { "id": "3", "artist": "Geography Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50", "year": "2014" }
       ]
     },
     {
@@ -205,9 +205,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/german/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "German Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/german/answers/", "song": "song30", "imagePath": "public/resources/img/german/", "image": "img30" },
-        { "id": "2", "artist": "German Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/german/answers/", "song": "song40", "imagePath": "public/resources/img/german/", "image": "img40" },
-        { "id": "3", "artist": "German Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/german/answers/", "song": "song50", "imagePath": "public/resources/img/german/", "image": "img50" }
+  { "id": "1", "artist": "German Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/german/answers/", "song": "song30", "imagePath": "public/resources/img/german/", "image": "img30", "year": "1983" },
+  { "id": "2", "artist": "German Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/german/answers/", "song": "song40", "imagePath": "public/resources/img/german/", "image": "img40", "year": "1983" },
+  { "id": "3", "artist": "German Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/german/answers/", "song": "song50", "imagePath": "public/resources/img/german/", "image": "img50", "year": "1983" }
       ]
     },
     {
@@ -219,9 +219,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Dogs Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30" },
-        { "id": "2", "artist": "Dogs Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40" },
-        { "id": "3", "artist": "Dogs Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50" }
+  { "id": "1", "artist": "Dogs Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30", "year": "2016" },
+  { "id": "2", "artist": "Dogs Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40", "year": "2016" },
+  { "id": "3", "artist": "Dogs Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50", "year": "2016" }
       ]
     },
     {
@@ -233,9 +233,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Signature Dance Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30" },
-        { "id": "2", "artist": "Signature Dance Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40" },
-        { "id": "3", "artist": "Signature Dance Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50" }
+  { "id": "1", "artist": "Signature Dance Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30", "year": "1990" },
+  { "id": "2", "artist": "Signature Dance Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40", "year": "1990" },
+  { "id": "3", "artist": "Signature Dance Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50", "year": "1990" }
       ]
     },
     {
@@ -247,9 +247,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Worst Haircuts Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30" },
-        { "id": "2", "artist": "Worst Haircuts Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
-        { "id": "3", "artist": "Worst Haircuts Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
+  { "id": "1", "artist": "Worst Haircuts Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "year": "1998" },
+  { "id": "2", "artist": "Worst Haircuts Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40", "year": "1998" },
+  { "id": "3", "artist": "Worst Haircuts Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50", "year": "1998" }
       ]
     },
     {
@@ -261,9 +261,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "3-Letter Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30" },
-        { "id": "2", "artist": "3-Letter Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40" },
-        { "id": "3", "artist": "3-Letter Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50" }
+  { "id": "1", "artist": "3-Letter Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30", "year": "2000" },
+  { "id": "2", "artist": "3-Letter Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40", "year": "2000" },
+  { "id": "3", "artist": "3-Letter Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50", "year": "2000" }
       ]
     },
     {
@@ -275,9 +275,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song50" }
       ],
       "answers": [
-        { "id": "1", "artist": "Foodie Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30" },
-        { "id": "2", "artist": "Foodie Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40" },
-        { "id": "3", "artist": "Foodie Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50" }
+  { "id": "1", "artist": "Foodie Artist 1", "name": "Song Title 30", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30", "year": "2011" },
+  { "id": "2", "artist": "Foodie Artist 2", "name": "Song Title 40", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40", "year": "2011" },
+  { "id": "3", "artist": "Foodie Artist 3", "name": "Song Title 50", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50", "year": "2011" }
       ]
     }
   ]
