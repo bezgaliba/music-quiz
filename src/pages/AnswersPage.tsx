@@ -246,7 +246,14 @@ const AnswersPage: React.FC = () => {
                 </>
               ) : null}
               {current.imagePath && current.image && (
-                <div style={{ position: "relative", width: "100%" }}>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "fit-content",
+                    maxWidth: "100%",
+                    display: "inline-block",
+                  }}
+                >
                   {current.bonus && (
                     <div
                       style={{
@@ -284,6 +291,7 @@ const AnswersPage: React.FC = () => {
                       objectFit: "cover",
                       borderRadius: "12px",
                       boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
+                      display: "block",
                     }}
                   />
                   {current.year && (
@@ -302,6 +310,7 @@ const AnswersPage: React.FC = () => {
                         textShadow:
                           "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
                         pointerEvents: "none",
+                        zIndex: 2,
                       }}
                     >
                       {current.year}

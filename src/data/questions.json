@@ -261,9 +261,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Sia", "name": "Chandelier", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30", "year": "2014" },
-  { "id": "2", "artist": "R.E.M.", "name": "Losing My Religion", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40", "year": "1991" },
-  { "id": "3", "artist": "HIM", "name": "Join Me in Death", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50", "year": "1999" }
+  { "id": "1", "artist": "Sia", "name": "Clap Your Hands", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30", "year": "2010" },
+  { "id": "2", "artist": "R.E.M.", "name": "Man on the Moon", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40", "year": "1992" },
+  { "id": "3", "artist": "HIM", "name": "Wings of a Butterfly", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50", "year": "2005" }
       ]
     },
     {
@@ -275,8 +275,8 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Bananarama", "name": "Cruel Summer", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30", "year": "1983" },
-  { "id": "2", "artist": "Pearl Jam", "name": "Even Flow", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40", "year": "1991" },
+  { "id": "1", "artist": "Bananarama", "name": "Venus", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30", "year": "1986" },
+  { "id": "2", "artist": "Pearl Jam", "name": "Alive", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40", "year": "1991" },
   { "id": "3", "artist": "Chuck Berry", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50", "year": "1958" }
       ]
     }
