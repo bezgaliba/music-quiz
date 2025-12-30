@@ -216,6 +216,7 @@ const AnswersPage: React.FC = () => {
                   fontWeight: 600,
                   fontSize: "3rem",
                   marginBottom: "0.5rem",
+                  color: "red",
                   textShadow:
                     "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
                 }}

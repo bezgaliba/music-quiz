@@ -71,20 +71,6 @@
       ]
     },
     {
-      "id": "indie",
-      "title": "Indie Covers",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/indie/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/indie/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/indie/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Indie Artist 1", "year": "2018", "name": "Song Title 30", "songPath": "public/resources/audio/indie/answers/", "song": "song30", "imagePath": "public/resources/img/indie/", "image": "img30" },
-  { "id": "2", "artist": "Indie Artist 2", "year": "2018", "name": "Song Title 40", "songPath": "public/resources/audio/indie/answers/", "song": "song40", "imagePath": "public/resources/img/indie/", "image": "img40" },
-  { "id": "3", "artist": "Indie Artist 3", "year": "2018", "name": "Song Title 50", "songPath": "public/resources/audio/indie/answers/", "song": "song50", "imagePath": "public/resources/img/indie/", "image": "img50" }
-      ]
-    },
-    {
       "id": "rock",
       "title": "Rock",
       "questions": [
@@ -126,18 +112,32 @@
   { "id": "3", "artist": "Hip Hop Artist 3", "year": "2015", "name": "Song Title 50", "songPath": "public/resources/audio/hiphop/answers/", "song": "song50", "imagePath": "public/resources/img/hiphop/", "image": "img50" }
       ]
     },
-    {
-      "id": "disco",
-      "title": "Disco",
+        {
+      "id": "countrypop",
+      "title": "Country Pop",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/disco/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/disco/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/disco/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Disco Artist 1", "year": "1978", "name": "Song Title 30", "songPath": "public/resources/audio/disco/answers/", "song": "song30", "imagePath": "public/resources/img/disco/", "image": "img30" },
-  { "id": "2", "artist": "Disco Artist 2", "year": "1978", "name": "Song Title 40", "songPath": "public/resources/audio/disco/answers/", "song": "song40", "imagePath": "public/resources/img/disco/", "image": "img40" },
-  { "id": "3", "artist": "Disco Artist 3", "year": "1978", "name": "Song Title 50", "songPath": "public/resources/audio/disco/answers/", "song": "song50", "imagePath": "public/resources/img/disco/", "image": "img50" }
+  { "id": "1", "artist": "Shania Twain", "year": "1998", "name": "That Don't Impress Me Much", "songPath": "public/resources/audio/countrypop/answers/", "song": "song30", "imagePath": "public/resources/img/countrypop/", "image": "img30" },
+  { "id": "2", "artist": "Dolly Parton", "year": "1980", "name": "9 to 5", "songPath": "public/resources/audio/countrypop/answers/", "song": "song40", "imagePath": "public/resources/img/countrypop/", "image": "img40" },
+  { "id": "3", "artist": "Shaboozey", "year": "2024", "name": "A Bar Song (Tipsy)", "songPath": "public/resources/audio/countrypop/answers/", "song": "song50", "imagePath": "public/resources/img/countrypop/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "debutalbums",
+      "title": "Debut Albums",
+      "questions": [
+        { "id": "1", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song30" },
+        { "id": "2", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song40" },
+        { "id": "3", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Hot Fuss", "year": "2004", "name": "The Killers", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song30", "imagePath": "public/resources/img/debutalbums/", "image": "img30" },
+  { "id": "2", "artist": "19", "year": "2008", "name": "Adele", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song40", "imagePath": "public/resources/img/debutalbums/", "image": "img40" },
+  { "id": "3", "artist": "SOUR", "year": "2021", "name": "Olivia Rodrigo", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song50", "imagePath": "public/resources/img/debutalbums/", "image": "img50" }
       ]
     },
     {
@@ -193,7 +193,7 @@
       "answers": [
   { "id": "1", "artist": "Europe", "year": "1986", "name": "The Final Countdown", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30" },
   { "id": "2", "artist": "America", "year": "1971", "name": "A Horse with No Name", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40" },
-  { "id": "3", "artist": "Kansas", "year": "1977", "name": "Dust in the Wind", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50" }
+  { "id": "3", "artist": "Kansas", "year": "1976", "name": "Carry on Wayward Son", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50" }
       ]
     },
     {
@@ -248,7 +248,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30" },
-  { "id": "2", "artist": "Limahl", "year": "1984", "name": "NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
+  { "id": "2", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
   { "id": "3", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
       ]
     },
