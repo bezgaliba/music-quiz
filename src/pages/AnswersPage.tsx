@@ -191,9 +191,7 @@ const AnswersPage: React.FC = () => {
           }}
         >
           {items.length === 0 ? (
-            <div style={{ color: "white" }}>
-              No crossed answers for this round.
-            </div>
+            <div style={{ color: "white" }}>No new answers for this round.</div>
           ) : current ? (
             <div
               key={current.key}

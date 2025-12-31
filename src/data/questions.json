@@ -4,14 +4,14 @@
       "id": "20s",
       "title": "20s",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song30", "bonus": "+10 Bonus: This is some kind of a question?" },
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song40" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "20s Artist 1", "year": "2023", "name": "Song Title 30", "songPath": "public/resources/audio/20s/answers/", "song": "song30", "imagePath": "public/resources/img/20s/", "image": "img30", "bonus": "Answer to the bonus question."},
-  { "id": "2", "artist": "20s Artist 2", "year": "2023", "name": "Song Title 40", "songPath": "public/resources/audio/20s/answers/", "song": "song40", "imagePath": "public/resources/img/20s/", "image": "img40" },
-  { "id": "3", "artist": "20s Artist 3", "year": "2023", "name": "Song Title 50", "songPath": "public/resources/audio/20s/answers/", "song": "song50", "imagePath": "public/resources/img/20s/", "image": "img50" }
+  { "id": "1", "artist": "Harry Styles", "year": "2022", "name": "As It Was", "songPath": "public/resources/audio/20s/answers/", "song": "song30", "imagePath": "public/resources/img/20s/", "image": "img30"},
+  { "id": "2", "artist": "Glass Animals", "year": "2020", "name": "Heat Waves", "songPath": "public/resources/audio/20s/answers/", "song": "song40", "imagePath": "public/resources/img/20s/", "image": "img40" },
+  { "id": "3", "artist": "Chapell Roan", "year": "2020", "name": "Pink Pony Club", "songPath": "public/resources/audio/20s/answers/", "song": "song50", "imagePath": "public/resources/img/20s/", "image": "img50" }
       ]
     },
     {
@@ -20,26 +20,26 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50", "bonus": "+10 Name the Featured Vocals" }
       ],
       "answers": [
-  { "id": "1", "artist": "10s Artist 1", "year": "2012", "name": "Song Title 30", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30" },
-  { "id": "2", "artist": "10s Artist 2", "year": "2012", "name": "Song Title 40", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40" },
-  { "id": "3", "artist": "10s Artist 3", "year": "2012", "name": "Song Title 50", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50" }
+  { "id": "1", "artist": "Drake", "year": "2015", "name": "Hotline Bling", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30" },
+  { "id": "2", "artist": "Billie Eilish", "year": "2019", "name": "bury a friend", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40" },
+  { "id": "3", "artist": "Sigma", "year": "2014", "name": "Changing", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "bonus": "Paloma Faith" }
       ]
     },
     {
       "id": "00s",
       "title": "00s",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30" },
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30", "bonus": "+10 Name the Featured Artist"},
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song40" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "00s Artist 1", "year": "2005", "name": "Song Title 30", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30" },
-  { "id": "2", "artist": "00s Artist 2", "year": "2005", "name": "Song Title 40", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
-  { "id": "3", "artist": "00s Artist 3", "year": "2005", "name": "Song Title 50", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
+  { "id": "1", "artist": "Snoop Dogg", "year": "2004", "name": "Drop It Like It's Hot", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "bonus": "Pharrell Williams" },
+  { "id": "2", "artist": "Britney Spears", "year": "2004", "name": "Everytime", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
+  { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
       ]
     },
     {
@@ -96,20 +96,6 @@
   { "id": "1", "artist": "The Prodigy", "year": "1996", "name": "Firestarter", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30" },
   { "id": "2", "artist": "Moby", "year": "2000", "name": "Natural Blues", "songPath": "public/resources/audio/electronica/answers/", "song": "song40", "imagePath": "public/resources/img/electronica/", "image": "img40" },
   { "id": "3", "artist": "The Chemical Brothers", "year": "1999", "name": "Hey Boy Hey Girl", "songPath": "public/resources/audio/electronica/answers/", "song": "song50", "imagePath": "public/resources/img/electronica/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "hiphop",
-      "title": "Hip-Hop",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Hip Hop Artist 1", "year": "2015", "name": "Song Title 30", "songPath": "public/resources/audio/hiphop/answers/", "song": "song30", "imagePath": "public/resources/img/hiphop/", "image": "img30" },
-  { "id": "2", "artist": "Hip Hop Artist 2", "year": "2015", "name": "Song Title 40", "songPath": "public/resources/audio/hiphop/answers/", "song": "song40", "imagePath": "public/resources/img/hiphop/", "image": "img40" },
-  { "id": "3", "artist": "Hip Hop Artist 3", "year": "2015", "name": "Song Title 50", "songPath": "public/resources/audio/hiphop/answers/", "song": "song50", "imagePath": "public/resources/img/hiphop/", "image": "img50" }
       ]
     },
         {
@@ -173,12 +159,12 @@
       "title": "Twilight Soundtrack",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Specifically which Movie?" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ],
       "answers": [
   { "id": "1", "artist": "Muse", "year": "2006", "name": "Supermassive Black Hole", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30" },
-  { "id": "2", "artist": "Paramore", "year": "2008", "name": "Decode", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40" },
+  { "id": "2", "artist": "Paramore", "year": "2008", "name": "Decode", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40", "bonus": "Twilight (2008)" },
   { "id": "3", "artist": "Iron & Wine", "year": "2005", "name": "Flightless Bird, American Mouth", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50" }
       ]
     },
@@ -278,6 +264,20 @@
   { "id": "1", "artist": "Bananarama", "year": "1986", "name": "Venus", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30" },
   { "id": "2", "artist": "Pearl Jam", "year": "1991", "name": "Alive", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40" },
   { "id": "3", "artist": "Chuck Berry", "year": "1958", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "simlish",
+      "title": "Simlish ❇️",
+      "questions": [
+        { "id": "1", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song30" },
+        { "id": "2", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song40" },
+        { "id": "3", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Lily Allen", "year": "2006", "name": "Smile (A.K.A. Smeel)", "songPath": "public/resources/audio/simlish/answers/", "song": "song30", "imagePath": "public/resources/img/simlish/", "image": "img30" },
+  { "id": "2", "artist": "The Pussycat Dolls", "year": "2004", "name": "Don't Cha (A.K.A. DOBA)", "songPath": "public/resources/audio/simlish/answers/", "song": "song40", "imagePath": "public/resources/img/simlish/", "image": "img40" },
+  { "id": "3", "artist": "Lady Antebellum", "year": "2010", "name": "Need You Now (A.K.A. Neeba Zow)", "songPath": "public/resources/audio/simlish/answers/", "song": "song50", "imagePath": "public/resources/img/simlish/", "image": "img50" }
       ]
     }
   ]
