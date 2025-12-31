@@ -34,12 +34,12 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30", "bonus": "+10 Name the Featured Artist"},
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50", "bonus": "+10 How old was the Artist at the time of song release?" }
       ],
       "answers": [
   { "id": "1", "artist": "Snoop Dogg", "year": "2004", "name": "Drop It Like It's Hot", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "bonus": "Pharrell Williams" },
   { "id": "2", "artist": "Britney Spears", "year": "2004", "name": "Everytime", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
-  { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
+  { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50", "bonus": "13 years old" }
       ]
     },
     {
@@ -159,7 +159,7 @@
       "title": "Twilight Soundtrack",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Specifically which Movie?" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Specific Movie?" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ],
       "answers": [
@@ -228,12 +228,12 @@
       "id": "worsthaircuts",
       "title": "Worst Haircuts",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song30" },
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song30", "bonus": "+10 Which country did they represent at Eurovision?" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song40" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30" },
+  { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "bonus": "Ireland 🇮🇪" },
   { "id": "2", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
   { "id": "3", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
       ]
