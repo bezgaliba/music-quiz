@@ -38,7 +38,6 @@ const AnswersPage: React.FC = () => {
       const rawSeen = localStorage.getItem(SEEN_KEY) || "[]";
       const seen = JSON.parse(rawSeen) as string[];
 
-      // Only show questions that are in 'used' but NOT in 'seen'
       const newItems = allUsed.filter((k) => !seen.includes(k));
       setUsedKeys(newItems);
     } catch {
@@ -100,7 +99,6 @@ const AnswersPage: React.FC = () => {
     const { songPath, song } = current;
     if (!songPath || !song) return;
 
-    // Remove 'public/' prefix if present and ensure leading slash
     const cleanPath = songPath.replace(/^public\//, "");
     const url = `/${cleanPath}${song}.mp3`.replace(/\/\//g, "/");
 

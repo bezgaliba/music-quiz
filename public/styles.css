@@ -320,7 +320,6 @@ body{
   color: #fff;
 }
 
-/* audio control button under the turntable */
 .audio-control{
   display: flex;
   justify-content: center;

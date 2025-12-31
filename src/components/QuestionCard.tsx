@@ -40,8 +40,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     setUsed(next);
     try {
       localStorage.setItem(USED_KEY, JSON.stringify(Array.from(next)));
-    } catch {
-      // ignore
+    } catch (e) {
+      console.error("Error saving used questions:", e);
     }
   };
 
