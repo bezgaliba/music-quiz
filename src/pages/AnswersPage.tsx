@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
+import { buildAssetUrl, buildAudioUrl } from "../utils/assets";
 
 import { incrementRound } from "../gameState";
 
@@ -98,9 +99,8 @@ const AnswersPage: React.FC = () => {
 
     const { songPath, song } = current;
     if (!songPath || !song) return;
-
-    const cleanPath = songPath.replace(/^public\//, "");
-    const url = `/${cleanPath}${song}.mp3`.replace(/\/\//g, "/");
+    const url = buildAudioUrl(songPath, song);
+    if (!url) return;
 
     const audio = new Audio(url);
     audio.loop = false;
@@ -140,7 +140,7 @@ const AnswersPage: React.FC = () => {
       className="answers-page"
       style={{
         minHeight: "100vh",
-        backgroundImage: "url('/resources/img/answersBackground.jpg')",
+        backgroundImage: `url('${buildAssetUrl("resources/img/answersBackground.jpg")}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -276,9 +276,9 @@ const AnswersPage: React.FC = () => {
                     </div>
                   )}
                   <img
-                    src={`/${current.imagePath.replace(/^public\//, "")}${
-                      current.image
-                    }.jpg`.replace(/\/\//g, "/")}
+                    src={buildAssetUrl(
+                      `${current.imagePath}${current.image}.jpg`,
+                    )}
                     alt={current.artist}
                     style={{
                       width: "100%",
