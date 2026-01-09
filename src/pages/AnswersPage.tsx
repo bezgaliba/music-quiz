@@ -1,7 +1,11 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
-import { buildAssetUrl, buildAudioUrl } from "../utils/assets";
+import {
+  buildAssetUrl,
+  buildAssetUrlVariants,
+  buildAudioUrlVariants,
+} from "../utils/assets";
 
 import { incrementRound } from "../gameState";
 
@@ -30,7 +34,10 @@ const AnswersPage: React.FC = () => {
   const navigate = useNavigate();
   const [usedKeys, setUsedKeys] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
-  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioQueueRef = useRef<string[]>([]);
+  const imageQueueRef = useRef<string[]>([]);
+  const [imageSrc, setImageSrc] = useState<string>("");
 
   useEffect(() => {
     try {
@@ -96,32 +103,58 @@ const AnswersPage: React.FC = () => {
     items.length > 0 && index >= 0 ? items[index % items.length] : null;
 
   useEffect(() => {
+    if (current?.imagePath && current.image) {
+      const variants = buildAssetUrlVariants(
+        `${current.imagePath}${current.image}.jpg`,
+      );
+      setImageSrc(variants[0] ?? "");
+      imageQueueRef.current = variants.slice(1);
+    } else {
+      setImageSrc("");
+      imageQueueRef.current = [];
+    }
+  }, [current?.imagePath, current?.image]);
+
+  useEffect(() => {
     if (!current) return;
 
     const { songPath, song } = current;
     if (!songPath || !song) return;
-    const url = buildAudioUrl(songPath, song);
-    if (!url) return;
+    const urls = buildAudioUrlVariants(songPath, song);
+    if (!urls.length) return;
 
-    if (!audioRef.current) {
-      audioRef.current = new Audio();
-      audioRef.current.loop = false;
-    }
+    audioQueueRef.current = [...urls];
 
-    const audio = audioRef.current;
-    audio.src = url;
-    audio.currentTime = 0;
+    const playNext = () => {
+      const next = audioQueueRef.current.shift();
+      if (!next) return;
 
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch((error) => {
-        console.warn("Autoplay blocked or failed:", error);
-      });
-    }
+      if (!audioRef.current) {
+        audioRef.current = new Audio();
+        audioRef.current.loop = false;
+      }
+
+      const audio = audioRef.current;
+      audio.onerror = () => playNext();
+      audio.src = next;
+      audio.currentTime = 0;
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn("Autoplay blocked or failed, trying fallback:", error);
+          playNext();
+        });
+      }
+    };
+
+    playNext();
 
     return () => {
-      audio.pause();
-      audio.currentTime = 0;
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
     };
   }, [current]);
 
@@ -284,9 +317,7 @@ const AnswersPage: React.FC = () => {
                       </div>
                     )}
                     <img
-                      src={buildAssetUrl(
-                        `${current.imagePath}${current.image}.jpg`,
-                      )}
+                      src={imageSrc}
                       alt={current.artist}
                       style={{
                         width: "100%",
@@ -297,6 +328,10 @@ const AnswersPage: React.FC = () => {
                         borderRadius: "12px",
                         boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
                         display: "block",
+                      }}
+                      onError={() => {
+                        const next = imageQueueRef.current.shift();
+                        if (next) setImageSrc(next);
                       }}
                     />
                     {current.year && (
