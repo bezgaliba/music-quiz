@@ -30,6 +30,8 @@ const AnswersPage: React.FC = () => {
   const navigate = useNavigate();
   const [usedKeys, setUsedKeys] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const [needsPlayClick, setNeedsPlayClick] = useState(false);
 
   useEffect(() => {
     try {
@@ -102,13 +104,22 @@ const AnswersPage: React.FC = () => {
     const url = buildAudioUrl(songPath, song);
     if (!url) return;
 
-    const audio = new Audio(url);
-    audio.loop = false;
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+      audioRef.current.loop = false;
+    }
+
+    const audio = audioRef.current;
+    audio.src = url;
+    audio.currentTime = 0;
+
+    setNeedsPlayClick(false);
 
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.catch((error) => {
-        console.error("Audio playback failed:", error);
+        console.warn("Autoplay blocked or failed, user click needed:", error);
+        setNeedsPlayClick(true);
       });
     }
 
@@ -117,6 +128,15 @@ const AnswersPage: React.FC = () => {
       audio.currentTime = 0;
     };
   }, [current]);
+
+  const handleManualPlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio
+      .play()
+      .then(() => setNeedsPlayClick(false))
+      .catch((e) => console.error("Audio playback failed:", e));
+  };
 
   const handleNext = () => {
     if (items.length === 0) return;
@@ -243,77 +263,97 @@ const AnswersPage: React.FC = () => {
                 </>
               ) : null}
               {current.imagePath && current.image && (
-                <div
-                  style={{
-                    position: "relative",
-                    width: "fit-content",
-                    maxWidth: "100%",
-                    display: "inline-block",
-                  }}
-                >
-                  {current.bonus && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "1rem",
-                        right: "1rem",
-                        background: "rgba(184,111,148,0.75)",
-                        color: "#fff",
-                        padding: "1.1rem 1.3rem",
-                        borderRadius: "12px",
-                        fontWeight: 700,
-                        fontSize: "1.35rem",
-                        maxWidth: "55%",
-                        textAlign: "left",
-                        boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
-                        lineHeight: 1.5,
-                        pointerEvents: "none",
-                        textShadow:
-                          "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
-                      }}
-                    >
-                      {current.bonus}
-                    </div>
-                  )}
-                  <img
-                    src={buildAssetUrl(
-                      `${current.imagePath}${current.image}.jpg`,
-                    )}
-                    alt={current.artist}
+                <>
+                  <div
                     style={{
-                      width: "100%",
+                      position: "relative",
+                      width: "fit-content",
                       maxWidth: "100%",
-                      height: "auto",
-                      maxHeight: "620px",
-                      objectFit: "cover",
-                      borderRadius: "12px",
-                      boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
-                      display: "block",
+                      display: "inline-block",
                     }}
-                  />
-                  {current.year && (
-                    <div
-                      aria-hidden
+                  >
+                    {current.bonus && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "1rem",
+                          right: "1rem",
+                          background: "rgba(184,111,148,0.75)",
+                          color: "#fff",
+                          padding: "1.1rem 1.3rem",
+                          borderRadius: "12px",
+                          fontWeight: 700,
+                          fontSize: "1.35rem",
+                          maxWidth: "55%",
+                          textAlign: "left",
+                          boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
+                          lineHeight: 1.5,
+                          pointerEvents: "none",
+                          textShadow:
+                            "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
+                        }}
+                      >
+                        {current.bonus}
+                      </div>
+                    )}
+                    <img
+                      src={buildAssetUrl(
+                        `${current.imagePath}${current.image}.jpg`,
+                      )}
+                      alt={current.artist}
                       style={{
-                        position: "absolute",
-                        right: "1rem",
-                        bottom: "1rem",
-                        background: "rgba(0,0,0,0.35)",
+                        width: "100%",
+                        maxWidth: "100%",
+                        height: "auto",
+                        maxHeight: "620px",
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                        boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
+                        display: "block",
+                      }}
+                    />
+                    {current.year && (
+                      <div
+                        aria-hidden
+                        style={{
+                          position: "absolute",
+                          right: "1rem",
+                          bottom: "1rem",
+                          background: "rgba(0,0,0,0.35)",
+                          color: "#fff",
+                          padding: "0.25rem 0.5rem",
+                          borderRadius: 6,
+                          fontWeight: 600,
+                          fontSize: "1.5rem",
+                          textShadow:
+                            "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+                          pointerEvents: "none",
+                          zIndex: 2,
+                        }}
+                      >
+                        {current.year}
+                      </div>
+                    )}
+                  </div>
+                  {needsPlayClick && (
+                    <button
+                      type="button"
+                      onClick={handleManualPlay}
+                      style={{
+                        marginTop: "1rem",
+                        padding: "0.75rem 1.25rem",
+                        borderRadius: 10,
+                        border: "2px solid rgba(255,255,255,0.2)",
+                        background: "rgba(0,0,0,0.45)",
                         color: "#fff",
-                        padding: "0.25rem 0.5rem",
-                        borderRadius: 6,
+                        cursor: "pointer",
                         fontWeight: 600,
-                        fontSize: "1.5rem",
-                        textShadow:
-                          "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-                        pointerEvents: "none",
-                        zIndex: 2,
                       }}
                     >
-                      {current.year}
-                    </div>
+                      Play answer audio
+                    </button>
                   )}
-                </div>
+                </>
               )}
             </div>
           ) : null}

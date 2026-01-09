@@ -6,7 +6,8 @@ const normalizePath = (p: string) =>
 export const buildAssetUrl = (relativePath: string) => {
   const cleaned = normalizePath(relativePath);
   if (!cleaned) return "";
-  return baseUrl ? `${baseUrl}/${cleaned}` : `/${cleaned}`;
+  const encoded = encodeURI(cleaned);
+  return baseUrl ? `${baseUrl}/${encoded}` : `/${encoded}`;
 };
 
 export const buildAudioUrl = (songPath: string, song: string) => {

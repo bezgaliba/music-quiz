@@ -255,7 +255,7 @@ body{
 .question-page{
   min-height: 100vh;
   padding: 24px;
-  background-image: url('/resources/img/background.jpeg');
+  background-image: url('resources/img/background.jpeg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
