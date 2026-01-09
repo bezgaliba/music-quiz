@@ -38,7 +38,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Snoop Dogg", "year": "2004", "name": "Drop It Like It's Hot", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "bonus": "Pharrell Williams" },
-  { "id": "2", "artist": "Britney Spears", "year": "2004", "name": "Everytime", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
+  { "id": "2", "artist": "Girls Aloud", "year": "2002", "name": "Sound of the Underground", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
   { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50", "bonus": "13 years old" }
       ]
     },
@@ -159,7 +159,7 @@
       "title": "Twilight Soundtrack",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Specific Movie?" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Name the Specific Movie" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
       ],
       "answers": [
