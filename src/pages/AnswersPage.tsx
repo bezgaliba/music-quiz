@@ -31,7 +31,6 @@ const AnswersPage: React.FC = () => {
   const [usedKeys, setUsedKeys] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
-  const [needsPlayClick, setNeedsPlayClick] = useState(false);
 
   useEffect(() => {
     try {
@@ -113,13 +112,10 @@ const AnswersPage: React.FC = () => {
     audio.src = url;
     audio.currentTime = 0;
 
-    setNeedsPlayClick(false);
-
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.catch((error) => {
-        console.warn("Autoplay blocked or failed, user click needed:", error);
-        setNeedsPlayClick(true);
+        console.warn("Autoplay blocked or failed:", error);
       });
     }
 
@@ -128,15 +124,6 @@ const AnswersPage: React.FC = () => {
       audio.currentTime = 0;
     };
   }, [current]);
-
-  const handleManualPlay = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio
-      .play()
-      .then(() => setNeedsPlayClick(false))
-      .catch((e) => console.error("Audio playback failed:", e));
-  };
 
   const handleNext = () => {
     if (items.length === 0) return;
@@ -335,24 +322,6 @@ const AnswersPage: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  {needsPlayClick && (
-                    <button
-                      type="button"
-                      onClick={handleManualPlay}
-                      style={{
-                        marginTop: "1rem",
-                        padding: "0.75rem 1.25rem",
-                        borderRadius: 10,
-                        border: "2px solid rgba(255,255,255,0.2)",
-                        background: "rgba(0,0,0,0.45)",
-                        color: "#fff",
-                        cursor: "pointer",
-                        fontWeight: 600,
-                      }}
-                    >
-                      Play answer audio
-                    </button>
-                  )}
                 </>
               )}
             </div>

@@ -1,4 +1,13 @@
-const baseUrl = (process.env.PUBLIC_URL ?? "").replace(/\/+$/, "");
+const buildRuntimeBase = () => {
+  if (typeof window === "undefined") return "";
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  return parts.length > 0 ? `/${parts[0]}` : "";
+};
+
+const baseUrl = (process.env.PUBLIC_URL ?? buildRuntimeBase()).replace(
+  /\/+$/,
+  "",
+);
 
 const normalizePath = (p: string) =>
   p.replace(/^public\//, "").replace(/^\/+/, "");

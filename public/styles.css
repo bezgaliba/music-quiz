@@ -323,7 +323,7 @@ body{
 .audio-control{
   display: flex;
   justify-content: center;
-  background-image: url('resources/img/background.jpeg');
+  background: transparent;
   gap: 12px;
 }
 .audio-control .icon-play-btn{
