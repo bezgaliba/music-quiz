@@ -4,7 +4,10 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import packageJson from "./package.json" with {type: "json"};
+
+const publicUrl = process.env.PUBLIC_URL || "";
 
 const webpackConfig = (env): webpack.Configuration => ({
     entry: "./src/index.tsx",
@@ -38,10 +41,22 @@ const webpackConfig = (env): webpack.Configuration => ({
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: "public",
+                    to: "./",
+                    globOptions: {
+                        ignore: ["**/index.html"]
+                    }
+                }
+            ]
+        }),
         new webpack.DefinePlugin({
             "process.env.PRODUCTION": env.production || !env.development,
             "process.env.NAME": JSON.stringify(packageJson.name),
-            "process.env.VERSION": JSON.stringify(packageJson.version)
+            "process.env.VERSION": JSON.stringify(packageJson.version),
+            "process.env.PUBLIC_URL": JSON.stringify(publicUrl)
         }),
         new ForkTsCheckerWebpackPlugin(),
         new ESLintPlugin({files: "./src/**/*.{ts,tsx,js,jsx}"})

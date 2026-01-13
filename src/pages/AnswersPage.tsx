@@ -1,6 +1,11 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
+import {
+  buildAssetUrl,
+  buildAssetUrlVariants,
+  buildAudioUrlVariants,
+} from "../utils/assets";
 
 import { incrementRound } from "../gameState";
 
@@ -29,6 +34,10 @@ const AnswersPage: React.FC = () => {
   const navigate = useNavigate();
   const [usedKeys, setUsedKeys] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioQueueRef = useRef<string[]>([]);
+  const imageQueueRef = useRef<string[]>([]);
+  const [imageSrc, setImageSrc] = useState<string>("");
 
   useEffect(() => {
     try {
@@ -94,27 +103,58 @@ const AnswersPage: React.FC = () => {
     items.length > 0 && index >= 0 ? items[index % items.length] : null;
 
   useEffect(() => {
+    if (current?.imagePath && current.image) {
+      const variants = buildAssetUrlVariants(
+        `${current.imagePath}${current.image}.jpg`,
+      );
+      setImageSrc(variants[0] ?? "");
+      imageQueueRef.current = variants.slice(1);
+    } else {
+      setImageSrc("");
+      imageQueueRef.current = [];
+    }
+  }, [current?.imagePath, current?.image]);
+
+  useEffect(() => {
     if (!current) return;
 
     const { songPath, song } = current;
     if (!songPath || !song) return;
+    const urls = buildAudioUrlVariants(songPath, song);
+    if (!urls.length) return;
 
-    const cleanPath = songPath.replace(/^public\//, "");
-    const url = `/${cleanPath}${song}.mp3`.replace(/\/\//g, "/");
+    audioQueueRef.current = [...urls];
 
-    const audio = new Audio(url);
-    audio.loop = false;
+    const playNext = () => {
+      const next = audioQueueRef.current.shift();
+      if (!next) return;
 
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch((error) => {
-        console.error("Audio playback failed:", error);
-      });
-    }
+      if (!audioRef.current) {
+        audioRef.current = new Audio();
+        audioRef.current.loop = false;
+      }
+
+      const audio = audioRef.current;
+      audio.onerror = () => playNext();
+      audio.src = next;
+      audio.currentTime = 0;
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn("Autoplay blocked or failed, trying fallback:", error);
+          playNext();
+        });
+      }
+    };
+
+    playNext();
 
     return () => {
-      audio.pause();
-      audio.currentTime = 0;
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
     };
   }, [current]);
 
@@ -140,7 +180,7 @@ const AnswersPage: React.FC = () => {
       className="answers-page"
       style={{
         minHeight: "100vh",
-        backgroundImage: "url('/resources/img/answersBackground.jpg')",
+        backgroundImage: `url('${buildAssetUrl("resources/img/answersBackground.jpg")}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -243,77 +283,81 @@ const AnswersPage: React.FC = () => {
                 </>
               ) : null}
               {current.imagePath && current.image && (
-                <div
-                  style={{
-                    position: "relative",
-                    width: "fit-content",
-                    maxWidth: "100%",
-                    display: "inline-block",
-                  }}
-                >
-                  {current.bonus && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "1rem",
-                        right: "1rem",
-                        background: "rgba(184,111,148,0.75)",
-                        color: "#fff",
-                        padding: "1.1rem 1.3rem",
-                        borderRadius: "12px",
-                        fontWeight: 700,
-                        fontSize: "1.35rem",
-                        maxWidth: "55%",
-                        textAlign: "left",
-                        boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
-                        lineHeight: 1.5,
-                        pointerEvents: "none",
-                        textShadow:
-                          "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
-                      }}
-                    >
-                      {current.bonus}
-                    </div>
-                  )}
-                  <img
-                    src={`/${current.imagePath.replace(/^public\//, "")}${
-                      current.image
-                    }.jpg`.replace(/\/\//g, "/")}
-                    alt={current.artist}
+                <>
+                  <div
                     style={{
-                      width: "100%",
+                      position: "relative",
+                      width: "fit-content",
                       maxWidth: "100%",
-                      height: "auto",
-                      maxHeight: "620px",
-                      objectFit: "cover",
-                      borderRadius: "12px",
-                      boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
-                      display: "block",
+                      display: "inline-block",
                     }}
-                  />
-                  {current.year && (
-                    <div
-                      aria-hidden
+                  >
+                    {current.bonus && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "1rem",
+                          right: "1rem",
+                          background: "rgba(184,111,148,0.75)",
+                          color: "#fff",
+                          padding: "1.1rem 1.3rem",
+                          borderRadius: "12px",
+                          fontWeight: 700,
+                          fontSize: "1.35rem",
+                          maxWidth: "55%",
+                          textAlign: "left",
+                          boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
+                          lineHeight: 1.5,
+                          pointerEvents: "none",
+                          textShadow:
+                            "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
+                        }}
+                      >
+                        {current.bonus}
+                      </div>
+                    )}
+                    <img
+                      src={imageSrc}
+                      alt={current.artist}
                       style={{
-                        position: "absolute",
-                        right: "1rem",
-                        bottom: "1rem",
-                        background: "rgba(0,0,0,0.35)",
-                        color: "#fff",
-                        padding: "0.25rem 0.5rem",
-                        borderRadius: 6,
-                        fontWeight: 600,
-                        fontSize: "1.5rem",
-                        textShadow:
-                          "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-                        pointerEvents: "none",
-                        zIndex: 2,
+                        width: "100%",
+                        maxWidth: "100%",
+                        height: "auto",
+                        maxHeight: "620px",
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                        boxShadow: "0 8px 18px rgba(0,0,0,0.5)",
+                        display: "block",
                       }}
-                    >
-                      {current.year}
-                    </div>
-                  )}
-                </div>
+                      onError={() => {
+                        const next = imageQueueRef.current.shift();
+                        if (next) setImageSrc(next);
+                      }}
+                    />
+                    {current.year && (
+                      <div
+                        aria-hidden
+                        style={{
+                          position: "absolute",
+                          right: "1rem",
+                          bottom: "1rem",
+                          background: "rgba(0,0,0,0.35)",
+                          color: "#fff",
+                          padding: "0.25rem 0.5rem",
+                          borderRadius: 6,
+                          fontWeight: 600,
+                          fontSize: "1.5rem",
+                          textShadow:
+                            "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+                          pointerEvents: "none",
+                          zIndex: 2,
+                        }}
+                      >
+                        {current.year}
+                      </div>
+                    )}
+                  </div>
+                </>
               )}
             </div>
           ) : null}

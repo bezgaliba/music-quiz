@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
+import { buildAssetUrl, buildAudioUrl } from "../utils/assets";
 
 type Question = {
   id: string;
@@ -36,10 +37,10 @@ const QuestionPage: React.FC = () => {
     : undefined;
   const navigate = useNavigate();
   const imageForPoints = (p: number) => {
-    if (p === 30) return "/resources/img/turntable30.jpeg";
-    if (p === 40) return "/resources/img/turntable40.jpeg";
-    if (p === 50) return "/resources/img/turntable50.jpeg";
-    return "/resources/img/turntable.jpeg";
+    if (p === 30) return buildAssetUrl("resources/img/turntable30.jpeg");
+    if (p === 40) return buildAssetUrl("resources/img/turntable40.jpeg");
+    if (p === 50) return buildAssetUrl("resources/img/turntable50.jpeg");
+    return buildAssetUrl("resources/img/turntable.jpeg");
   };
 
   useEffect(() => {
@@ -156,7 +157,10 @@ const QuestionPage: React.FC = () => {
               ? catData.questions.find((q: any) => q.id === normalizedId)
               : undefined;
             const fileUrl = questionMetaPlay
-              ? `${questionMetaPlay.songPath.replace(/^public/, "")}${questionMetaPlay.song}.mp3`
+              ? buildAudioUrl(
+                  questionMetaPlay.songPath ?? "",
+                  questionMetaPlay.song ?? "",
+                )
               : null;
             if (!fileUrl) return;
 
@@ -176,10 +180,7 @@ const QuestionPage: React.FC = () => {
 
             audio.onended = () => setIsPlaying(false);
 
-            if (
-              audio.src !== window.location.origin + fileUrl &&
-              audio.src !== fileUrl
-            ) {
+            if (audio.src !== fileUrl) {
               audio.src = fileUrl;
               try {
                 audio.load();

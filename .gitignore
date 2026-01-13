@@ -6,3 +6,5 @@ dist/
 coverage/
 *.mp3
 *.jpg
+!public/resources/**/*.mp3
+!public/resources/**/*.jpg

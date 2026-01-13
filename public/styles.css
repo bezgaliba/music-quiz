@@ -13,7 +13,7 @@ body{
 .grid{
   padding: 24px 48px;
   min-height: 100vh;
-  background-image: url('/resources/img/background.jpeg');
+  background-image: url('resources/img/background.jpeg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -255,7 +255,7 @@ body{
 .question-page{
   min-height: 100vh;
   padding: 24px;
-  background-image: url('/resources/img/background.jpeg');
+  background-image: url('resources/img/background.jpeg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -323,7 +323,7 @@ body{
 .audio-control{
   display: flex;
   justify-content: center;
-  z-index: 30;
+  background: transparent;
   gap: 12px;
 }
 .audio-control .icon-play-btn{

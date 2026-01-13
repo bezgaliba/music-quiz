@@ -12,7 +12,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
       <Routes>
         <Route path="/" element={<CardGrid />} />
         <Route path="/question/:category/:id" element={<QuestionPage />} />
