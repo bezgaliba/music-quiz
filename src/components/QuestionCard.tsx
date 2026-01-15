@@ -50,15 +50,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     navigate(`/question/${categoryId}/${qid}`);
   };
 
-  const renderChoice = (qid: string) => {
+  type Difficulty = "easy" | "medium" | "hard";
+
+  const renderChoice = (qid: string, difficulty: Difficulty) => {
     const key = `${categoryId}:${qid}`;
     const isUsed = used.has(key);
     return (
       <button
         key={qid}
-        className={`choice ${isUsed ? "used" : ""}`}
+        className={`choice choice-${qid} ${isUsed ? "used" : ""}`}
         onClick={() => handleClick(qid)}
         aria-pressed={isUsed}
+        aria-label={`${title} ${qid} points (${difficulty} difficulty)`}
       >
         {qid}
       </button>
@@ -71,9 +74,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         <span className="title-text">{title}</span>
       </div>
       <div className="card-choices">
-        {renderChoice("30")}
-        {renderChoice("40")}
-        {renderChoice("50")}
+        {renderChoice("30", "easy")}
+        {renderChoice("40", "medium")}
+        {renderChoice("50", "hard")}
       </div>
     </div>
   );
