@@ -36,12 +36,10 @@ const QuestionPage: React.FC = () => {
       )
     : undefined;
   const navigate = useNavigate();
-  const imageForPoints = (p: number) => {
-    if (p === 30) return buildAssetUrl("resources/img/turntable30.jpeg");
-    if (p === 40) return buildAssetUrl("resources/img/turntable40.jpeg");
-    if (p === 50) return buildAssetUrl("resources/img/turntable50.jpeg");
-    return buildAssetUrl("resources/img/turntable.jpeg");
-  };
+  const defaultBackground = buildAssetUrl("resources/img/background.jpeg");
+  const imageSrc = cat?.imagePath
+    ? buildAssetUrl(cat.imagePath)
+    : defaultBackground;
 
   useEffect(() => {
     return () => {
@@ -60,8 +58,12 @@ const QuestionPage: React.FC = () => {
     <div className="question-page">
       <div className="turntable-container">
         <img
-          src={imageForPoints(points)}
-          alt="Turntable"
+          src={imageSrc}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = defaultBackground;
+          }}
+          alt={cat?.title ?? "Category background"}
           className="turntable-img"
         />
         {questionMeta?.header && (
@@ -137,7 +139,7 @@ const QuestionPage: React.FC = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "1rem",
+          marginTop: "0.25rem",
           gap: "1rem",
         }}
       >
