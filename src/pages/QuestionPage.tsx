@@ -137,7 +137,7 @@ const QuestionPage: React.FC = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "1rem",
+          marginTop: "0.25rem",
           gap: "1rem",
         }}
       >
