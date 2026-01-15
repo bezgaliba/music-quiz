@@ -2,7 +2,8 @@
   "categories": [
     {
       "id": "20s",
-      "title": "20s",
+      "title": "2020s",
+      "imagePath": "public/resources/img/20s/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/20s/", "song": "song40" },
@@ -16,7 +17,8 @@
     },
     {
       "id": "10s",
-      "title": "10s",
+      "title": "2010s",
+      "imagePath": "public/resources/img/10s/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song40" },
@@ -30,7 +32,8 @@
     },
     {
       "id": "00s",
-      "title": "00s",
+      "title": "2000s",
+      "imagePath": "public/resources/img/00s/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30", "bonus": "+10 Name the Featured Artist"},
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song40" },
@@ -44,7 +47,8 @@
     },
     {
       "id": "90s",
-      "title": "90s",
+      "title": "1990s",
+      "imagePath": "public/resources/img/90s/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/90s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/90s/", "song": "song40" },
@@ -58,7 +62,8 @@
     },
     {
       "id": "80s",
-      "title": "80s",
+      "title": "1980s",
+      "imagePath": "public/resources/img/80s/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song40" },
@@ -73,6 +78,7 @@
     {
       "id": "rock",
       "title": "Rock",
+      "imagePath": "public/resources/img/rock/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/rock/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/rock/", "song": "song40" },
@@ -87,6 +93,7 @@
     {
       "id": "electronica",
       "title": "Electronica",
+      "imagePath": "public/resources/img/electronica/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song40" },
@@ -101,6 +108,7 @@
         {
       "id": "countrypop",
       "title": "Country Pop",
+      "imagePath": "public/resources/img/countrypop/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song40" },
@@ -112,9 +120,25 @@
   { "id": "3", "artist": "Shaboozey", "year": "2024", "name": "A Bar Song (Tipsy)", "songPath": "public/resources/audio/countrypop/answers/", "song": "song50", "imagePath": "public/resources/img/countrypop/", "image": "img50" }
       ]
     },
+        {
+      "id": "metal",
+      "title": "Metal",
+      "imagePath": "public/resources/img/metal/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Slipknot", "year": "2008", "name": "Psychosocial", "songPath": "public/resources/audio/metal/answers/", "song": "song30", "imagePath": "public/resources/img/metal/", "image": "img30" },
+  { "id": "2", "artist": "Deftones", "year": "2000", "name": "Change (In the House of Flies)", "songPath": "public/resources/audio/metal/answers/", "song": "song40", "imagePath": "public/resources/img/metal/", "image": "img40" },
+  { "id": "3", "artist": "W.A.S.P", "year": "1984", "name": "I Wanna Be Somebody", "songPath": "public/resources/audio/metal/answers/", "song": "song50", "imagePath": "public/resources/img/metal/", "image": "img50" }
+      ]
+    },
     {
       "id": "debutalbums",
       "title": "Debut Albums",
+      "imagePath": "public/resources/img/debutalbums/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song30" },
         { "id": "2", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song40" },
@@ -128,7 +152,8 @@
     },
     {
       "id": "boybands",
-      "title": "Boybands",
+      "title": "British Boybands 🇬🇧",
+      "imagePath": "public/resources/img/boybands/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song40" },
@@ -143,6 +168,7 @@
     {
       "id": "tv",
       "title": "TV Series",
+      "imagePath": "public/resources/img/tvseries/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song30" },
         { "id": "2", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song40" },
@@ -157,6 +183,7 @@
     {
       "id": "twilight",
       "title": "Twilight Soundtrack",
+      "imagePath": "public/resources/img/twilight/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Name the Specific Movie" },
@@ -171,6 +198,7 @@
     {
       "id": "geography",
       "title": "Geography",
+      "imagePath": "public/resources/img/geography/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song40" },
@@ -182,23 +210,11 @@
   { "id": "3", "artist": "Kansas", "year": "1976", "name": "Carry on Wayward Son", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50" }
       ]
     },
-    {
-      "id": "german",
-      "title": "German 🇩🇪",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/german/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/german/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/german/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Rammstein", "year": "2001", "name": "Sonne", "songPath": "public/resources/audio/german/answers/", "song": "song30", "imagePath": "public/resources/img/german/", "image": "img30" },
-  { "id": "2", "artist": "Tokio Hotel", "year": "2005", "name": "Durch den Monsun", "songPath": "public/resources/audio/german/answers/", "song": "song40", "imagePath": "public/resources/img/german/", "image": "img40" },
-  { "id": "3", "artist": "Nena", "year": "1983", "name": "99 Luftballons", "songPath": "public/resources/audio/german/answers/", "song": "song50", "imagePath": "public/resources/img/german/", "image": "img50" }
-      ]
-    },
+
     {
       "id": "dogs",
       "title": "Dogs",
+      "imagePath": "public/resources/img/dogs/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song40" },
@@ -213,6 +229,7 @@
     {
       "id": "signaturedance",
       "title": "Signature Dance",
+      "imagePath": "public/resources/img/signaturedance/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song40" },
@@ -227,6 +244,7 @@
     {
       "id": "worsthaircuts",
       "title": "Worst Haircuts",
+      "imagePath": "public/resources/img/worsthaircuts/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song30", "bonus": "+10 Which country did they represent at Eurovision?" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song40" },
@@ -241,6 +259,7 @@
     {
       "id": "3letterartists",
       "title": "3-Letter Artists",
+      "imagePath": "public/resources/img/3letterartists/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song40" },
@@ -255,20 +274,22 @@
     {
       "id": "foodieartists",
       "title": "Foodie Artists",
+      "imagePath": "public/resources/img/foodieartists/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song40" },
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Bananarama", "year": "1986", "name": "Venus", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30" },
-  { "id": "2", "artist": "Pearl Jam", "year": "1991", "name": "Alive", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40" },
-  { "id": "3", "artist": "Chuck Berry", "year": "1958", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50" }
+  { "id": "1", "artist": "Bananarama 🍌", "year": "1986", "name": "Venus", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30" },
+  { "id": "2", "artist": "Pearl Jam 🍓🍇🍞🥄🍯", "year": "1991", "name": "Alive", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40" },
+  { "id": "3", "artist": "Chuck Berry 🍒", "year": "1958", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50" }
       ]
     },
     {
       "id": "simlish",
-      "title": "Simlish ❇️",
+      "title": "Simlish Pop ❇️",
+      "imagePath": "public/resources/img/simlish/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song30" },
         { "id": "2", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song40" },
