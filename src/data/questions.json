@@ -330,6 +330,29 @@
   { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2004", "name": "Roku Okeāns / Hand Ocean", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
   { "id": "3", "artist": "Citi Zēni / Other Boys", "year": "2010", "name": "Limuzīns uz Krīta / Limousine on a Chalk", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song50", "imagePath": "public/resources/img/latvianhits/", "image": "img50" }
       ]
+    },
+    {
+      "id": "special",
+      "title": "Special",
+      "imagePath": "public/resources/img/special/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song10", "points": 40 },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song20", "points": 40 },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song30", "points": 40 },
+        { "id": "4", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song40", "points": 40 },
+        { "id": "5", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song50", "points": 40 },
+        { "id": "6", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song60", "points": 40 },
+        { "id": "7", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song70", "points": 40 }
+      ],
+      "answers": [
+        { "id": "1", "artist": "Monica", "year": "1998", "name": "Angel of Mine", "songPath": "public/resources/audio/special/answers/", "song": "song10", "imagePath": "public/resources/img/special/", "image": "img10" },
+        { "id": "2", "artist": "Eric Clapton", "year": "1971", "name": "Layla", "songPath": "public/resources/audio/special/answers/", "song": "song20", "imagePath": "public/resources/img/special/", "image": "img20" },
+        { "id": "3", "artist": "Rita Ora", "year": "2014", "name": "I Will Never Let You Down", "songPath": "public/resources/audio/special/answers/", "song": "song30", "imagePath": "public/resources/img/special/", "image": "img30" },
+        { "id": "4", "artist": "Tina Turner", "year": "1971", "name": "Proud Mary", "songPath": "public/resources/audio/special/answers/", "song": "song40", "imagePath": "public/resources/img/special/", "image": "img40" },
+        { "id": "5", "artist": "Sandra", "year": "1985", "name": "(I'll Never Be) Maria Magdalena", "songPath": "public/resources/audio/special/answers/", "song": "song50", "imagePath": "public/resources/img/special/", "image": "img50" },
+        { "id": "6", "artist": "Mary J. Blige", "year": "2001", "name": "Family Affair", "songPath": "public/resources/audio/special/answers/", "song": "song60", "imagePath": "public/resources/img/special/", "image": "img60" },
+        { "id": "7", "artist": "Jessica Simpson", "year": "2003", "name": "With You", "songPath": "public/resources/audio/special/answers/", "song": "song70", "imagePath": "public/resources/img/special/", "image": "img70" }
+      ]
     }
   ]
 }

@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import {
+  QuestionMeta,
+  deriveQuestionKey,
+  pointsForQuestion,
+} from "../utils/questions";
 
 type QuestionCardProps = {
   title: string;
   categoryId: string;
+  questions: QuestionMeta[];
   style?: React.CSSProperties;
 };
 
@@ -12,6 +18,7 @@ const USED_KEY = "usedQuestions";
 const QuestionCard: React.FC<QuestionCardProps> = ({
   title,
   categoryId,
+  questions,
   style,
 }) => {
   const navigate = useNavigate();
@@ -27,9 +34,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       setUsed(new Set());
     }
   }, [location.pathname]);
+  const entries = useMemo(
+    () =>
+      (questions ?? []).map((q, idx) => ({
+        key: deriveQuestionKey(q, idx),
+        points: pointsForQuestion(q, idx),
+      })),
+    [questions],
+  );
+
   const allUsed = () => {
-    const keys = [`${categoryId}:30`, `${categoryId}:40`, `${categoryId}:50`];
-    return keys.every((k) => used.has(k));
+    const keys = entries.map((e) => `${categoryId}:${e.key}`);
+    return keys.length > 0 && keys.every((k) => used.has(k));
   };
 
   const markUsed = (qid: string) => {
@@ -50,9 +66,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     navigate(`/question/${categoryId}/${qid}`);
   };
 
-  type Difficulty = "easy" | "medium" | "hard";
-
-  const renderChoice = (qid: string, difficulty: Difficulty) => {
+  const renderChoice = (qid: string, idx: number, points: number) => {
     const key = `${categoryId}:${qid}`;
     const isUsed = used.has(key);
     return (
@@ -61,22 +75,26 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         className={`choice choice-${qid} ${isUsed ? "used" : ""}`}
         onClick={() => handleClick(qid)}
         aria-pressed={isUsed}
-        aria-label={`${title} ${qid} points (${difficulty} difficulty)`}
+        aria-label={`${title} question ${idx + 1} (${points} points)`}
       >
-        {qid}
+        {points}
       </button>
     );
   };
 
   return (
     <div className="card" style={style}>
-      <div className={`card-title ${allUsed() ? "title-used" : ""}`}>
+      <div
+        className={`card-title ${allUsed() ? "title-used" : ""} ${categoryId === "special" ? "special-title" : ""}`}
+      >
         <span className="title-text">{title}</span>
       </div>
-      <div className="card-choices">
-        {renderChoice("30", "easy")}
-        {renderChoice("40", "medium")}
-        {renderChoice("50", "hard")}
+      <div
+        className={`card-choices ${categoryId === "special" ? "special-card" : ""}`}
+      >
+        {entries.map((entry, idx) =>
+          renderChoice(entry.key, idx, entry.points),
+        )}
       </div>
     </div>
   );

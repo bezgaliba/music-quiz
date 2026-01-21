@@ -6,22 +6,11 @@ import {
   buildAssetUrlVariants,
   buildAudioUrl,
 } from "../utils/assets";
-
-type Question = {
-  id: string;
-  header?: string;
-  songPath?: string;
-  song?: string;
-  bonus?: string;
-  coverImagePath?: string;
-  coverImage?: string;
-};
-
-const POINTS: Record<string, number> = {
-  "1": 30,
-  "2": 40,
-  "3": 50,
-};
+import {
+  QuestionMeta,
+  resolveQuestionByKey,
+  useQuestionResolution,
+} from "../utils/questions";
 
 const QuestionPage: React.FC = () => {
   const { category, id } = useParams<{ category: string; id: string }>();
@@ -32,18 +21,11 @@ const QuestionPage: React.FC = () => {
   const coverQueueRef = useRef<string[]>([]);
 
   const cat = data.categories.find((c: any) => c.id === category);
-  const numericToQid: Record<string, string> = {
-    "30": "1",
-    "40": "2",
-    "50": "3",
-  };
-  const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
-  const points = POINTS[normalizedId] ?? 0;
-  const questionMeta = cat
-    ? (cat.questions as Question[] | undefined)?.find(
-        (q) => q.id === normalizedId,
-      )
-    : undefined;
+  const questions = (cat?.questions as QuestionMeta[]) ?? [];
+  const resolved = useQuestionResolution(questions, id);
+  const questionMeta = resolved?.question;
+  const points = resolved?.points ?? 0;
+  const normalizedId = resolved?.key ?? id ?? "1";
   const coverVariants = useMemo(() => {
     if (!questionMeta?.coverImagePath || !questionMeta?.coverImage) return [];
     return buildAssetUrlVariants(
@@ -176,17 +158,11 @@ const QuestionPage: React.FC = () => {
           aria-label={isPlaying ? "Pause" : "Play"}
           className={`icon-play-btn ${isPlaying ? "playing" : ""}`}
           onClick={async () => {
-            const numericToQid: Record<string, string> = {
-              "30": "1",
-              "40": "2",
-              "50": "3",
-            };
-            const normalizedId =
-              id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
-            const catData = data.categories.find((c: any) => c.id === category);
-            const questionMetaPlay = catData
-              ? catData.questions.find((q: any) => q.id === normalizedId)
-              : undefined;
+            const questionMetaPlay =
+              questionMeta ??
+              resolveQuestionByKey((cat?.questions as QuestionMeta[]) ?? [], id)
+                ?.question;
+
             const fileUrl = questionMetaPlay
               ? buildAudioUrl(
                   questionMetaPlay.songPath ?? "",

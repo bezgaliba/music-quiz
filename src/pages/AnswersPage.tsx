@@ -6,6 +6,7 @@ import {
   buildAssetUrlVariants,
   buildAudioUrlVariants,
 } from "../utils/assets";
+import { QuestionMeta, resolveQuestionByKey } from "../utils/questions";
 
 import { incrementRound } from "../gameState";
 
@@ -23,12 +24,6 @@ type Answer = {
 
 const USED_KEY = "usedQuestions";
 const SEEN_KEY = "seenQuestions";
-
-const numericToQid: Record<string, string> = {
-  "30": "1",
-  "40": "2",
-  "50": "3",
-};
 
 const AnswersPage: React.FC = () => {
   const navigate = useNavigate();
@@ -61,18 +56,20 @@ const AnswersPage: React.FC = () => {
         const parts = k.split(":");
         if (parts.length !== 2) return null;
         const [catId, pointsStr] = parts;
-        const points = parseInt(pointsStr, 10) || 0;
-        const qid = numericToQid[pointsStr];
         const category = data.categories.find((c: any) => c.id === catId);
         if (!category) return null;
+        const catQuestions = (category.questions as QuestionMeta[]) ?? [];
+        const resolved = resolveQuestionByKey(catQuestions, pointsStr);
+        if (!resolved) return null;
+
         const answer = (category.answers as Answer[] | undefined)?.find(
-          (a) => a.id === qid,
+          (a) => a.id === resolved.question.id,
         );
         return {
           key: k,
           categoryId: catId,
           categoryTitle: category.title,
-          points,
+          points: resolved.points,
           artist: answer?.artist ?? "",
           name: answer?.name ?? "",
           songPath: answer?.songPath ?? "",
