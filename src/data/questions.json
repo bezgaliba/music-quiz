@@ -353,7 +353,7 @@
         { "id": "5", "artist": "Sandra", "year": "1985", "name": "(I'll Never Be) Maria Magdalena", "songPath": "public/resources/audio/special/answers/", "song": "song50", "imagePath": "public/resources/img/special/", "image": "img50" },
         { "id": "6", "artist": "Mary J. Blige", "year": "2001", "name": "Family Affair", "songPath": "public/resources/audio/special/answers/", "song": "song60", "imagePath": "public/resources/img/special/", "image": "img60" },
         { "id": "7", "artist": "Jessica Simpson", "year": "2003", "name": "With You", "songPath": "public/resources/audio/special/answers/", "song": "song70", "imagePath": "public/resources/img/special/", "image": "img70" },
-        { "id": "8", "artist": "Mystery Artist", "year": "2025", "name": "Mystery Song", "songPath": "public/resources/audio/special/answers/", "song": "song80", "imagePath": "public/resources/img/special/", "image": "img80" }
+        { "id": "8", "artist": "Lou Bega", "year": "1999", "name": "Mambo No. 5", "songPath": "public/resources/audio/special/answers/", "song": "song80", "imagePath": "public/resources/img/special/", "image": "img80" }
       ]
     }
   ]
