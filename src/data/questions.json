@@ -22,12 +22,12 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50", "bonus": "+10 Name the Featured Vocals" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50", "bonus": "+10 Name the Featured Film" }
       ],
       "answers": [
   { "id": "1", "artist": "Drake", "year": "2015", "name": "Hotline Bling", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30" },
   { "id": "2", "artist": "Billie Eilish", "year": "2019", "name": "bury a friend", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40" },
-  { "id": "3", "artist": "Sigma", "year": "2014", "name": "Changing", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "bonus": "Paloma Faith" }
+  { "id": "3", "artist": "Lorde", "year": "2014", "name": "Yellow Flicker Beat", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "bonus": " The Hunger Games: Mockingjay – Part 1" }
       ]
     },
     {
@@ -37,13 +37,13 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30", "bonus": "+10 Name the Featured Artist"},
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50", "bonus": "+10 How old was the Artist at the time of song release?" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50" }
       ],
       "answers": [
   { "id": "1", "artist": "Snoop Dogg", "year": "2004", "name": "Drop It Like It's Hot", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "bonus": "Pharrell Williams" },
-  { "id": "2", "artist": "Girls Aloud", "year": "2002", "name": "Sound of the Underground", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
-  { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50", "bonus": "13 years old" }
-      ]
+  { "id": "2", "artist": "Keane", "year": "2003", "name": "Everybody's Changing", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
+  { "id": "3", "artist": "Girls Aloud", "year": "2002", "name": "Sound of the Underground", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
+    ]
     },
     {
       "id": "90s",
@@ -57,7 +57,7 @@
       "answers": [
   { "id": "1", "artist": "Ace of Base", "year": "1992", "name": "All That She Wants", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30" },
   { "id": "2", "artist": "Semisonic", "year": "1998", "name": "Closing Time", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40" },
-  { "id": "3", "artist": "Liquido", "year": "1998", "name": "Narcotic", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50" }
+  { "id": "3", "artist": "Janet Jackson", "year": "1993", "name": "That's The Way Love Goes", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50" }
       ]
     },
     {
@@ -70,7 +70,7 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Metallica", "year": "1984", "name": "For Whom The Bell Tolls", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30" },
+  { "id": "1", "artist": "Enya", "year": "1988", "name": "Orinoco Flow", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30" },
   { "id": "2", "artist": "Erasure", "year": "1988", "name": "A Little Respect", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40" },
   { "id": "3", "artist": "Suzanne Vega", "year": "1987", "name": "Luka", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50" }
       ]
@@ -86,7 +86,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Guns N Roses", "year": "1992", "name": "November Rain", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30" },
-  { "id": "2", "artist": "Rainbow", "year": "1979", "name": "Since You Been Gone", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40" },
+  { "id": "2", "artist": "Placebo", "year": "1998", "name": "Every You Every Me", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40" },
   { "id": "3", "artist": "Staind", "year": "2001", "name": "It's Been A While", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50" }
       ]
     },
