@@ -560,7 +560,7 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
   if (!revealedOuter.length) return null;
 
   const radius = 260;
-  const outerSize = 120;
+  const outerSize = 150;
   const centerSize = 200;
 
   return (
@@ -572,6 +572,7 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
         alignItems: "center",
         gap: "1.25rem",
         marginTop: "1rem",
+        marginLeft: "3rem",
       }}
     >
       <div
@@ -597,8 +598,8 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
             const angle = (2 * Math.PI * idx) / specialPrevAnswers.length;
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
-            const left = radius + x;
-            const top = radius + y;
+            const left = radius + outerSize / 2 + x;
+            const top = radius + outerSize / 2 + y;
             const src = outerSrcMap[answer.id] ?? "";
             return (
               <div
@@ -608,56 +609,63 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
                   left,
                   top,
                   transform: "translate(-50%, -50%)",
-                  width: outerSize,
-                  height: outerSize,
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  border: "5px solid #fff",
-                  boxShadow: "0 10px 22px rgba(0,0,0,0.45)",
-                  background: "rgba(0,0,0,0.35)",
                   display: "flex",
+                  flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
+                  zIndex: 2,
                 }}
               >
-                {src ? (
-                  <img
-                    src={src}
-                    alt={answer.artist ?? "Special reveal"}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                    onError={() => {
-                      const queue = outerQueueRef.current[answer.id] ?? [];
-                      const next = queue.shift();
-                      if (next) {
-                        setOuterSrcMap((prev) => ({
-                          ...prev,
-                          [answer.id]: next,
-                        }));
-                      }
-                    }}
-                  />
-                ) : null}
                 <div
                   style={{
-                    position: "absolute",
-                    left: "50%",
-                    bottom: -26,
-                    transform: "translateX(-50%)",
+                    width: outerSize,
+                    height: outerSize,
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    border: "5px solid #fff",
+                    boxShadow: "0 10px 22px rgba(0,0,0,0.45)",
+                    background: "rgba(0,0,0,0.35)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {src ? (
+                    <img
+                      src={src}
+                      alt={answer.artist ?? "Special reveal"}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                      onError={() => {
+                        const queue = outerQueueRef.current[answer.id] ?? [];
+                        const next = queue.shift();
+                        if (next) {
+                          setOuterSrcMap((prev) => ({
+                            ...prev,
+                            [answer.id]: next,
+                          }));
+                        }
+                      }}
+                    />
+                  ) : null}
+                </div>
+                <div
+                  style={{
+                    marginTop: "0.5rem",
                     color: "#fff",
                     fontWeight: 700,
-                    fontSize: "0.9rem",
+                    fontSize: "2rem",
                     textShadow:
                       "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
                     whiteSpace: "nowrap",
-                    pointerEvents: "none",
+                    textAlign: "center",
                   }}
                 >
-                  {answer.artist}
+                  {answer.artist?.split(" ")[0] === "Eric"
+                    ? "Erica"
+                    : answer.artist?.split(" ")[0]}
                 </div>
               </div>
             );
@@ -707,18 +715,7 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
             "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
         }}
       >
-        {!isFinal ? (
-          <div
-            style={{
-              marginTop: "0.5rem",
-              fontSize: "1.3rem",
-              opacity: 0.9,
-              fontWeight: 600,
-            }}
-          >
-            Next reveal in 5s...
-          </div>
-        ) : (
+        {isFinal ? (
           <div style={{ marginTop: "0.5rem" }}>
             <div style={{ fontWeight: 800, fontSize: "2.2rem" }}>
               {current.artist}
@@ -734,7 +731,7 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
               </div>
             ) : null}
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
