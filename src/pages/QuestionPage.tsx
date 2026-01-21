@@ -1,7 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
-import { buildAssetUrl, buildAudioUrl } from "../utils/assets";
+import {
+  buildAssetUrl,
+  buildAssetUrlVariants,
+  buildAudioUrl,
+} from "../utils/assets";
 
 type Question = {
   id: string;
@@ -9,6 +13,8 @@ type Question = {
   songPath?: string;
   song?: string;
   bonus?: string;
+  coverImagePath?: string;
+  coverImage?: string;
 };
 
 const POINTS: Record<string, number> = {
@@ -21,6 +27,9 @@ const QuestionPage: React.FC = () => {
   const { category, id } = useParams<{ category: string; id: string }>();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showCover, setShowCover] = useState(false);
+  const [coverSrc, setCoverSrc] = useState("");
+  const coverQueueRef = useRef<string[]>([]);
 
   const cat = data.categories.find((c: any) => c.id === category);
   const numericToQid: Record<string, string> = {
@@ -35,6 +44,12 @@ const QuestionPage: React.FC = () => {
         (q) => q.id === normalizedId,
       )
     : undefined;
+  const coverVariants = useMemo(() => {
+    if (!questionMeta?.coverImagePath || !questionMeta?.coverImage) return [];
+    return buildAssetUrlVariants(
+      `${questionMeta.coverImagePath}${questionMeta.coverImage}.jpg`,
+    );
+  }, [questionMeta?.coverImagePath, questionMeta?.coverImage]);
   const navigate = useNavigate();
   const defaultBackground = buildAssetUrl("resources/img/background.jpeg");
   const imageSrc = cat?.imagePath
@@ -54,9 +69,22 @@ const QuestionPage: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setShowCover(false);
+    setCoverSrc("");
+    coverQueueRef.current = coverVariants.slice(1);
+  }, [category, normalizedId, coverVariants]);
+
+  const revealCover = () => {
+    if (!coverVariants.length) return;
+    setShowCover(true);
+    setCoverSrc(coverVariants[0]);
+    coverQueueRef.current = coverVariants.slice(1);
+  };
+
   return (
     <div className="question-page">
-      <div className="turntable-container">
+      <div className={`turntable-container ${showCover ? "compact" : ""}`}>
         <img
           src={imageSrc}
           onError={(e) => {
@@ -139,6 +167,7 @@ const QuestionPage: React.FC = () => {
         style={{
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           marginTop: "0.25rem",
           gap: "1rem",
         }}
@@ -248,7 +277,39 @@ const QuestionPage: React.FC = () => {
             <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6s-6-2.69-6-6H4a8 8 0 1 0 8-8z" />
           </svg>
         </button>
+        {coverVariants.length > 0 && (
+          <button
+            aria-label={showCover ? "Hide" : "Reveal"}
+            className="reveal-btn"
+            onClick={() => {
+              if (showCover) {
+                setShowCover(false);
+                setCoverSrc("");
+                return;
+              }
+              revealCover();
+            }}
+          >
+            {showCover ? "Hide" : "Reveal"}
+          </button>
+        )}
       </div>
+      {showCover && coverSrc && (
+        <div className="album-cover">
+          <img
+            src={coverSrc}
+            alt={questionMeta?.header ?? `${cat?.title ?? "Album"} cover`}
+            onError={() => {
+              const next = coverQueueRef.current.shift();
+              if (next) {
+                setCoverSrc(next);
+                return;
+              }
+              setShowCover(false);
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

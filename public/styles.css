@@ -338,6 +338,13 @@ body{
   box-shadow: 0 30px 70px rgba(0,0,0,0.45);
   isolation: isolate;
 }
+.turntable-container.compact{
+  height: clamp(240px, 42vh, 520px);
+}
+.turntable-container.compact .turntable-img{
+  transform: scale(0.9);
+  transform-origin: center;
+}
 .turntable-img{
   position: absolute;
   inset: 0;
@@ -388,6 +395,7 @@ body{
   justify-content: center;
   background: transparent;
   gap: 12px;
+  align-items: center;
 }
 .audio-control .icon-play-btn{
   background: rgba(255,255,255,0.06);
@@ -419,6 +427,45 @@ body{
 }
 .audio-control .reset-btn:hover{
   background: rgba(255,255,255,0.12);
+}
+
+.audio-control .reveal-btn{
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.16);
+  color: #fff;
+  padding: 0 18px;
+  height: 64px;
+  min-width: 96px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  transition: transform 140ms ease, box-shadow 180ms ease, background 160ms ease;
+}
+.audio-control .reveal-btn:hover{
+  background: rgba(255,255,255,0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.34);
+}
+
+.album-cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.album-cover img{
+  width: min(820px, 95vw);
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 38px rgba(0,0,0,0.4);
+  border: 3px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.15);
 }
 
 @keyframes flyInFromTop {

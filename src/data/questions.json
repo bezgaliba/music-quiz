@@ -121,18 +121,18 @@
       ]
     },
         {
-      "id": "metal",
-      "title": "Metal",
-      "imagePath": "public/resources/img/metal/bg.jpg",
+      "id": "albumcover",
+      "title": "Album Covers",
+      "imagePath": "public/resources/img/albumcover/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song30", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover30" },
+  { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song40", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song50", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover50", "bonus": "+10 Name the Album" }
       ],
       "answers": [
-  { "id": "1", "artist": "Slipknot", "year": "2008", "name": "Psychosocial", "songPath": "public/resources/audio/metal/answers/", "song": "song30", "imagePath": "public/resources/img/metal/", "image": "img30" },
-  { "id": "2", "artist": "Deftones", "year": "2000", "name": "Change (In the House of Flies)", "songPath": "public/resources/audio/metal/answers/", "song": "song40", "imagePath": "public/resources/img/metal/", "image": "img40" },
-  { "id": "3", "artist": "W.A.S.P", "year": "1984", "name": "I Wanna Be Somebody", "songPath": "public/resources/audio/metal/answers/", "song": "song50", "imagePath": "public/resources/img/metal/", "image": "img50" }
+  { "id": "1", "artist": "Fleetwood Mac", "year": "1977", "name": "Rumours", "songPath": "public/resources/audio/albumcover/answers/", "song": "song30", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover30" },
+  { "id": "2", "artist": "The Clash", "year": "1979", "name": "London Calling", "songPath": "public/resources/audio/albumcover/answers/", "song": "song40", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover40" },
+  { "id": "3", "artist": "The Killers", "year": "2004", "name": "Hot Fuss", "songPath": "public/resources/audio/albumcover/answers/", "song": "song50", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover50", "bonus": "Hot Fuss" }
       ]
     },
     {
