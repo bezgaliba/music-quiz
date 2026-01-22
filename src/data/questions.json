@@ -86,7 +86,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Lynyrd Skynyrd", "year": "1974", "name": "Free Bird", "songPath": "public/resources/audio/70s/answers/", "song": "song30", "imagePath": "public/resources/img/70s/", "image": "img30" },
-  { "id": "2", "artist": "Bread", "year": "1972", "name": "The Guitar Man", "songPath": "public/resources/audio/70s/answers/", "song": "song40", "imagePath": "public/resources/img/70s /", "image": "img40" },
+  { "id": "2", "artist": "Bread", "year": "1972", "name": "The Guitar Man", "songPath": "public/resources/audio/70s/answers/", "song": "song40", "imagePath": "public/resources/img/70s/", "image": "img40" },
   { "id": "3", "artist": "Ace", "year": "1975", "name": "How Long", "songPath": "public/resources/audio/70s/answers/", "song": "song50", "imagePath": "public/resources/img/70s/", "image": "img50" }
       ]
     },

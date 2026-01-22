@@ -514,7 +514,7 @@ const DefaultAnswerContent: React.FC<DefaultAnswerContentProps> = ({
                 padding: "1.1rem 1.3rem",
                 borderRadius: "12px",
                 fontWeight: 700,
-                fontSize: "1.35rem",
+                fontSize: "1.89rem",
                 maxWidth: "55%",
                 textAlign: "left",
                 boxShadow: "0 8px 18px rgba(0,0,0,0.4)",
