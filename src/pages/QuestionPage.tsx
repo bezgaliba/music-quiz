@@ -140,7 +140,9 @@ const QuestionPage: React.FC = () => {
           aria-label="Go back"
           style={{ pointerEvents: "auto", cursor: "pointer" }}
         >
-          <div className="overlay-title">{cat ? cat.title : ""}</div>
+          <div className="overlay-title">
+            {cat ? (category === "special" ? `Special #${id}` : cat.title) : ""}
+          </div>
           <div className="overlay-points">{points} points</div>
         </div>
       </div>

@@ -311,9 +311,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/eurovision/", "song": "song50", "bonus": "+10 What country did the artist represent?" }
       ],
       "answers": [
-  { "id": "1", "artist": "Sudden Lights", "year": "2023", "name": "Aijā", "songPath": "public/resources/audio/eurovision/answers/", "song": "song30", "imagePath": "public/resources/img/eurovision/", "image": "img30", "bonus": "United Kingdom 🇬🇧" },
-  { "id": "2", "artist": "The Roop", "year": "2021", "name": "Discoteque", "songPath": "public/resources/audio/eurovision/answers/", "song": "song40", "imagePath": "public/resources/img/eurovision/", "image": "img40" },
-  { "id": "3", "artist": "SunStroke Project", "year": "2010", "name": "Run Away", "songPath": "public/resources/audio/eurovision/answers/", "song": "song50", "imagePath": "public/resources/img/eurovision/", "image": "img50", "bonus": "Moldova 🇲🇩" }
+  { "id": "1", "artist": "Sudden Lights 🇱🇻", "year": "2023", "name": "Aijā", "songPath": "public/resources/audio/eurovision/answers/", "song": "song30", "imagePath": "public/resources/img/eurovision/", "image": "img30", "bonus": "United Kingdom 🇬🇧" },
+  { "id": "2", "artist": "The Roop 🇱🇹", "year": "2021", "name": "Discoteque", "songPath": "public/resources/audio/eurovision/answers/", "song": "song40", "imagePath": "public/resources/img/eurovision/", "image": "img40" },
+  { "id": "3", "artist": "SunStroke Project 🇲🇩", "year": "2010", "name": "Run Away", "songPath": "public/resources/audio/eurovision/answers/", "song": "song50", "imagePath": "public/resources/img/eurovision/", "image": "img50", "bonus": "Moldova 🇲🇩" }
       ]
     },
     {
@@ -327,7 +327,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Prāta Vētra / Brainstorm", "year": "2001", "name": "Kaķēns, kurš atteicās no jūrasskolas / The kitten who refused to go to sea school", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song30", "imagePath": "public/resources/img/latvianhits/", "image": "img30" },
-  { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2004", "name": "Roku Okeāns / Hand Ocean", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
+  { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2004", "name": "Roku Okeāns / Ocean of Hands ", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
   { "id": "3", "artist": "Citi Zēni / Other Boys", "year": "2010", "name": "Limuzīns uz Krīta / Limousine on a Chalk", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song50", "imagePath": "public/resources/img/latvianhits/", "image": "img50" }
       ]
     },
@@ -348,7 +348,7 @@
           "header": "Name the Artist", 
           "songPath": "public/resources/audio/special/", 
           "song": "song80", 
-          "points": 40,
+          "points": 80,
           "timedReveals": [
             { "time": 1, "text": "Monica" },
             { "time": 7, "text": "Erica" },

@@ -382,7 +382,11 @@ const AnswersPage: React.FC = () => {
                 "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
             }}
           >
-            {current ? current.categoryTitle : ""}
+            {current
+              ? current.categoryId === "special"
+                ? `Special #${current.answerId}`
+                : current.categoryTitle
+              : ""}
           </div>
           <div
             className="overlay-points"
