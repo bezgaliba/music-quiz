@@ -76,6 +76,21 @@
       ]
     },
     {
+      "id": "70s",
+      "title": "1970s",
+      "imagePath": "public/resources/img/70s/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Lynyrd Skynyrd", "year": "1974", "name": "Free Bird", "songPath": "public/resources/audio/70s/answers/", "song": "song30", "imagePath": "public/resources/img/70s/", "image": "img30" },
+  { "id": "2", "artist": "Bread", "year": "1972", "name": "The Guitar Man", "songPath": "public/resources/audio/70s/answers/", "song": "song40", "imagePath": "public/resources/img/70s /", "image": "img40" },
+  { "id": "3", "artist": "Ace", "year": "1975", "name": "How Long", "songPath": "public/resources/audio/70s/answers/", "song": "song50", "imagePath": "public/resources/img/70s/", "image": "img50" }
+      ]
+    },
+    {
       "id": "rock",
       "title": "Rock",
       "imagePath": "public/resources/img/rock/bg.jpg",
@@ -224,21 +239,6 @@
   { "id": "1", "artist": "Baha Men", "year": "2000", "name": "Who Let the Dogs Out", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30" },
   { "id": "2", "artist": "Jane's Addiction", "year": "1990", "name": "Been Caught Stealing", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40" },
   { "id": "3", "artist": "Pink Floyd", "year": "1977", "name": "Dogs", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "signaturedance",
-      "title": "Signature Dance",
-      "imagePath": "public/resources/img/signaturedance/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Village People", "year": "1978", "name": "Y.M.C.A.", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30" },
-  { "id": "2", "artist": "Las Ketchup", "year": "2002", "name": "The Ketchup Song (Aserejé)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40" },
-  { "id": "3", "artist": "Soulja Boy", "year": "2007", "name": "Crank That (Soulja Boy)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50" }
       ]
     },
     {
