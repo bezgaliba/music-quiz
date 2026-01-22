@@ -9,6 +9,7 @@ export type QuestionMeta = {
   coverImagePath?: string;
   coverImage?: string;
   points?: number;
+  timedReveals?: Array<{ time: number; text: string; duration?: number }>;
 };
 
 const DEFAULT_POINTS = ["30", "40", "50"] as const;

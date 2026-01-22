@@ -49,7 +49,8 @@ const AnswersPage: React.FC = () => {
   const audioQueueRef = useRef<string[]>([]);
   const imageQueueRef = useRef<string[]>([]);
   const [imageSrc, setImageSrc] = useState<string>("");
-  const [specialStep, setSpecialStep] = useState(0);
+  const [visibleReveals, setVisibleReveals] = useState<boolean[]>([]);
+  const specialTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     try {
@@ -124,26 +125,81 @@ const AnswersPage: React.FC = () => {
 
   const specialPrevAnswers = useMemo(() => {
     const answers = (specialCategory?.answers as Answer[] | undefined) ?? [];
-    return answers.filter((a) => parseInt(a.id, 10) < 8);
+    return answers;
   }, [specialCategory?.answers]);
 
   const isSpecialFinal =
     current?.categoryId === "special" && current.answerId === "8";
 
+  // Get timedReveals from the question data
+  const timedReveals = useMemo(() => {
+    if (!isSpecialFinal) return null;
+    const specialQuestions =
+      (specialCategory?.questions as QuestionMeta[] | undefined) ?? [];
+    const question8 = specialQuestions.find((q) => q.id === "8");
+    return question8?.timedReveals ?? null;
+  }, [isSpecialFinal, specialCategory?.questions]);
+
   useEffect(() => {
-    if (!isSpecialFinal) return undefined;
-    setSpecialStep(0);
-    const timer = window.setInterval(() => {
-      setSpecialStep((step) => {
-        if (step >= specialPrevAnswers.length) {
-          window.clearInterval(timer);
-          return step;
-        }
-        return step + 1;
+    // Clear any existing timers
+    if (specialTimerRef.current) {
+      clearTimeout(specialTimerRef.current);
+      specialTimerRef.current = null;
+    }
+
+    if (!isSpecialFinal) {
+      setVisibleReveals([]);
+      return;
+    }
+
+    setVisibleReveals(new Array(specialPrevAnswers.length).fill(false));
+
+    if (timedReveals && timedReveals.length > 0) {
+      // Schedule each reveal at the exact time
+      const timeouts: number[] = [];
+      timedReveals.forEach((reveal, i) => {
+        if (i >= specialPrevAnswers.length) return; // Safety check
+        const delay = reveal.time * 1000;
+        const timeout = window.setTimeout(() => {
+          setVisibleReveals((prev) => {
+            const newArr = [...prev];
+            newArr[i] = true;
+            return newArr;
+          });
+        }, delay);
+        timeouts.push(timeout);
       });
-    }, 5000);
-    return () => window.clearInterval(timer);
-  }, [isSpecialFinal, specialPrevAnswers.length]);
+
+      // Store the timeouts array in the ref (though we only need to clear them)
+      specialTimerRef.current = timeouts[0] || null; // Just store one for cleanup
+
+      return () => {
+        timeouts.forEach(clearTimeout);
+      };
+    } else {
+      // Fallback: reveal one every 2 seconds
+      let step = 0;
+      const revealNext = () => {
+        step += 1;
+        setVisibleReveals((prev) => {
+          const newArr = [...prev];
+          newArr[step - 1] = true;
+          return newArr;
+        });
+        if (step < specialPrevAnswers.length) {
+          specialTimerRef.current = window.setTimeout(revealNext, 2000);
+        }
+      };
+      specialTimerRef.current = window.setTimeout(revealNext, 2000);
+    }
+
+    return () => {
+      if (specialTimerRef.current) {
+        clearTimeout(specialTimerRef.current);
+        specialTimerRef.current = null;
+      }
+    };
+  }, [isSpecialFinal, specialPrevAnswers.length, timedReveals]);
 
   useEffect(() => {
     if (!current) return;
@@ -166,8 +222,10 @@ const AnswersPage: React.FC = () => {
 
       const audio = audioRef.current;
       audio.onerror = () => playNext();
+      audio.onloadedmetadata = null;
+      audio.ontimeupdate = null;
       audio.src = next;
-      audio.currentTime = 0;
+      audio.load();
 
       const playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -182,8 +240,14 @@ const AnswersPage: React.FC = () => {
 
     return () => {
       if (audioRef.current) {
+        audioRef.current.onloadedmetadata = null;
+        audioRef.current.ontimeupdate = null;
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
+      }
+      if (specialTimerRef.current) {
+        window.clearInterval(specialTimerRef.current);
+        specialTimerRef.current = null;
       }
     };
   }, [current]);
@@ -281,7 +345,7 @@ const AnswersPage: React.FC = () => {
                 <SpecialFinalReveal
                   current={current}
                   specialPrevAnswers={specialPrevAnswers}
-                  step={specialStep}
+                  visibleReveals={visibleReveals}
                 />
               ) : (
                 <DefaultAnswerContent
@@ -512,28 +576,22 @@ const DefaultAnswerContent: React.FC<DefaultAnswerContentProps> = ({
 type SpecialFinalRevealProps = {
   current: RevealItem;
   specialPrevAnswers: Answer[];
-  step: number;
+  visibleReveals: boolean[];
 };
 
 const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
   current,
   specialPrevAnswers,
-  step,
+  visibleReveals,
 }) => {
-  const isFinal = step >= specialPrevAnswers.length;
+  const isFinal = visibleReveals.length > 0 && visibleReveals.every((v) => v);
   const revealedOuter = useMemo(
-    () =>
-      specialPrevAnswers.slice(
-        0,
-        Math.min(step + 1, specialPrevAnswers.length),
-      ),
-    [specialPrevAnswers, step],
+    () => specialPrevAnswers.filter((_, i) => visibleReveals[i] ?? false),
+    [specialPrevAnswers, visibleReveals],
   );
 
   const [outerSrcMap, setOuterSrcMap] = useState<Record<string, string>>({});
   const outerQueueRef = useRef<Record<string, string[]>>({});
-  const [centerSrc, setCenterSrc] = useState<string>("");
-  const centerQueueRef = useRef<string[]>([]);
 
   useEffect(() => {
     revealedOuter.forEach((answer) => {
@@ -548,20 +606,13 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
     });
   }, [revealedOuter, outerSrcMap]);
 
-  useEffect(() => {
-    if (!isFinal) return;
-    const variants = buildAssetUrlVariants(
-      `${current.imagePath ?? ""}${current.image ?? ""}.jpg`,
-    );
-    setCenterSrc(variants[0] ?? "");
-    centerQueueRef.current = variants.slice(1);
-  }, [current.image, current.imagePath, isFinal]);
-
   if (!revealedOuter.length) return null;
+
+  const louBega = revealedOuter.find((a) => a.id === "8");
+  const others = revealedOuter.filter((a) => a.id !== "8");
 
   const radius = 260;
   const outerSize = 150;
-  const centerSize = 200;
 
   return (
     <div
@@ -572,7 +623,7 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
         alignItems: "center",
         gap: "1.25rem",
         marginTop: "1rem",
-        marginLeft: "3rem",
+        marginLeft: "1rem",
       }}
     >
       <div
@@ -583,19 +634,48 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
           justifyContent: "center",
           padding: "1rem",
           boxSizing: "border-box",
+          gap: "2rem",
         }}
       >
+        {isFinal ? (
+          <div
+            style={{
+              textAlign: "center",
+              color: "#fff",
+              textShadow:
+                "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+              marginRight: "1rem",
+            }}
+          >
+            <div style={{ fontWeight: 800, fontSize: "3.08rem" }}>
+              <span style={{ color: "red" }}>Lou Bega</span>
+            </div>
+            <div style={{ fontWeight: 700, fontSize: "2.52rem", marginTop: 6 }}>
+              {current.name}
+            </div>
+            {current.year ? (
+              <div
+                style={{ fontWeight: 600, fontSize: "1.82rem", opacity: 0.92 }}
+              >
+                {current.year}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
         <div
           style={{
             position: "relative",
             width: `${radius * 2 + outerSize}px`,
             height: `${radius * 2 + outerSize}px`,
             maxWidth: "100%",
-            margin: "0 auto",
           }}
         >
-          {revealedOuter.map((answer, idx) => {
-            const angle = (2 * Math.PI * idx) / specialPrevAnswers.length;
+          {others.map((answer) => {
+            const originalIdx = specialPrevAnswers.findIndex(
+              (a) => a.id === answer.id,
+            );
+            const angle =
+              (2 * Math.PI * originalIdx) / (specialPrevAnswers.length - 1);
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
             const left = radius + outerSize / 2 + x;
@@ -670,68 +750,73 @@ const SpecialFinalReveal: React.FC<SpecialFinalRevealProps> = ({
               </div>
             );
           })}
-
-          {isFinal ? (
+          {louBega && (
             <div
+              key={louBega.id}
               style={{
                 position: "absolute",
-                left: "50%",
-                top: "50%",
+                left: radius + outerSize / 2,
+                top: radius + outerSize / 2,
                 transform: "translate(-50%, -50%)",
-                width: centerSize,
-                height: centerSize,
-                borderRadius: "50%",
-                overflow: "hidden",
-                border: "7px solid #fff",
-                boxShadow: "0 14px 30px rgba(0,0,0,0.55)",
-                background: "rgba(0,0,0,0.4)",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "center",
                 zIndex: 2,
               }}
             >
-              {centerSrc ? (
-                <img
-                  src={centerSrc}
-                  alt={current.artist ?? "Special reveal"}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  onError={() => {
-                    const next = centerQueueRef.current.shift();
-                    if (next) setCenterSrc(next);
-                  }}
-                />
-              ) : null}
-            </div>
-          ) : null}
-        </div>
-      </div>
-
-      <div
-        style={{
-          textAlign: "center",
-          color: "#fff",
-          textShadow:
-            "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
-        }}
-      >
-        {isFinal ? (
-          <div style={{ marginTop: "0.5rem" }}>
-            <div style={{ fontWeight: 800, fontSize: "2.2rem" }}>
-              {current.artist}
-            </div>
-            <div style={{ fontWeight: 700, fontSize: "1.8rem", marginTop: 6 }}>
-              {current.name}
-            </div>
-            {current.year ? (
               <div
-                style={{ fontWeight: 600, fontSize: "1.3rem", opacity: 0.92 }}
+                style={{
+                  width: outerSize,
+                  height: outerSize,
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  border: "5px solid #fff",
+                  boxShadow: "0 10px 22px rgba(0,0,0,0.45)",
+                  background: "rgba(0,0,0,0.35)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
               >
-                {current.year}
+                {outerSrcMap[louBega.id] ? (
+                  <img
+                    src={outerSrcMap[louBega.id]}
+                    alt={louBega.artist ?? "Special reveal"}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    onError={() => {
+                      const queue = outerQueueRef.current[louBega.id] ?? [];
+                      const next = queue.shift();
+                      if (next) {
+                        setOuterSrcMap((prev) => ({
+                          ...prev,
+                          [louBega.id]: next,
+                        }));
+                      }
+                    }}
+                  />
+                ) : null}
               </div>
-            ) : null}
-          </div>
-        ) : null}
+              <div
+                style={{
+                  marginTop: "0.5rem",
+                  color: "#fff",
+                  fontWeight: 700,
+                  fontSize: "2rem",
+                  textShadow:
+                    "-1px -1px 0 rgba(0,0,0,0.55), 1px -1px 0 rgba(0,0,0,0.55), -1px 1px 0 rgba(0,0,0,0.55), 1px 1px 0 rgba(0,0,0,0.55)",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                }}
+              >
+                {louBega.artist?.split(" ")[0]}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

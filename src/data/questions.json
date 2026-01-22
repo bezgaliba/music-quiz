@@ -343,7 +343,23 @@
         { "id": "5", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song50", "points": 40 },
         { "id": "6", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song60", "points": 40 },
         { "id": "7", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song70", "points": 40 },
-        { "id": "8", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song80", "points": 40 }
+        { 
+          "id": "8", 
+          "header": "Name the Artist", 
+          "songPath": "public/resources/audio/special/", 
+          "song": "song80", 
+          "points": 40,
+          "timedReveals": [
+            { "time": 1, "text": "Monica" },
+            { "time": 7, "text": "Erica" },
+            { "time": 10, "text": "Rita" },
+            { "time": 13, "text": "Tina" },
+            { "time": 15.5, "text": "Sandra" },
+            { "time": 18, "text": "Mary" },
+            { "time": 21, "text": "Jessica" },
+            { "time": 24, "text": "Lou Bega - Mambo No. 5" }
+          ]
+        }
       ],
       "answers": [
         { "id": "1", "artist": "Monica", "year": "1998", "name": "Angel of Mine", "songPath": "public/resources/audio/special/answers/", "song": "song10", "imagePath": "public/resources/img/special/", "image": "img10" },
