@@ -1,40 +1,37 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data/questions.json";
-import { buildAssetUrl, buildAudioUrl } from "../utils/assets";
-
-type Question = {
-  id: string;
-  header?: string;
-  songPath?: string;
-  song?: string;
-  bonus?: string;
-};
-
-const POINTS: Record<string, number> = {
-  "1": 30,
-  "2": 40,
-  "3": 50,
-};
+import {
+  buildAssetUrl,
+  buildAssetUrlVariants,
+  buildAudioUrl,
+} from "../utils/assets";
+import {
+  QuestionMeta,
+  resolveQuestionByKey,
+  useQuestionResolution,
+} from "../utils/questions";
 
 const QuestionPage: React.FC = () => {
   const { category, id } = useParams<{ category: string; id: string }>();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showCover, setShowCover] = useState(false);
+  const [coverSrc, setCoverSrc] = useState("");
+  const coverQueueRef = useRef<string[]>([]);
 
   const cat = data.categories.find((c: any) => c.id === category);
-  const numericToQid: Record<string, string> = {
-    "30": "1",
-    "40": "2",
-    "50": "3",
-  };
-  const normalizedId = id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
-  const points = POINTS[normalizedId] ?? 0;
-  const questionMeta = cat
-    ? (cat.questions as Question[] | undefined)?.find(
-        (q) => q.id === normalizedId,
-      )
-    : undefined;
+  const questions = (cat?.questions as QuestionMeta[]) ?? [];
+  const resolved = useQuestionResolution(questions, id);
+  const questionMeta = resolved?.question;
+  const points = resolved?.points ?? 0;
+  const normalizedId = resolved?.key ?? id ?? "1";
+  const coverVariants = useMemo(() => {
+    if (!questionMeta?.coverImagePath || !questionMeta?.coverImage) return [];
+    return buildAssetUrlVariants(
+      `${questionMeta.coverImagePath}${questionMeta.coverImage}.jpg`,
+    );
+  }, [questionMeta?.coverImagePath, questionMeta?.coverImage]);
   const navigate = useNavigate();
   const defaultBackground = buildAssetUrl("resources/img/background.jpeg");
   const imageSrc = cat?.imagePath
@@ -54,9 +51,22 @@ const QuestionPage: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setShowCover(false);
+    setCoverSrc("");
+    coverQueueRef.current = coverVariants.slice(1);
+  }, [category, normalizedId, coverVariants]);
+
+  const revealCover = () => {
+    if (!coverVariants.length) return;
+    setShowCover(true);
+    setCoverSrc(coverVariants[0]);
+    coverQueueRef.current = coverVariants.slice(1);
+  };
+
   return (
     <div className="question-page">
-      <div className="turntable-container">
+      <div className={`turntable-container ${showCover ? "compact" : ""}`}>
         <img
           src={imageSrc}
           onError={(e) => {
@@ -130,7 +140,9 @@ const QuestionPage: React.FC = () => {
           aria-label="Go back"
           style={{ pointerEvents: "auto", cursor: "pointer" }}
         >
-          <div className="overlay-title">{cat ? cat.title : ""}</div>
+          <div className="overlay-title">
+            {cat ? (category === "special" ? `Special #${id}` : cat.title) : ""}
+          </div>
           <div className="overlay-points">{points} points</div>
         </div>
       </div>
@@ -139,6 +151,7 @@ const QuestionPage: React.FC = () => {
         style={{
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           marginTop: "0.25rem",
           gap: "1rem",
         }}
@@ -147,17 +160,11 @@ const QuestionPage: React.FC = () => {
           aria-label={isPlaying ? "Pause" : "Play"}
           className={`icon-play-btn ${isPlaying ? "playing" : ""}`}
           onClick={async () => {
-            const numericToQid: Record<string, string> = {
-              "30": "1",
-              "40": "2",
-              "50": "3",
-            };
-            const normalizedId =
-              id && numericToQid[id] ? numericToQid[id] : (id ?? "1");
-            const catData = data.categories.find((c: any) => c.id === category);
-            const questionMetaPlay = catData
-              ? catData.questions.find((q: any) => q.id === normalizedId)
-              : undefined;
+            const questionMetaPlay =
+              questionMeta ??
+              resolveQuestionByKey((cat?.questions as QuestionMeta[]) ?? [], id)
+                ?.question;
+
             const fileUrl = questionMetaPlay
               ? buildAudioUrl(
                   questionMetaPlay.songPath ?? "",
@@ -248,7 +255,39 @@ const QuestionPage: React.FC = () => {
             <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6s-6-2.69-6-6H4a8 8 0 1 0 8-8z" />
           </svg>
         </button>
+        {coverVariants.length > 0 && (
+          <button
+            aria-label={showCover ? "Hide" : "Reveal"}
+            className="reveal-btn"
+            onClick={() => {
+              if (showCover) {
+                setShowCover(false);
+                setCoverSrc("");
+                return;
+              }
+              revealCover();
+            }}
+          >
+            {showCover ? "Hide" : "Reveal"}
+          </button>
+        )}
       </div>
+      {showCover && coverSrc && (
+        <div className="album-cover">
+          <img
+            src={coverSrc}
+            alt={questionMeta?.header ?? `${cat?.title ?? "Album"} cover`}
+            onError={() => {
+              const next = coverQueueRef.current.shift();
+              if (next) {
+                setCoverSrc(next);
+                return;
+              }
+              setShowCover(false);
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

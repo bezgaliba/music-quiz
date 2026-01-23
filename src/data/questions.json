@@ -22,12 +22,12 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song30" },
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50", "bonus": "+10 Name the Featured Vocals" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/10s/", "song": "song50", "bonus": "+10 Name the Featured Film" }
       ],
       "answers": [
   { "id": "1", "artist": "Drake", "year": "2015", "name": "Hotline Bling", "songPath": "public/resources/audio/10s/answers/", "song": "song30", "imagePath": "public/resources/img/10s/", "image": "img30" },
   { "id": "2", "artist": "Billie Eilish", "year": "2019", "name": "bury a friend", "songPath": "public/resources/audio/10s/answers/", "song": "song40", "imagePath": "public/resources/img/10s/", "image": "img40" },
-  { "id": "3", "artist": "Sigma", "year": "2014", "name": "Changing", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "bonus": "Paloma Faith" }
+  { "id": "3", "artist": "Lorde", "year": "2014", "name": "Yellow Flicker Beat", "songPath": "public/resources/audio/10s/answers/", "song": "song50", "imagePath": "public/resources/img/10s/", "image": "img50", "bonus": " The Hunger Games: Mockingjay – Part 1" }
       ]
     },
     {
@@ -37,13 +37,13 @@
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song30", "bonus": "+10 Name the Featured Artist"},
         { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50", "bonus": "+10 How old was the Artist at the time of song release?" }
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/00s/", "song": "song50" }
       ],
       "answers": [
   { "id": "1", "artist": "Snoop Dogg", "year": "2004", "name": "Drop It Like It's Hot", "songPath": "public/resources/audio/00s/answers/", "song": "song30", "imagePath": "public/resources/img/00s/", "image": "img30", "bonus": "Pharrell Williams" },
-  { "id": "2", "artist": "Girls Aloud", "year": "2002", "name": "Sound of the Underground", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
-  { "id": "3", "artist": "JoJo", "year": "2004", "name": "Get Out (Leave)", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50", "bonus": "13 years old" }
-      ]
+  { "id": "2", "artist": "Keane", "year": "2003", "name": "Everybody's Changing", "songPath": "public/resources/audio/00s/answers/", "song": "song40", "imagePath": "public/resources/img/00s/", "image": "img40" },
+  { "id": "3", "artist": "Girls Aloud", "year": "2002", "name": "Sound of the Underground", "songPath": "public/resources/audio/00s/answers/", "song": "song50", "imagePath": "public/resources/img/00s/", "image": "img50" }
+    ]
     },
     {
       "id": "90s",
@@ -55,9 +55,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/90s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Ace of Base", "year": "1992", "name": "All That She Wants", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30" },
+  { "id": "1", "artist": "Kriss Kross", "year": "1992", "name": "Jump", "songPath": "public/resources/audio/90s/answers/", "song": "song30", "imagePath": "public/resources/img/90s/", "image": "img30" },
   { "id": "2", "artist": "Semisonic", "year": "1998", "name": "Closing Time", "songPath": "public/resources/audio/90s/answers/", "song": "song40", "imagePath": "public/resources/img/90s/", "image": "img40" },
-  { "id": "3", "artist": "Liquido", "year": "1998", "name": "Narcotic", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50" }
+  { "id": "3", "artist": "Janet Jackson", "year": "1993", "name": "That's The Way Love Goes", "songPath": "public/resources/audio/90s/answers/", "song": "song50", "imagePath": "public/resources/img/90s/", "image": "img50" }
       ]
     },
     {
@@ -70,9 +70,24 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/80s/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Metallica", "year": "1984", "name": "For Whom The Bell Tolls", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30" },
+  { "id": "1", "artist": "Enya", "year": "1988", "name": "Orinoco Flow", "songPath": "public/resources/audio/80s/answers/", "song": "song30", "imagePath": "public/resources/img/80s/", "image": "img30" },
   { "id": "2", "artist": "Erasure", "year": "1988", "name": "A Little Respect", "songPath": "public/resources/audio/80s/answers/", "song": "song40", "imagePath": "public/resources/img/80s/", "image": "img40" },
   { "id": "3", "artist": "Suzanne Vega", "year": "1987", "name": "Luka", "songPath": "public/resources/audio/80s/answers/", "song": "song50", "imagePath": "public/resources/img/80s/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "70s",
+      "title": "1970s",
+      "imagePath": "public/resources/img/70s/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/70s/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Lynyrd Skynyrd", "year": "1974", "name": "Free Bird", "songPath": "public/resources/audio/70s/answers/", "song": "song30", "imagePath": "public/resources/img/70s/", "image": "img30" },
+  { "id": "2", "artist": "Bread", "year": "1972", "name": "The Guitar Man", "songPath": "public/resources/audio/70s/answers/", "song": "song40", "imagePath": "public/resources/img/70s/", "image": "img40" },
+  { "id": "3", "artist": "Ace", "year": "1975", "name": "How Long", "songPath": "public/resources/audio/70s/answers/", "song": "song50", "imagePath": "public/resources/img/70s/", "image": "img50" }
       ]
     },
     {
@@ -86,7 +101,7 @@
       ],
       "answers": [
   { "id": "1", "artist": "Guns N Roses", "year": "1992", "name": "November Rain", "songPath": "public/resources/audio/rock/answers/", "song": "song30", "imagePath": "public/resources/img/rock/", "image": "img30" },
-  { "id": "2", "artist": "Rainbow", "year": "1979", "name": "Since You Been Gone", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40" },
+  { "id": "2", "artist": "Placebo", "year": "1998", "name": "Every You Every Me", "songPath": "public/resources/audio/rock/answers/", "song": "song40", "imagePath": "public/resources/img/rock/", "image": "img40" },
   { "id": "3", "artist": "Staind", "year": "2001", "name": "It's Been A While", "songPath": "public/resources/audio/rock/answers/", "song": "song50", "imagePath": "public/resources/img/rock/", "image": "img50" }
       ]
     },
@@ -121,18 +136,18 @@
       ]
     },
         {
-      "id": "metal",
-      "title": "Metal",
-      "imagePath": "public/resources/img/metal/bg.jpg",
+      "id": "albumcover",
+      "title": "Album Covers",
+      "imagePath": "public/resources/img/albumcover/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/metal/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song30", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover30" },
+  { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song40", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/albumcover/", "song": "song50", "coverImagePath": "public/resources/img/albumcover/", "coverImage": "cover50", "bonus": "+10 Name the Album" }
       ],
       "answers": [
-  { "id": "1", "artist": "Slipknot", "year": "2008", "name": "Psychosocial", "songPath": "public/resources/audio/metal/answers/", "song": "song30", "imagePath": "public/resources/img/metal/", "image": "img30" },
-  { "id": "2", "artist": "Deftones", "year": "2000", "name": "Change (In the House of Flies)", "songPath": "public/resources/audio/metal/answers/", "song": "song40", "imagePath": "public/resources/img/metal/", "image": "img40" },
-  { "id": "3", "artist": "W.A.S.P", "year": "1984", "name": "I Wanna Be Somebody", "songPath": "public/resources/audio/metal/answers/", "song": "song50", "imagePath": "public/resources/img/metal/", "image": "img50" }
+  { "id": "1", "artist": "Fleetwood Mac", "year": "1977", "name": "Rumours", "songPath": "public/resources/audio/albumcover/answers/", "song": "song30", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover30" },
+  { "id": "2", "artist": "The Clash", "year": "1979", "name": "London Calling", "songPath": "public/resources/audio/albumcover/answers/", "song": "song40", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover40" },
+  { "id": "3", "artist": "The Killers", "year": "2004", "name": "Hot Fuss", "songPath": "public/resources/audio/albumcover/answers/", "song": "song50", "imagePath": "public/resources/img/albumcover/answers/", "image": "cover50", "bonus": "Hot Fuss" }
       ]
     },
     {
@@ -145,7 +160,7 @@
         { "id": "3", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Hot Fuss", "year": "2004", "name": "The Killers", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song30", "imagePath": "public/resources/img/debutalbums/", "image": "img30" },
+  { "id": "1", "artist": "+", "year": "2011", "name": "Ed Sheeran", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song30", "imagePath": "public/resources/img/debutalbums/", "image": "img30" },
   { "id": "2", "artist": "19", "year": "2008", "name": "Adele", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song40", "imagePath": "public/resources/img/debutalbums/", "image": "img40" },
   { "id": "3", "artist": "SOUR", "year": "2021", "name": "Olivia Rodrigo", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song50", "imagePath": "public/resources/img/debutalbums/", "image": "img50" }
       ]
@@ -160,9 +175,9 @@
         { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "NSYNC", "year": "2000", "name": "It's Gonna Be Me", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30" },
-  { "id": "2", "artist": "Blue", "year": "2011", "name": "I Can", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40" },
-  { "id": "3", "artist": "Jonas Brothers", "year": "2008", "name": "Burnin' Up", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50" }
+  { "id": "1", "artist": "One Direction", "year": "2015", "name": "Drag Me Down", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30" },
+  { "id": "2", "artist": "Blue", "year": "2001", "name": "All Rise", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40" },
+  { "id": "3", "artist": "The Wanted", "year": "2012", "name": "Chasing The Sun", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50" }
       ]
     },
     {
@@ -227,21 +242,6 @@
       ]
     },
     {
-      "id": "signaturedance",
-      "title": "Signature Dance",
-      "imagePath": "public/resources/img/signaturedance/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/signaturedance/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Village People", "year": "1978", "name": "Y.M.C.A.", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song30", "imagePath": "public/resources/img/signaturedance/", "image": "img30" },
-  { "id": "2", "artist": "Las Ketchup", "year": "2002", "name": "The Ketchup Song (Aserejé)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song40", "imagePath": "public/resources/img/signaturedance/", "image": "img40" },
-  { "id": "3", "artist": "Soulja Boy", "year": "2007", "name": "Crank That (Soulja Boy)", "songPath": "public/resources/audio/signaturedance/answers/", "song": "song50", "imagePath": "public/resources/img/signaturedance/", "image": "img50" }
-      ]
-    },
-    {
       "id": "worsthaircuts",
       "title": "Worst Haircuts",
       "imagePath": "public/resources/img/worsthaircuts/bg.jpg",
@@ -252,8 +252,8 @@
       ],
       "answers": [
   { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "bonus": "Ireland 🇮🇪" },
-  { "id": "2", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
-  { "id": "3", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
+  { "id": "2", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
+  { "id": "3", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
       ]
     },
     {
@@ -268,7 +268,7 @@
       "answers": [
   { "id": "1", "artist": "Sia", "year": "2010", "name": "Clap Your Hands", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30" },
   { "id": "2", "artist": "R.E.M.", "year": "1992", "name": "Man on the Moon", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40" },
-  { "id": "3", "artist": "HIM", "year": "2005", "name": "Wings of a Butterfly", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50" }
+  { "id": "3", "artist": "XTC", "year": "1979", "name": "Making Plans for Nigel", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50" }
       ]
     },
     {
@@ -299,6 +299,77 @@
   { "id": "1", "artist": "Lily Allen", "year": "2006", "name": "Smile (A.K.A. Smeel)", "songPath": "public/resources/audio/simlish/answers/", "song": "song30", "imagePath": "public/resources/img/simlish/", "image": "img30" },
   { "id": "2", "artist": "The Pussycat Dolls", "year": "2004", "name": "Don't Cha (A.K.A. DOBA)", "songPath": "public/resources/audio/simlish/answers/", "song": "song40", "imagePath": "public/resources/img/simlish/", "image": "img40" },
   { "id": "3", "artist": "Lady Antebellum", "year": "2010", "name": "Need You Now (A.K.A. Neeba Zow)", "songPath": "public/resources/audio/simlish/answers/", "song": "song50", "imagePath": "public/resources/img/simlish/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "eurovision",
+      "title": "Eurovision",
+      "imagePath": "public/resources/img/eurovision/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/eurovision/", "song": "song30", "bonus": "+10 Which was the Host country?" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/eurovision/", "song": "song40"},
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/eurovision/", "song": "song50", "bonus": "+10 What country did the artist represent?" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Sudden Lights 🇱🇻", "year": "2023", "name": "Aijā", "songPath": "public/resources/audio/eurovision/answers/", "song": "song30", "imagePath": "public/resources/img/eurovision/", "image": "img30", "bonus": "United Kingdom 🇬🇧" },
+  { "id": "2", "artist": "The Roop 🇱🇹", "year": "2021", "name": "Discoteque", "songPath": "public/resources/audio/eurovision/answers/", "song": "song40", "imagePath": "public/resources/img/eurovision/", "image": "img40" },
+  { "id": "3", "artist": "SunStroke Project 🇲🇩", "year": "2010", "name": "Run Away", "songPath": "public/resources/audio/eurovision/answers/", "song": "song50", "imagePath": "public/resources/img/eurovision/", "image": "img50", "bonus": "Moldova 🇲🇩" }
+      ]
+    },
+    {
+      "id": "latvianhits",
+      "title": "Latvijas Hīti 🇱🇻",
+      "imagePath": "public/resources/img/latvianhits/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/latvianhits/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/latvianhits/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/latvianhits/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Prāta Vētra / Brainstorm", "year": "2001", "name": "Kaķēns, kurš atteicās no jūrasskolas / The kitten who refused to go to sea school", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song30", "imagePath": "public/resources/img/latvianhits/", "image": "img30" },
+  { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2004", "name": "Roku Okeāns / Ocean of Hands ", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
+  { "id": "3", "artist": "Citi Zēni / Other Boys", "year": "2010", "name": "Limuzīns uz Krīta / Limousine on a Chalk", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song50", "imagePath": "public/resources/img/latvianhits/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Special",
+      "imagePath": "public/resources/img/special/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song10", "points": 40 },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song20", "points": 40 },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song30", "points": 40 },
+        { "id": "4", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song40", "points": 40 },
+        { "id": "5", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song50", "points": 40 },
+        { "id": "6", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song60", "points": 40 },
+        { "id": "7", "header": "Name the Artist", "songPath": "public/resources/audio/special/", "song": "song70", "points": 40 },
+        { 
+          "id": "8", 
+          "header": "Name the Artist", 
+          "songPath": "public/resources/audio/special/", 
+          "song": "song80", 
+          "points": 80,
+          "timedReveals": [
+            { "time": 1, "text": "Monica" },
+            { "time": 7, "text": "Erica" },
+            { "time": 10, "text": "Rita" },
+            { "time": 13, "text": "Tina" },
+            { "time": 15.5, "text": "Sandra" },
+            { "time": 18, "text": "Mary" },
+            { "time": 21, "text": "Jessica" },
+            { "time": 24, "text": "Lou Bega - Mambo No. 5" }
+          ]
+        }
+      ],
+      "answers": [
+        { "id": "1", "artist": "Monica", "year": "1998", "name": "Angel of Mine", "songPath": "public/resources/audio/special/answers/", "song": "song10", "imagePath": "public/resources/img/special/", "image": "img10" },
+        { "id": "2", "artist": "Eric Clapton", "year": "1971", "name": "Layla", "songPath": "public/resources/audio/special/answers/", "song": "song20", "imagePath": "public/resources/img/special/", "image": "img20" },
+        { "id": "3", "artist": "Rita Ora", "year": "2014", "name": "I Will Never Let You Down", "songPath": "public/resources/audio/special/answers/", "song": "song30", "imagePath": "public/resources/img/special/", "image": "img30" },
+        { "id": "4", "artist": "Tina Turner", "year": "1971", "name": "Proud Mary", "songPath": "public/resources/audio/special/answers/", "song": "song40", "imagePath": "public/resources/img/special/", "image": "img40" },
+        { "id": "5", "artist": "Sandra", "year": "1985", "name": "(I'll Never Be) Maria Magdalena", "songPath": "public/resources/audio/special/answers/", "song": "song50", "imagePath": "public/resources/img/special/", "image": "img50" },
+        { "id": "6", "artist": "Mary J. Blige", "year": "2001", "name": "Family Affair", "songPath": "public/resources/audio/special/answers/", "song": "song60", "imagePath": "public/resources/img/special/", "image": "img60" },
+        { "id": "7", "artist": "Jessica Simpson", "year": "2003", "name": "With You", "songPath": "public/resources/audio/special/answers/", "song": "song70", "imagePath": "public/resources/img/special/", "image": "img70" },
+        { "id": "8", "artist": "Lou Bega", "year": "1999", "name": "Mambo No. 5", "songPath": "public/resources/audio/special/answers/", "song": "song80", "imagePath": "public/resources/img/special/", "image": "img80" }
       ]
     }
   ]

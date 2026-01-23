@@ -3,16 +3,43 @@ import { useNavigate } from "react-router-dom";
 import QuestionCard from "./QuestionCard";
 import data from "../data/questions.json";
 import { getRound } from "../gameState";
+import { QuestionMeta } from "../utils/questions";
 
-const categories = data.categories as { id: string; title: string }[];
+type Category = { id: string; title: string; questions: QuestionMeta[] };
+
+const categories = data.categories as Category[];
+const SHOW_SPECIAL_KEY = "showSpecialRound";
 
 const CardGrid: React.FC = () => {
   const navigate = useNavigate();
   const [round, setRound] = useState(1);
+  const [showSpecial, setShowSpecial] = useState(false);
 
   useEffect(() => {
     setRound(getRound());
   }, []);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(SHOW_SPECIAL_KEY);
+      if (raw === "true") setShowSpecial(true);
+      if (raw === "false") setShowSpecial(false);
+    } catch (e) {
+      console.error("Failed to read special round toggle:", e);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(SHOW_SPECIAL_KEY, showSpecial ? "true" : "false");
+    } catch (e) {
+      console.error("Failed to persist special round toggle:", e);
+    }
+  }, [showSpecial]);
+
+  const visibleCategories = showSpecial
+    ? categories
+    : categories.filter((c) => c.id !== "special");
 
   return (
     <div className="grid">
@@ -29,16 +56,23 @@ const CardGrid: React.FC = () => {
       >
         Round {round}
       </div>
+      <button
+        className="special-round-btn"
+        onClick={() => setShowSpecial((s) => !s)}
+      >
+        {showSpecial ? "Hide Special" : "Special Round"}
+      </button>
       <button className="end-round-btn" onClick={() => navigate("/answers")}>
         End Round
       </button>
       <div className="grid-inner all-rows">
-        {categories.map((c, idx) => {
+        {visibleCategories.map((c, idx) => {
           const row = Math.floor(idx / 4) + 1;
 
           const itemsPerRow = 4;
-          const fullRows = Math.floor(categories.length / itemsPerRow);
-          const lastRowCount = categories.length - fullRows * itemsPerRow;
+          const fullRows = Math.floor(visibleCategories.length / itemsPerRow);
+          const lastRowCount =
+            visibleCategories.length - fullRows * itemsPerRow;
           const baseIndex = fullRows * itemsPerRow;
 
           const style: React.CSSProperties = {};
@@ -60,6 +94,7 @@ const CardGrid: React.FC = () => {
               key={c.id}
               title={c.title}
               categoryId={c.id}
+              questions={c.questions ?? []}
               style={style}
             />
           );
