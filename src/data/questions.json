@@ -92,7 +92,7 @@
     },
     {
       "id": "rock",
-      "title": "Rock",
+      "title": "Classic Rock",
       "imagePath": "public/resources/img/rock/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/rock/", "song": "song30" },
@@ -106,13 +106,13 @@
       ]
     },
     {
-      "id": "electronica",
-      "title": "Electronica",
-      "imagePath": "public/resources/img/electronica/bg.jpg",
+      "id": "altrock",
+      "title": "Alternative Rock",
+      "imagePath": "public/resources/img/altrock/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/electronica/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/altrock/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/altrock/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/altrock/", "song": "song50" }
       ],
       "answers": [
   { "id": "1", "artist": "The Prodigy", "year": "1996", "name": "Firestarter", "songPath": "public/resources/audio/electronica/answers/", "song": "song30", "imagePath": "public/resources/img/electronica/", "image": "img30" },
@@ -121,18 +121,63 @@
       ]
     },
         {
-      "id": "countrypop",
-      "title": "Country Pop",
-      "imagePath": "public/resources/img/countrypop/bg.jpg",
+      "id": "hiphop",
+      "title": "Hip-Hop",
+      "imagePath": "public/resources/img/hiphop/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/countrypop/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/hiphop/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Shania Twain", "year": "1998", "name": "That Don't Impress Me Much", "songPath": "public/resources/audio/countrypop/answers/", "song": "song30", "imagePath": "public/resources/img/countrypop/", "image": "img30" },
-  { "id": "2", "artist": "Dolly Parton", "year": "1980", "name": "9 to 5", "songPath": "public/resources/audio/countrypop/answers/", "song": "song40", "imagePath": "public/resources/img/countrypop/", "image": "img40" },
-  { "id": "3", "artist": "Shaboozey", "year": "2024", "name": "A Bar Song (Tipsy)", "songPath": "public/resources/audio/countrypop/answers/", "song": "song50", "imagePath": "public/resources/img/countrypop/", "image": "img50" }
+  { "id": "1", "artist": "Shania Twain", "year": "1998", "name": "That Don't Impress Me Much", "songPath": "public/resources/audio/hiphop/answers/", "song": "song30", "imagePath": "public/resources/img/hiphop/", "image": "img30" },
+  { "id": "2", "artist": "Fort Minor", "year": "1980", "name": "Remember The Name", "songPath": "public/resources/audio/hiphop/answers/", "song": "song40", "imagePath": "public/resources/img/hiphop/", "image": "img40" },
+  { "id": "3", "artist": "Terror Squad", "year": "2024", "name": "Lean Back", "songPath": "public/resources/audio/hiphop/answers/", "song": "song50", "imagePath": "public/resources/img/hiphop/", "image": "img50" }
+      ]
+    },
+        {
+      "id": "classical",
+      "title": "Classical Music",
+      "imagePath": "public/resources/img/classical/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Album", "songPath": "public/resources/audio/classical/", "song": "song30" },
+        { "id": "2", "header": "Name the Album", "songPath": "public/resources/audio/classical/", "song": "song40" },
+        { "id": "3", "header": "Name the Album", "songPath": "public/resources/audio/classical/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "+", "year": "2011", "name": "Ed Sheeran", "songPath": "public/resources/audio/classical/answers/", "song": "song30", "imagePath": "public/resources/img/classical/", "image": "img30" },
+  { "id": "2", "artist": "19", "year": "2008", "name": "Adele", "songPath": "public/resources/audio/classical/answers/", "song": "song40", "imagePath": "public/resources/img/classical/", "image": "img40" },
+  { "id": "3", "artist": "SOUR", "year": "2021", "name": "Olivia Rodrigo", "songPath": "public/resources/audio/classical/answers/", "song": "song50", "imagePath": "public/resources/img/classical/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "anthems",
+      "title": "Country Anthems",
+      "imagePath": "public/resources/img/anthems/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/anthems/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/anthems/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/anthems/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "One Direction", "year": "2015", "name": "Drag Me Down", "songPath": "public/resources/audio/anthems/answers/", "song": "song30", "imagePath": "public/resources/img/anthems/", "image": "img30" },
+  { "id": "2", "artist": "Blue", "year": "2001", "name": "All Rise", "songPath": "public/resources/audio/anthems/answers/", "song": "song40", "imagePath": "public/resources/img/anthems/", "image": "img40" },
+  { "id": "3", "artist": "The Wanted", "year": "2012", "name": "Chasing The Sun", "songPath": "public/resources/audio/anthems/answers/", "song": "song50", "imagePath": "public/resources/img/anthems/", "image": "img50" }
+      ]
+    },
+    {
+      "id": "lgbt",
+      "title": "LGBT+ Anthems",
+      "imagePath": "public/resources/img/lgbt/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the TV Series", "songPath": "public/resources/audio/lgbt/", "song": "song30" },
+        { "id": "2", "header": "Name the TV Series", "songPath": "public/resources/audio/lgbt/", "song": "song40" },
+        { "id": "3", "header": "Name the TV Series", "songPath": "public/resources/audio/lgbt/", "song": "song50", "bonus": "+10 Name The Artist" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Breaking Bad", "year": "2008 - 2013", "songPath": "public/resources/audio/lgbt/answers/", "song": "song30", "imagePath": "public/resources/img/lgbt/", "image": "img30" },
+  { "id": "2", "artist": "Futurama", "year": "1999 - present", "songPath": "public/resources/audio/lgbt/answers/", "song": "song40", "imagePath": "public/resources/img/lgbt/", "image": "img40" },
+  { "id": "3", "artist": "House, M.D.", "year": "2004 - 2012", "songPath": "public/resources/audio/lgbt/answers/", "song": "song50", "imagePath": "public/resources/img/lgbt/", "image": "img50", "bonus": "Massive Attack" }
       ]
     },
         {
@@ -151,154 +196,108 @@
       ]
     },
     {
-      "id": "debutalbums",
-      "title": "Debut Albums",
-      "imagePath": "public/resources/img/debutalbums/bg.jpg",
+      "id": "turn50",
+      "title": "Artists turning 50 this year 🎉",
+      "imagePath": "public/resources/img/turn50/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song30" },
-        { "id": "2", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song40" },
-        { "id": "3", "header": "Name the Album", "songPath": "public/resources/audio/debutalbums/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/turn50/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/turn50/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/turn50/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "+", "year": "2011", "name": "Ed Sheeran", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song30", "imagePath": "public/resources/img/debutalbums/", "image": "img30" },
-  { "id": "2", "artist": "19", "year": "2008", "name": "Adele", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song40", "imagePath": "public/resources/img/debutalbums/", "image": "img40" },
-  { "id": "3", "artist": "SOUR", "year": "2021", "name": "Olivia Rodrigo", "songPath": "public/resources/audio/debutalbums/answers/", "song": "song50", "imagePath": "public/resources/img/debutalbums/", "image": "img50" }
+  { "id": "1", "artist": "Daddy Yankee", "year": "1986", "name": "The Final Countdown", "songPath": "public/resources/audio/turn50/answers/", "song": "song30", "imagePath": "public/resources/img/turn50/", "image": "img30" },
+  { "id": "2", "artist": "Emma Bunton", "year": "1971", "name": "A Horse with No Name", "songPath": "public/resources/audio/turn50/answers/", "song": "song40", "imagePath": "public/resources/img/turn50/", "image": "img40" },
+  { "id": "3", "artist": "Ja Rule", "year": "1976", "name": "Carry on Wayward Son", "songPath": "public/resources/audio/turn50/answers/", "song": "song50", "imagePath": "public/resources/img/turn50/", "image": "img50" }
+      ]
+    },
+        {
+      "id": "manchester",
+      "title": "from Manchester with love",
+      "imagePath": "public/resources/img/manchester/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Original Artist", "songPath": "public/resources/audio/manchester/", "song": "song30" },
+        { "id": "2", "header": "Name the Original Artist", "songPath": "public/resources/audio/manchester/", "song": "song40" },
+        { "id": "3", "header": "Name the Original Artist", "songPath": "public/resources/audio/manchester/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Lily Allen", "year": "2006", "name": "Smile (A.K.A. Smeel)", "songPath": "public/resources/audio/manchester/answers/", "song": "song30", "imagePath": "public/resources/img/manchester/", "image": "img30" },
+  { "id": "2", "artist": "The Pussycat Dolls", "year": "2004", "name": "Don't Cha (A.K.A. DOBA)", "songPath": "public/resources/audio/manchester/answers/", "song": "song40", "imagePath": "public/resources/img/manchester/", "image": "img40" },
+  { "id": "3", "artist": "Lady Antebellum", "year": "2010", "name": "Need You Now (A.K.A. Neeba Zow)", "songPath": "public/resources/audio/manchester/answers/", "song": "song50", "imagePath": "public/resources/img/manchester/", "image": "img50" }
+      ]
+    },
+        {
+      "id": "ukchart",
+      "title": "UK chart No. 1 debut singles",
+      "imagePath": "public/resources/img/ukchart/bg.jpg",
+      "questions": [
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/ukchart/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/ukchart/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/ukchart/", "song": "song50" }
+      ],
+      "answers": [
+  { "id": "1", "artist": "Sia", "year": "2010", "name": "Clap Your Hands", "songPath": "public/resources/audio/ukchart/answers/", "song": "song30", "imagePath": "public/resources/img/ukchart/", "image": "img30" },
+  { "id": "2", "artist": "R.E.M.", "year": "1992", "name": "Man on the Moon", "songPath": "public/resources/audio/ukchart/answers/", "song": "song40", "imagePath": "public/resources/img/ukchart/", "image": "img40" },
+  { "id": "3", "artist": "XTC", "year": "1979", "name": "Making Plans for Nigel", "songPath": "public/resources/audio/ukchart/answers/", "song": "song50", "imagePath": "public/resources/img/ukchart/", "image": "img50" }
       ]
     },
     {
-      "id": "boybands",
-      "title": "British Boybands 🇬🇧",
-      "imagePath": "public/resources/img/boybands/bg.jpg",
+      "id": "tarot",
+      "title": "Film Soundtracks",
+      "imagePath": "public/resources/img/tarot/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/boybands/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/tarot/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/tarot/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/tarot/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "One Direction", "year": "2015", "name": "Drag Me Down", "songPath": "public/resources/audio/boybands/answers/", "song": "song30", "imagePath": "public/resources/img/boybands/", "image": "img30" },
-  { "id": "2", "artist": "Blue", "year": "2001", "name": "All Rise", "songPath": "public/resources/audio/boybands/answers/", "song": "song40", "imagePath": "public/resources/img/boybands/", "image": "img40" },
-  { "id": "3", "artist": "The Wanted", "year": "2012", "name": "Chasing The Sun", "songPath": "public/resources/audio/boybands/answers/", "song": "song50", "imagePath": "public/resources/img/boybands/", "image": "img50" }
+  { "id": "1", "artist": "Baha Men", "year": "2000", "name": "Who Let the Dogs Out", "songPath": "public/resources/audio/tarot/answers/", "song": "song30", "imagePath": "public/resources/img/tarot/", "image": "img30" },
+  { "id": "2", "artist": "Jane's Addiction", "year": "1990", "name": "Been Caught Stealing", "songPath": "public/resources/audio/tarot/answers/", "song": "song40", "imagePath": "public/resources/img/tarot/", "image": "img40" },
+  { "id": "3", "artist": "Pink Floyd", "year": "1977", "name": "Dogs", "songPath": "public/resources/audio/tarot/answers/", "song": "song50", "imagePath": "public/resources/img/tarot/", "image": "img50" }
       ]
     },
     {
-      "id": "tv",
-      "title": "TV Series",
-      "imagePath": "public/resources/img/tvseries/bg.jpg",
+      "id": "allcaps",
+      "title": "ALL CAPS ARTISTS!!!",
+      "imagePath": "public/resources/img/allcaps/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song30" },
-        { "id": "2", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song40" },
-        { "id": "3", "header": "Name the TV Series", "songPath": "public/resources/audio/tvseries/", "song": "song50", "bonus": "+10 Name The Artist" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/allcaps/", "song": "song30", "bonus": "+10 Which country did they represent at Eurovision?" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/allcaps/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/allcaps/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Breaking Bad", "year": "2008 - 2013", "songPath": "public/resources/audio/tvseries/answers/", "song": "song30", "imagePath": "public/resources/img/tvseries/", "image": "img30" },
-  { "id": "2", "artist": "Futurama", "year": "1999 - present", "songPath": "public/resources/audio/tvseries/answers/", "song": "song40", "imagePath": "public/resources/img/tvseries/", "image": "img40" },
-  { "id": "3", "artist": "House, M.D.", "year": "2004 - 2012", "songPath": "public/resources/audio/tvseries/answers/", "song": "song50", "imagePath": "public/resources/img/tvseries/", "image": "img50", "bonus": "Massive Attack" }
+  { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/allcaps/answers/", "song": "song30", "imagePath": "public/resources/img/allcaps/", "image": "img30", "bonus": "Ireland 🇮🇪" },
+  { "id": "2", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/allcaps/answers/", "song": "song40", "imagePath": "public/resources/img/allcaps/", "image": "img40" },
+  { "id": "3", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/allcaps/answers/", "song": "song50", "imagePath": "public/resources/img/allcaps/", "image": "img50" }
       ]
     },
     {
-      "id": "twilight",
-      "title": "Twilight Soundtrack",
-      "imagePath": "public/resources/img/twilight/bg.jpg",
+      "id": "whistle",
+      "title": "Whistling",
+      "imagePath": "public/resources/img/whistle/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song40", "bonus": "+10 Name the Specific Movie" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/twilight/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/whistle/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/whistle/", "song": "song40", "bonus": "+10 Name the Specific Movie" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/whistle/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Muse", "year": "2006", "name": "Supermassive Black Hole", "songPath": "public/resources/audio/twilight/answers/", "song": "song30", "imagePath": "public/resources/img/twilight/", "image": "img30" },
-  { "id": "2", "artist": "Paramore", "year": "2008", "name": "Decode", "songPath": "public/resources/audio/twilight/answers/", "song": "song40", "imagePath": "public/resources/img/twilight/", "image": "img40", "bonus": "Twilight (2008)" },
-  { "id": "3", "artist": "Iron & Wine", "year": "2005", "name": "Flightless Bird, American Mouth", "songPath": "public/resources/audio/twilight/answers/", "song": "song50", "imagePath": "public/resources/img/twilight/", "image": "img50" }
+  { "id": "1", "artist": "Muse", "year": "2006", "name": "Supermassive Black Hole", "songPath": "public/resources/audio/whistle/answers/", "song": "song30", "imagePath": "public/resources/img/whistle/", "image": "img30" },
+  { "id": "2", "artist": "Paramore", "year": "2008", "name": "Decode", "songPath": "public/resources/audio/whistle/answers/", "song": "song40", "imagePath": "public/resources/img/whistle/", "image": "img40", "bonus": "Twilight (2008)" },
+  { "id": "3", "artist": "Iron & Wine", "year": "2005", "name": "Flightless Bird, American Mouth", "songPath": "public/resources/audio/whistle/answers/", "song": "song50", "imagePath": "public/resources/img/whistle/", "image": "img50" }
       ]
     },
-    {
-      "id": "geography",
-      "title": "Geography",
-      "imagePath": "public/resources/img/geography/bg.jpg",
+        {
+      "id": "misspelled",
+      "title": "Misspelled Artysts",
+      "imagePath": "public/resources/img/misspelled/bg.jpg",
       "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/geography/", "song": "song50" }
+        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/misspelled/", "song": "song30" },
+        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/misspelled/", "song": "song40" },
+        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/misspelled/", "song": "song50" }
       ],
       "answers": [
-  { "id": "1", "artist": "Europe", "year": "1986", "name": "The Final Countdown", "songPath": "public/resources/audio/geography/answers/", "song": "song30", "imagePath": "public/resources/img/geography/", "image": "img30" },
-  { "id": "2", "artist": "America", "year": "1971", "name": "A Horse with No Name", "songPath": "public/resources/audio/geography/answers/", "song": "song40", "imagePath": "public/resources/img/geography/", "image": "img40" },
-  { "id": "3", "artist": "Kansas", "year": "1976", "name": "Carry on Wayward Son", "songPath": "public/resources/audio/geography/answers/", "song": "song50", "imagePath": "public/resources/img/geography/", "image": "img50" }
-      ]
-    },
-
-    {
-      "id": "dogs",
-      "title": "Dogs",
-      "imagePath": "public/resources/img/dogs/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/dogs/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Baha Men", "year": "2000", "name": "Who Let the Dogs Out", "songPath": "public/resources/audio/dogs/answers/", "song": "song30", "imagePath": "public/resources/img/dogs/", "image": "img30" },
-  { "id": "2", "artist": "Jane's Addiction", "year": "1990", "name": "Been Caught Stealing", "songPath": "public/resources/audio/dogs/answers/", "song": "song40", "imagePath": "public/resources/img/dogs/", "image": "img40" },
-  { "id": "3", "artist": "Pink Floyd", "year": "1977", "name": "Dogs", "songPath": "public/resources/audio/dogs/answers/", "song": "song50", "imagePath": "public/resources/img/dogs/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "worsthaircuts",
-      "title": "Worst Haircuts",
-      "imagePath": "public/resources/img/worsthaircuts/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song30", "bonus": "+10 Which country did they represent at Eurovision?" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/worsthaircuts/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Jedward", "year": "2011", "name": "Lipstick", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song30", "imagePath": "public/resources/img/worsthaircuts/", "image": "img30", "bonus": "Ireland 🇮🇪" },
-  { "id": "2", "artist": "A Flock of Seagulls", "year": "1982", "name": "I Ran (So Far Away)", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song40", "imagePath": "public/resources/img/worsthaircuts/", "image": "img40" },
-  { "id": "3", "artist": "Limahl", "year": "1984", "name": "The NeverEnding Story", "songPath": "public/resources/audio/worsthaircuts/answers/", "song": "song50", "imagePath": "public/resources/img/worsthaircuts/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "3letterartists",
-      "title": "3-Letter Artists",
-      "imagePath": "public/resources/img/3letterartists/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/3letterartists/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Sia", "year": "2010", "name": "Clap Your Hands", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song30", "imagePath": "public/resources/img/3letterartists/", "image": "img30" },
-  { "id": "2", "artist": "R.E.M.", "year": "1992", "name": "Man on the Moon", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song40", "imagePath": "public/resources/img/3letterartists/", "image": "img40" },
-  { "id": "3", "artist": "XTC", "year": "1979", "name": "Making Plans for Nigel", "songPath": "public/resources/audio/3letterartists/answers/", "song": "song50", "imagePath": "public/resources/img/3letterartists/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "foodieartists",
-      "title": "Foodie Artists",
-      "imagePath": "public/resources/img/foodieartists/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song30" },
-        { "id": "2", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song40" },
-        { "id": "3", "header": "Name the Artist", "songPath": "public/resources/audio/foodieartists/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Bananarama 🍌", "year": "1986", "name": "Venus", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song30", "imagePath": "public/resources/img/foodieartists/", "image": "img30" },
-  { "id": "2", "artist": "Pearl Jam 🍓🍇🍞🥄🍯", "year": "1991", "name": "Alive", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song40", "imagePath": "public/resources/img/foodieartists/", "image": "img40" },
-  { "id": "3", "artist": "Chuck Berry 🍒", "year": "1958", "name": "Johnny B. Goode", "songPath": "public/resources/audio/foodieartists/answers/", "song": "song50", "imagePath": "public/resources/img/foodieartists/", "image": "img50" }
-      ]
-    },
-    {
-      "id": "simlish",
-      "title": "Simlish Pop ❇️",
-      "imagePath": "public/resources/img/simlish/bg.jpg",
-      "questions": [
-        { "id": "1", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song30" },
-        { "id": "2", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song40" },
-        { "id": "3", "header": "Name the Original Artist", "songPath": "public/resources/audio/simlish/", "song": "song50" }
-      ],
-      "answers": [
-  { "id": "1", "artist": "Lily Allen", "year": "2006", "name": "Smile (A.K.A. Smeel)", "songPath": "public/resources/audio/simlish/answers/", "song": "song30", "imagePath": "public/resources/img/simlish/", "image": "img30" },
-  { "id": "2", "artist": "The Pussycat Dolls", "year": "2004", "name": "Don't Cha (A.K.A. DOBA)", "songPath": "public/resources/audio/simlish/answers/", "song": "song40", "imagePath": "public/resources/img/simlish/", "image": "img40" },
-  { "id": "3", "artist": "Lady Antebellum", "year": "2010", "name": "Need You Now (A.K.A. Neeba Zow)", "songPath": "public/resources/audio/simlish/answers/", "song": "song50", "imagePath": "public/resources/img/simlish/", "image": "img50" }
+  { "id": "1", "artist": "Bananarama 🍌", "year": "1986", "name": "Venus", "songPath": "public/resources/audio/misspelled/answers/", "song": "song30", "imagePath": "public/resources/img/misspelled/", "image": "img30" },
+  { "id": "2", "artist": "Pearl Jam 🍓🍇🍞🥄🍯", "year": "1991", "name": "Alive", "songPath": "public/resources/audio/misspelled/answers/", "song": "song40", "imagePath": "public/resources/img/misspelled/", "image": "img40" },
+  { "id": "3", "artist": "Chuck Berry 🍒", "year": "1958", "name": "Johnny B. Goode", "songPath": "public/resources/audio/misspelled/answers/", "song": "song50", "imagePath": "public/resources/img/misspelled/", "image": "img50" }
       ]
     },
     {
@@ -318,7 +317,7 @@
     },
     {
       "id": "latvianhits",
-      "title": "Latvijas Hīti 🇱🇻",
+      "title": "Latviešu dziesmas 🇱🇻",
       "imagePath": "public/resources/img/latvianhits/bg.jpg",
       "questions": [
         { "id": "1", "header": "Name the Artist", "songPath": "public/resources/audio/latvianhits/", "song": "song30" },
@@ -327,8 +326,8 @@
       ],
       "answers": [
   { "id": "1", "artist": "Prāta Vētra / Brainstorm", "year": "2001", "name": "Kaķēns, kurš atteicās no jūrasskolas / The kitten who refused to go to sea school", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song30", "imagePath": "public/resources/img/latvianhits/", "image": "img30" },
-  { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2004", "name": "Roku Okeāns / Ocean of Hands ", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
-  { "id": "3", "artist": "Citi Zēni / Other Boys", "year": "2010", "name": "Limuzīns uz Krīta / Limousine on a Chalk", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song50", "imagePath": "public/resources/img/latvianhits/", "image": "img50" }
+  { "id": "2", "artist": "Bermudu Divstūris / Bermuda Digon", "year": "2018", "name": "Roku Okeāns / Ocean of Hands ", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song40", "imagePath": "public/resources/img/latvianhits/", "image": "img40" },
+  { "id": "3", "artist": "Citi Zēni / Other Boys", "year": "2021", "name": "Limuzīns uz Krīta / Limousine on a Chalk", "songPath": "public/resources/audio/latvianhits/answers/", "song": "song50", "imagePath": "public/resources/img/latvianhits/", "image": "img50" }
       ]
     },
     {
@@ -369,7 +368,7 @@
         { "id": "5", "artist": "Sandra", "year": "1985", "name": "(I'll Never Be) Maria Magdalena", "songPath": "public/resources/audio/special/answers/", "song": "song50", "imagePath": "public/resources/img/special/", "image": "img50" },
         { "id": "6", "artist": "Mary J. Blige", "year": "2001", "name": "Family Affair", "songPath": "public/resources/audio/special/answers/", "song": "song60", "imagePath": "public/resources/img/special/", "image": "img60" },
         { "id": "7", "artist": "Jessica Simpson", "year": "2003", "name": "With You", "songPath": "public/resources/audio/special/answers/", "song": "song70", "imagePath": "public/resources/img/special/", "image": "img70" },
-        { "id": "8", "artist": "Lou Bega", "year": "1999", "name": "Mambo No. 5", "songPath": "public/resources/audio/special/answers/", "song": "song80", "imagePath": "public/resources/img/special/", "image": "img80" }
+        { "id": "8", "artist": "Billy Joel", "year": "1989", "name": "We Didn't Start the Fire", "songPath": "public/resources/audio/special/answers/", "song": "song80", "imagePath": "public/resources/img/special/", "image": "img80" }
       ]
     }
   ]

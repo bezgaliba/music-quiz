@@ -50,8 +50,8 @@ const CardGrid: React.FC = () => {
           fontSize: "3rem",
           fontWeight: 600,
           color: "#fff",
-          textShadow:
-            "-2px -2px 0 rgba(0,0,0,0.6), 2px -2px 0 rgba(0,0,0,0.6), -2px 2px 0 rgba(0,0,0,0.6), 2px 2px 0 rgba(0,0,0,0.6), 0 6px 18px rgba(0,0,0,0.25)",
+          WebkitTextStroke: "2px red",
+          textShadow: "0 6px 18px rgba(0,0,0,0.25)",
         }}
       >
         Round {round}
