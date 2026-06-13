@@ -1,5 +1,5 @@
 :root{
-  --card-bg: #b86f94;
+  --card-bg: rgba(173, 216, 230, 0.97);
   --choice-bg: #111;
   --choice-border: #fff;
 
@@ -358,7 +358,8 @@ body{
   justify-content: center;
   align-items: center;
   border-radius: 0;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  border: 5px solid #fff;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45), 0 8px 24px rgba(0,0,0,0.5);
   isolation: isolate;
 }
 .turntable-container.compact{
